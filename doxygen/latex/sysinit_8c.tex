@@ -1,0 +1,119 @@
+\hypertarget{sysinit_8c}{}\section{Sources/hal/sysinit.c File Reference}
+\label{sysinit_8c}\index{Sources/hal/sysinit.\+c@{Sources/hal/sysinit.\+c}}
+{\ttfamily \#include \char`\"{}sysinit.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{sysinit_8c_af5852e0e4dd65bfb8be84a12f02906a7}{sysinit} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{sysinit_8c_a5383539a3a607e05906f71be0fd4f4af}{mcg\+\_\+clk\+\_\+hz}
+\item 
+int \hyperlink{sysinit_8c_a147d9f2b0cb61752bb5c764775d9b022}{mcg\+\_\+clk\+\_\+khz}
+\item 
+int \hyperlink{sysinit_8c_a7fa854056a09162506d2e1e8ca57fd6d}{core\+\_\+clk\+\_\+khz}
+\item 
+int \hyperlink{sysinit_8c_a59867450eec8beb54994d135314cd392}{periph\+\_\+clk\+\_\+khz}
+\item 
+int \hyperlink{sysinit_8c_af7ba394e0943d9482cbdb48f3364169d}{pll\+\_\+clk\+\_\+khz}
+\item 
+int \hyperlink{sysinit_8c_a18a07641cd3e9696bdc1b37f42fc214e}{uart0\+\_\+clk\+\_\+khz}
+\item 
+uint32\+\_\+t \hyperlink{sysinit_8c_a97635c774b70984fd29475d88c779d6e}{uart0\+\_\+clk\+\_\+hz}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{sysinit.\+c@{sysinit.\+c}!sysinit@{sysinit}}
+\index{sysinit@{sysinit}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{sysinit(void)}{sysinit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void sysinit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sysinit_8c_af5852e0e4dd65bfb8be84a12f02906a7}{}\label{sysinit_8c_af5852e0e4dd65bfb8be84a12f02906a7}
+
+
+Definition at line 19 of file sysinit.\+c.
+
+
+
+References C\+L\+K0\+\_\+\+F\+R\+E\+Q\+\_\+\+HZ, C\+L\+K0\+\_\+\+T\+Y\+PE, core\+\_\+clk\+\_\+khz, L\+O\+W\+\_\+\+P\+O\+W\+ER, mcg\+\_\+clk\+\_\+hz, mcg\+\_\+clk\+\_\+khz, M\+C\+G\+O\+UT, periph\+\_\+clk\+\_\+khz, P\+L\+L0\+\_\+\+P\+R\+D\+IV, P\+L\+L0\+\_\+\+V\+D\+IV, pll\+\_\+init(), S\+I\+M\+\_\+\+C\+L\+K\+D\+I\+V1, S\+I\+M\+\_\+\+C\+L\+K\+D\+I\+V1\+\_\+\+O\+U\+T\+D\+I\+V1, S\+I\+M\+\_\+\+C\+L\+K\+D\+I\+V1\+\_\+\+O\+U\+T\+D\+I\+V1\+\_\+\+M\+A\+SK, S\+I\+M\+\_\+\+C\+L\+K\+D\+I\+V1\+\_\+\+O\+U\+T\+D\+I\+V4, S\+I\+M\+\_\+\+C\+L\+K\+D\+I\+V1\+\_\+\+O\+U\+T\+D\+I\+V4\+\_\+\+M\+A\+SK, S\+I\+M\+\_\+\+S\+O\+P\+T2, S\+I\+M\+\_\+\+S\+O\+P\+T2\+\_\+\+P\+L\+L\+F\+L\+L\+S\+E\+L\+\_\+\+M\+A\+SK, and uart0\+\_\+clk\+\_\+khz.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+init().
+
+
+
+\subsection{Variable Documentation}
+\index{sysinit.\+c@{sysinit.\+c}!core\+\_\+clk\+\_\+khz@{core\+\_\+clk\+\_\+khz}}
+\index{core\+\_\+clk\+\_\+khz@{core\+\_\+clk\+\_\+khz}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{core\+\_\+clk\+\_\+khz}{core_clk_khz}}]{\setlength{\rightskip}{0pt plus 5cm}int core\+\_\+clk\+\_\+khz}\hypertarget{sysinit_8c_a7fa854056a09162506d2e1e8ca57fd6d}{}\label{sysinit_8c_a7fa854056a09162506d2e1e8ca57fd6d}
+
+
+Definition at line 12 of file sysinit.\+c.
+
+
+
+Referenced by sysinit().
+
+\index{sysinit.\+c@{sysinit.\+c}!mcg\+\_\+clk\+\_\+hz@{mcg\+\_\+clk\+\_\+hz}}
+\index{mcg\+\_\+clk\+\_\+hz@{mcg\+\_\+clk\+\_\+hz}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{mcg\+\_\+clk\+\_\+hz}{mcg_clk_hz}}]{\setlength{\rightskip}{0pt plus 5cm}int mcg\+\_\+clk\+\_\+hz}\hypertarget{sysinit_8c_a5383539a3a607e05906f71be0fd4f4af}{}\label{sysinit_8c_a5383539a3a607e05906f71be0fd4f4af}
+
+
+Definition at line 10 of file sysinit.\+c.
+
+
+
+Referenced by sysinit(), and T\+P\+M\+\_\+init\+\_\+\+I\+C().
+
+\index{sysinit.\+c@{sysinit.\+c}!mcg\+\_\+clk\+\_\+khz@{mcg\+\_\+clk\+\_\+khz}}
+\index{mcg\+\_\+clk\+\_\+khz@{mcg\+\_\+clk\+\_\+khz}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{mcg\+\_\+clk\+\_\+khz}{mcg_clk_khz}}]{\setlength{\rightskip}{0pt plus 5cm}int mcg\+\_\+clk\+\_\+khz}\hypertarget{sysinit_8c_a147d9f2b0cb61752bb5c764775d9b022}{}\label{sysinit_8c_a147d9f2b0cb61752bb5c764775d9b022}
+
+
+Definition at line 11 of file sysinit.\+c.
+
+
+
+Referenced by sysinit().
+
+\index{sysinit.\+c@{sysinit.\+c}!periph\+\_\+clk\+\_\+khz@{periph\+\_\+clk\+\_\+khz}}
+\index{periph\+\_\+clk\+\_\+khz@{periph\+\_\+clk\+\_\+khz}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{periph\+\_\+clk\+\_\+khz}{periph_clk_khz}}]{\setlength{\rightskip}{0pt plus 5cm}int periph\+\_\+clk\+\_\+khz}\hypertarget{sysinit_8c_a59867450eec8beb54994d135314cd392}{}\label{sysinit_8c_a59867450eec8beb54994d135314cd392}
+
+
+Definition at line 13 of file sysinit.\+c.
+
+
+
+Referenced by sysinit().
+
+\index{sysinit.\+c@{sysinit.\+c}!pll\+\_\+clk\+\_\+khz@{pll\+\_\+clk\+\_\+khz}}
+\index{pll\+\_\+clk\+\_\+khz@{pll\+\_\+clk\+\_\+khz}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{pll\+\_\+clk\+\_\+khz}{pll_clk_khz}}]{\setlength{\rightskip}{0pt plus 5cm}int pll\+\_\+clk\+\_\+khz}\hypertarget{sysinit_8c_af7ba394e0943d9482cbdb48f3364169d}{}\label{sysinit_8c_af7ba394e0943d9482cbdb48f3364169d}
+
+
+Definition at line 14 of file sysinit.\+c.
+
+\index{sysinit.\+c@{sysinit.\+c}!uart0\+\_\+clk\+\_\+hz@{uart0\+\_\+clk\+\_\+hz}}
+\index{uart0\+\_\+clk\+\_\+hz@{uart0\+\_\+clk\+\_\+hz}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{uart0\+\_\+clk\+\_\+hz}{uart0_clk_hz}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t uart0\+\_\+clk\+\_\+hz}\hypertarget{sysinit_8c_a97635c774b70984fd29475d88c779d6e}{}\label{sysinit_8c_a97635c774b70984fd29475d88c779d6e}
+
+
+Definition at line 16 of file sysinit.\+c.
+
+\index{sysinit.\+c@{sysinit.\+c}!uart0\+\_\+clk\+\_\+khz@{uart0\+\_\+clk\+\_\+khz}}
+\index{uart0\+\_\+clk\+\_\+khz@{uart0\+\_\+clk\+\_\+khz}!sysinit.\+c@{sysinit.\+c}}
+\subsubsection[{\texorpdfstring{uart0\+\_\+clk\+\_\+khz}{uart0_clk_khz}}]{\setlength{\rightskip}{0pt plus 5cm}int uart0\+\_\+clk\+\_\+khz}\hypertarget{sysinit_8c_a18a07641cd3e9696bdc1b37f42fc214e}{}\label{sysinit_8c_a18a07641cd3e9696bdc1b37f42fc214e}
+
+
+Definition at line 15 of file sysinit.\+c.
+
+
+
+Referenced by sysinit().
+

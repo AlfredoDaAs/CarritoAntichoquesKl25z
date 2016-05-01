@@ -1,0 +1,69 @@
+\hypertarget{nvic_8c}{}\section{Sources/hal/nvic.c File Reference}
+\label{nvic_8c}\index{Sources/hal/nvic.\+c@{Sources/hal/nvic.\+c}}
+{\ttfamily \#include \char`\"{}nvic.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{nvic_8c_a71c80934bf15a4691e5a360fe0283227}{enable\+\_\+irq} (int irq)
+\item 
+void \hyperlink{nvic_8c_ac7a35f33ff72f90657561721b263c1d2}{disable\+\_\+irq} (int irq)
+\item 
+void \hyperlink{nvic_8c_a3a30db290feb837ed72b8048d71be018}{set\+\_\+irq\+\_\+priority} (int irq, int prio)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{nvic.\+c@{nvic.\+c}!disable\+\_\+irq@{disable\+\_\+irq}}
+\index{disable\+\_\+irq@{disable\+\_\+irq}!nvic.\+c@{nvic.\+c}}
+\subsubsection[{\texorpdfstring{disable\+\_\+irq(int irq)}{disable_irq(int irq)}}]{\setlength{\rightskip}{0pt plus 5cm}void disable\+\_\+irq (
+\begin{DoxyParamCaption}
+\item[{int}]{irq}
+\end{DoxyParamCaption}
+)}\hypertarget{nvic_8c_ac7a35f33ff72f90657561721b263c1d2}{}\label{nvic_8c_ac7a35f33ff72f90657561721b263c1d2}
+
+
+Definition at line 45 of file nvic.\+c.
+
+
+
+References N\+V\+I\+C\+\_\+\+I\+C\+ER.
+
+\index{nvic.\+c@{nvic.\+c}!enable\+\_\+irq@{enable\+\_\+irq}}
+\index{enable\+\_\+irq@{enable\+\_\+irq}!nvic.\+c@{nvic.\+c}}
+\subsubsection[{\texorpdfstring{enable\+\_\+irq(int irq)}{enable_irq(int irq)}}]{\setlength{\rightskip}{0pt plus 5cm}void enable\+\_\+irq (
+\begin{DoxyParamCaption}
+\item[{int}]{irq}
+\end{DoxyParamCaption}
+)}\hypertarget{nvic_8c_a71c80934bf15a4691e5a360fe0283227}{}\label{nvic_8c_a71c80934bf15a4691e5a360fe0283227}
+
+
+Definition at line 16 of file nvic.\+c.
+
+
+
+References N\+V\+I\+C\+\_\+\+I\+C\+PR, and N\+V\+I\+C\+\_\+\+I\+S\+ER.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+init().
+
+\index{nvic.\+c@{nvic.\+c}!set\+\_\+irq\+\_\+priority@{set\+\_\+irq\+\_\+priority}}
+\index{set\+\_\+irq\+\_\+priority@{set\+\_\+irq\+\_\+priority}!nvic.\+c@{nvic.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+irq\+\_\+priority(int irq, int prio)}{set_irq_priority(int irq, int prio)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+irq\+\_\+priority (
+\begin{DoxyParamCaption}
+\item[{int}]{irq, }
+\item[{int}]{prio}
+\end{DoxyParamCaption}
+)}\hypertarget{nvic_8c_a3a30db290feb837ed72b8048d71be018}{}\label{nvic_8c_a3a30db290feb837ed72b8048d71be018}
+
+
+Definition at line 73 of file nvic.\+c.
+
+
+
+References A\+R\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+\+B\+I\+TS, and N\+V\+I\+C\+\_\+\+IP.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+init().
+

@@ -1,0 +1,90 @@
+\hypertarget{struct_d_m_a___mem_map}{}\section{D\+M\+A\+\_\+\+Mem\+Map Struct Reference}
+\label{struct_d_m_a___mem_map}\index{D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}}
+
+
+{\ttfamily \#include $<$M\+K\+L25\+Z4.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{struct_d_m_a___mem_map_ac2655fa4a2c9e21906cf4e769379e83a}{R\+E\+S\+E\+R\+V\+E\+D\+\_\+0} \mbox{[}256\mbox{]}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t \hyperlink{struct_d_m_a___mem_map_a800d089db050cc5c5376f4fd1b8607f4}{SAR}\\
+\>uint32\_t \hyperlink{struct_d_m_a___mem_map_a22aca0a7ea6ca1da1a58f0fe6f32166f}{DAR}\\
+\>union \{\\
+\>\>uint32\_t \hyperlink{struct_d_m_a___mem_map_ad1e76cea4d92082ca9ed0d760ce5cefe}{DSR\_BCR}\\
+\>\>struct \{\\
+\>\>\>uint8\_t \hyperlink{struct_d_m_a___mem_map_ac2655fa4a2c9e21906cf4e769379e83a}{RESERVED\_0} \mbox{[}3\mbox{]}\\
+\>\>\>uint8\_t \hyperlink{struct_d_m_a___mem_map_a386ac5fd0aa8748b87f2de231c917b07}{DSR}\\
+\>\>\} \hyperlink{struct_d_m_a___mem_map_a7f349cbaa84a7664aa61aa115338ffa3}{DMA\_DSR\_ACCESS8BIT}\\
+\>\} \\
+\>uint32\_t \hyperlink{struct_d_m_a___mem_map_a844c0fef8183d262baec56c84a07c070}{DCR}\\
+\} \hyperlink{struct_d_m_a___mem_map_a03afa3f1b88380a72aee5aa4aec927e9}{DMA} \mbox{[}4\mbox{]}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\+MA -\/ Peripheral register structure 
+
+Definition at line 984 of file M\+K\+L25\+Z4.\+h.
+
+
+
+\subsection{Field Documentation}
+\index{D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}!D\+AR@{D\+AR}}
+\index{D\+AR@{D\+AR}!D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}}
+\subsubsection[{\texorpdfstring{D\+AR}{DAR}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t D\+M\+A\+\_\+\+Mem\+Map\+::\+D\+AR}\hypertarget{struct_d_m_a___mem_map_a22aca0a7ea6ca1da1a58f0fe6f32166f}{}\label{struct_d_m_a___mem_map_a22aca0a7ea6ca1da1a58f0fe6f32166f}
+Destination Address Register, array offset\+: 0x104, array step\+: 0x10 
+
+Definition at line 988 of file M\+K\+L25\+Z4.\+h.
+
+\index{D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}!D\+CR@{D\+CR}}
+\index{D\+CR@{D\+CR}!D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}}
+\subsubsection[{\texorpdfstring{D\+CR}{DCR}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t D\+M\+A\+\_\+\+Mem\+Map\+::\+D\+CR}\hypertarget{struct_d_m_a___mem_map_a844c0fef8183d262baec56c84a07c070}{}\label{struct_d_m_a___mem_map_a844c0fef8183d262baec56c84a07c070}
+D\+MA Control Register, array offset\+: 0x10C, array step\+: 0x10 
+
+Definition at line 996 of file M\+K\+L25\+Z4.\+h.
+
+\index{D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}!D\+MA@{D\+MA}}
+\index{D\+MA@{D\+MA}!D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}}
+\subsubsection[{\texorpdfstring{D\+MA}{DMA}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   D\+M\+A\+\_\+\+Mem\+Map\+::\+D\+MA\mbox{[}4\mbox{]}}\hypertarget{struct_d_m_a___mem_map_a03afa3f1b88380a72aee5aa4aec927e9}{}\label{struct_d_m_a___mem_map_a03afa3f1b88380a72aee5aa4aec927e9}
+\index{D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}!D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+A\+C\+C\+E\+S\+S8\+B\+IT@{D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+A\+C\+C\+E\+S\+S8\+B\+IT}}
+\index{D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+A\+C\+C\+E\+S\+S8\+B\+IT@{D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+A\+C\+C\+E\+S\+S8\+B\+IT}!D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}}
+\subsubsection[{\texorpdfstring{D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+A\+C\+C\+E\+S\+S8\+B\+IT}{DMA_DSR_ACCESS8BIT}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   D\+M\+A\+\_\+\+Mem\+Map\+::\+D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+A\+C\+C\+E\+S\+S8\+B\+IT}\hypertarget{struct_d_m_a___mem_map_a7f349cbaa84a7664aa61aa115338ffa3}{}\label{struct_d_m_a___mem_map_a7f349cbaa84a7664aa61aa115338ffa3}
+\index{D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}!D\+SR@{D\+SR}}
+\index{D\+SR@{D\+SR}!D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}}
+\subsubsection[{\texorpdfstring{D\+SR}{DSR}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t D\+M\+A\+\_\+\+Mem\+Map\+::\+D\+SR}\hypertarget{struct_d_m_a___mem_map_a386ac5fd0aa8748b87f2de231c917b07}{}\label{struct_d_m_a___mem_map_a386ac5fd0aa8748b87f2de231c917b07}
+D\+M\+A\+\_\+\+D\+S\+R0 register...D\+M\+A\+\_\+\+D\+S\+R3 register., array offset\+: 0x10B, array step\+: 0x10 
+
+Definition at line 993 of file M\+K\+L25\+Z4.\+h.
+
+\index{D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}!D\+S\+R\+\_\+\+B\+CR@{D\+S\+R\+\_\+\+B\+CR}}
+\index{D\+S\+R\+\_\+\+B\+CR@{D\+S\+R\+\_\+\+B\+CR}!D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}}
+\subsubsection[{\texorpdfstring{D\+S\+R\+\_\+\+B\+CR}{DSR_BCR}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t D\+M\+A\+\_\+\+Mem\+Map\+::\+D\+S\+R\+\_\+\+B\+CR}\hypertarget{struct_d_m_a___mem_map_ad1e76cea4d92082ca9ed0d760ce5cefe}{}\label{struct_d_m_a___mem_map_ad1e76cea4d92082ca9ed0d760ce5cefe}
+D\+MA Status Register / Byte Count Register, array offset\+: 0x108, array step\+: 0x10 
+
+Definition at line 990 of file M\+K\+L25\+Z4.\+h.
+
+\index{D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}!R\+E\+S\+E\+R\+V\+E\+D\+\_\+0@{R\+E\+S\+E\+R\+V\+E\+D\+\_\+0}}
+\index{R\+E\+S\+E\+R\+V\+E\+D\+\_\+0@{R\+E\+S\+E\+R\+V\+E\+D\+\_\+0}!D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}}
+\subsubsection[{\texorpdfstring{R\+E\+S\+E\+R\+V\+E\+D\+\_\+0}{RESERVED_0}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t D\+M\+A\+\_\+\+Mem\+Map\+::\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+0\mbox{[}3\mbox{]}}\hypertarget{struct_d_m_a___mem_map_ac2655fa4a2c9e21906cf4e769379e83a}{}\label{struct_d_m_a___mem_map_ac2655fa4a2c9e21906cf4e769379e83a}
+
+
+Definition at line 985 of file M\+K\+L25\+Z4.\+h.
+
+\index{D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}!S\+AR@{S\+AR}}
+\index{S\+AR@{S\+AR}!D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}}
+\subsubsection[{\texorpdfstring{S\+AR}{SAR}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t D\+M\+A\+\_\+\+Mem\+Map\+::\+S\+AR}\hypertarget{struct_d_m_a___mem_map_a800d089db050cc5c5376f4fd1b8607f4}{}\label{struct_d_m_a___mem_map_a800d089db050cc5c5376f4fd1b8607f4}
+Source Address Register, array offset\+: 0x100, array step\+: 0x10 
+
+Definition at line 987 of file M\+K\+L25\+Z4.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Project\+\_\+\+Headers/\hyperlink{_m_k_l25_z4_8h}{M\+K\+L25\+Z4.\+h}\end{DoxyCompactItemize}

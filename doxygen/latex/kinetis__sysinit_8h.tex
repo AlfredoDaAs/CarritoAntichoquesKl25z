@@ -1,0 +1,61 @@
+\hypertarget{kinetis__sysinit_8h}{}\section{Project\+\_\+\+Settings/\+Startup\+\_\+\+Code/kinetis\+\_\+sysinit.h File Reference}
+\label{kinetis__sysinit_8h}\index{Project\+\_\+\+Settings/\+Startup\+\_\+\+Code/kinetis\+\_\+sysinit.\+h@{Project\+\_\+\+Settings/\+Startup\+\_\+\+Code/kinetis\+\_\+sysinit.\+h}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{kinetis__sysinit_8h_aba026211a4df32bf206b017a3d8a7f7e}{K\+I\+N\+E\+T\+I\+S\+\_\+\+W\+D\+O\+G\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+C\+T\+RL}~0x0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{kinetis__sysinit_8h_aa26e7fe3b6c8854139ce1e69a3e181e4}{\+\_\+\+\_\+init\+\_\+hardware} ()
+\item 
+void \hyperlink{kinetis__sysinit_8h_a678d0aa1dbbf42119a8358cc68140b51}{Default\+\_\+\+Handler} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{kinetis\+\_\+sysinit.\+h@{kinetis\+\_\+sysinit.\+h}!K\+I\+N\+E\+T\+I\+S\+\_\+\+W\+D\+O\+G\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+C\+T\+RL@{K\+I\+N\+E\+T\+I\+S\+\_\+\+W\+D\+O\+G\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+C\+T\+RL}}
+\index{K\+I\+N\+E\+T\+I\+S\+\_\+\+W\+D\+O\+G\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+C\+T\+RL@{K\+I\+N\+E\+T\+I\+S\+\_\+\+W\+D\+O\+G\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+C\+T\+RL}!kinetis\+\_\+sysinit.\+h@{kinetis\+\_\+sysinit.\+h}}
+\subsubsection[{\texorpdfstring{K\+I\+N\+E\+T\+I\+S\+\_\+\+W\+D\+O\+G\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+C\+T\+RL}{KINETIS_WDOG_DISABLED_CTRL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\+I\+N\+E\+T\+I\+S\+\_\+\+W\+D\+O\+G\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+C\+T\+RL~0x0}\hypertarget{kinetis__sysinit_8h_aba026211a4df32bf206b017a3d8a7f7e}{}\label{kinetis__sysinit_8h_aba026211a4df32bf206b017a3d8a7f7e}
+
+
+Definition at line 15 of file kinetis\+\_\+sysinit.\+h.
+
+
+
+Referenced by \+\_\+\+\_\+init\+\_\+hardware().
+
+
+
+\subsection{Function Documentation}
+\index{kinetis\+\_\+sysinit.\+h@{kinetis\+\_\+sysinit.\+h}!\+\_\+\+\_\+init\+\_\+hardware@{\+\_\+\+\_\+init\+\_\+hardware}}
+\index{\+\_\+\+\_\+init\+\_\+hardware@{\+\_\+\+\_\+init\+\_\+hardware}!kinetis\+\_\+sysinit.\+h@{kinetis\+\_\+sysinit.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+hardware()}{__init_hardware()}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+\+\_\+init\+\_\+hardware (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{kinetis__sysinit_8h_aa26e7fe3b6c8854139ce1e69a3e181e4}{}\label{kinetis__sysinit_8h_aa26e7fe3b6c8854139ce1e69a3e181e4}
+=========================================================================== \subsection*{Reset handler }
+
+Definition at line 40 of file kinetis\+\_\+sysinit.\+c.
+
+
+
+References \+\_\+\+\_\+vector\+\_\+table, K\+I\+N\+E\+T\+I\+S\+\_\+\+W\+D\+O\+G\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+C\+T\+RL, S\+C\+B\+\_\+\+V\+T\+OR, and S\+I\+M\+\_\+\+C\+O\+PC.
+
+\index{kinetis\+\_\+sysinit.\+h@{kinetis\+\_\+sysinit.\+h}!Default\+\_\+\+Handler@{Default\+\_\+\+Handler}}
+\index{Default\+\_\+\+Handler@{Default\+\_\+\+Handler}!kinetis\+\_\+sysinit.\+h@{kinetis\+\_\+sysinit.\+h}}
+\subsubsection[{\texorpdfstring{Default\+\_\+\+Handler()}{Default_Handler()}}]{\setlength{\rightskip}{0pt plus 5cm}void Default\+\_\+\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{kinetis__sysinit_8h_a678d0aa1dbbf42119a8358cc68140b51}{}\label{kinetis__sysinit_8h_a678d0aa1dbbf42119a8358cc68140b51}
+=========================================================================== \subsection*{Default interrupt handler }
+
+Definition at line 30 of file kinetis\+\_\+sysinit.\+c.
+
+
+
+Referenced by N\+M\+I\+\_\+\+Handler().
+

@@ -1,0 +1,155 @@
+\hypertarget{____arm__start_8c}{}\section{Project\+\_\+\+Settings/\+Startup\+\_\+\+Code/\+\_\+\+\_\+arm\+\_\+start.c File Reference}
+\label{____arm__start_8c}\index{Project\+\_\+\+Settings/\+Startup\+\_\+\+Code/\+\_\+\+\_\+arm\+\_\+start.\+c@{Project\+\_\+\+Settings/\+Startup\+\_\+\+Code/\+\_\+\+\_\+arm\+\_\+start.\+c}}
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$runtime\+\_\+configuration.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{____arm__start_8c_ab3c9da1beffe422a24001836a91bd370}{\+\_\+\+\_\+call\+\_\+static\+\_\+initializers} (void)
+\item 
+int \hyperlink{____arm__start_8c_a2c3f6775325c30275d11c6abee2db6a0}{main} (int, char $\ast$$\ast$)
+\item 
+void \hyperlink{____arm__start_8c_a85078be29214e670653250f605ff797e}{\+\_\+\+\_\+init\+\_\+registers} ()
+\item 
+void \hyperlink{____arm__start_8c_aa26e7fe3b6c8854139ce1e69a3e181e4}{\+\_\+\+\_\+init\+\_\+hardware} ()
+\item 
+void \hyperlink{____arm__start_8c_abdb8586df61436f61fae8a1aa8ab4306}{\+\_\+\+\_\+init\+\_\+user} ()
+\item 
+static void \hyperlink{____arm__start_8c_af6e30729eee713343841ed6dc5a0aeb8}{zero\+\_\+fill\+\_\+bss} (void)
+\item 
+void \hyperlink{____arm__start_8c_ab4ccc436ed44ffac8d3ab82bba93476d}{\+\_\+\+\_\+iar\+\_\+program\+\_\+start} (void)
+\item 
+void \hyperlink{____arm__start_8c_a1291096ffdfeb4d928a6020b5e9a8ccc}{\+\_\+\+\_\+thumb\+\_\+startup} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+E\+W\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+C char $\ast$ \hyperlink{____arm__start_8c_a6b7aa5e222e07448f2ef9af097523b15}{argv} \mbox{[}$\,$\mbox{]} = \{ 0 \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}!\+\_\+\+\_\+call\+\_\+static\+\_\+initializers@{\+\_\+\+\_\+call\+\_\+static\+\_\+initializers}}
+\index{\+\_\+\+\_\+call\+\_\+static\+\_\+initializers@{\+\_\+\+\_\+call\+\_\+static\+\_\+initializers}!\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+call\+\_\+static\+\_\+initializers(void)}{__call_static_initializers(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+\+\_\+call\+\_\+static\+\_\+initializers (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{____arm__start_8c_ab3c9da1beffe422a24001836a91bd370}{}\label{____arm__start_8c_ab3c9da1beffe422a24001836a91bd370}
+
+
+Referenced by \+\_\+\+\_\+thumb\+\_\+startup().
+
+\index{\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}!\+\_\+\+\_\+iar\+\_\+program\+\_\+start@{\+\_\+\+\_\+iar\+\_\+program\+\_\+start}}
+\index{\+\_\+\+\_\+iar\+\_\+program\+\_\+start@{\+\_\+\+\_\+iar\+\_\+program\+\_\+start}!\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+iar\+\_\+program\+\_\+start(void)}{__iar_program_start(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+\+\_\+iar\+\_\+program\+\_\+start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{____arm__start_8c_ab4ccc436ed44ffac8d3ab82bba93476d}{}\label{____arm__start_8c_ab4ccc436ed44ffac8d3ab82bba93476d}
+
+
+Definition at line 155 of file \+\_\+\+\_\+arm\+\_\+start.\+c.
+
+
+
+References \+\_\+\+\_\+thumb\+\_\+startup().
+
+\index{\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}!\+\_\+\+\_\+init\+\_\+hardware@{\+\_\+\+\_\+init\+\_\+hardware}}
+\index{\+\_\+\+\_\+init\+\_\+hardware@{\+\_\+\+\_\+init\+\_\+hardware}!\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+hardware()}{__init_hardware()}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+\+\_\+init\+\_\+hardware (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{____arm__start_8c_aa26e7fe3b6c8854139ce1e69a3e181e4}{}\label{____arm__start_8c_aa26e7fe3b6c8854139ce1e69a3e181e4}
+=========================================================================== \subsection*{Reset handler }
+
+Definition at line 40 of file kinetis\+\_\+sysinit.\+c.
+
+
+
+Referenced by \+\_\+\+\_\+thumb\+\_\+startup().
+
+\index{\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}!\+\_\+\+\_\+init\+\_\+registers@{\+\_\+\+\_\+init\+\_\+registers}}
+\index{\+\_\+\+\_\+init\+\_\+registers@{\+\_\+\+\_\+init\+\_\+registers}!\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+registers()}{__init_registers()}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+\+\_\+init\+\_\+registers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{____arm__start_8c_a85078be29214e670653250f605ff797e}{}\label{____arm__start_8c_a85078be29214e670653250f605ff797e}
+
+
+Referenced by \+\_\+\+\_\+thumb\+\_\+startup().
+
+\index{\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}!\+\_\+\+\_\+init\+\_\+user@{\+\_\+\+\_\+init\+\_\+user}}
+\index{\+\_\+\+\_\+init\+\_\+user@{\+\_\+\+\_\+init\+\_\+user}!\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+user()}{__init_user()}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+\+\_\+init\+\_\+user (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{____arm__start_8c_abdb8586df61436f61fae8a1aa8ab4306}{}\label{____arm__start_8c_abdb8586df61436f61fae8a1aa8ab4306}
+
+
+Referenced by \+\_\+\+\_\+thumb\+\_\+startup().
+
+\index{\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}!\+\_\+\+\_\+thumb\+\_\+startup@{\+\_\+\+\_\+thumb\+\_\+startup}}
+\index{\+\_\+\+\_\+thumb\+\_\+startup@{\+\_\+\+\_\+thumb\+\_\+startup}!\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+thumb\+\_\+startup(void)}{__thumb_startup(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+\+\_\+thumb\+\_\+startup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{____arm__start_8c_a1291096ffdfeb4d928a6020b5e9a8ccc}{}\label{____arm__start_8c_a1291096ffdfeb4d928a6020b5e9a8ccc}
+
+
+Definition at line 171 of file \+\_\+\+\_\+arm\+\_\+start.\+c.
+
+
+
+References \+\_\+\+\_\+call\+\_\+static\+\_\+initializers(), \+\_\+\+\_\+init\+\_\+hardware(), \+\_\+\+\_\+init\+\_\+registers(), \+\_\+\+\_\+init\+\_\+user(), argv, main(), and zero\+\_\+fill\+\_\+bss().
+
+
+
+Referenced by \+\_\+\+\_\+iar\+\_\+program\+\_\+start(), and N\+M\+I\+\_\+\+Handler().
+
+\index{\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}!main@{main}}
+\index{main@{main}!\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}}
+\subsubsection[{\texorpdfstring{main(int, char $\ast$$\ast$)}{main(int, char **)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{char $\ast$$\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{____arm__start_8c_a2c3f6775325c30275d11c6abee2db6a0}{}\label{____arm__start_8c_a2c3f6775325c30275d11c6abee2db6a0}
+
+
+Referenced by \+\_\+\+\_\+thumb\+\_\+startup().
+
+\index{\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}!zero\+\_\+fill\+\_\+bss@{zero\+\_\+fill\+\_\+bss}}
+\index{zero\+\_\+fill\+\_\+bss@{zero\+\_\+fill\+\_\+bss}!\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}}
+\subsubsection[{\texorpdfstring{zero\+\_\+fill\+\_\+bss(void)}{zero_fill_bss(void)}}]{\setlength{\rightskip}{0pt plus 5cm}static void zero\+\_\+fill\+\_\+bss (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{____arm__start_8c_af6e30729eee713343841ed6dc5a0aeb8}{}\label{____arm__start_8c_af6e30729eee713343841ed6dc5a0aeb8}
+
+
+Definition at line 129 of file \+\_\+\+\_\+arm\+\_\+start.\+c.
+
+
+
+Referenced by \+\_\+\+\_\+thumb\+\_\+startup().
+
+
+
+\subsection{Variable Documentation}
+\index{\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}!argv@{argv}}
+\index{argv@{argv}!\+\_\+\+\_\+arm\+\_\+start.\+c@{\+\_\+\+\_\+arm\+\_\+start.\+c}}
+\subsubsection[{\texorpdfstring{argv}{argv}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+E\+W\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+C char$\ast$ argv\mbox{[}$\,$\mbox{]} = \{ 0 \}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{____arm__start_8c_a6b7aa5e222e07448f2ef9af097523b15}{}\label{____arm__start_8c_a6b7aa5e222e07448f2ef9af097523b15}
+
+
+Definition at line 45 of file \+\_\+\+\_\+arm\+\_\+start.\+c.
+
+
+
+Referenced by \+\_\+\+\_\+thumb\+\_\+startup().
+

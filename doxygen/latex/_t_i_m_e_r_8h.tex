@@ -1,0 +1,90 @@
+\hypertarget{_t_i_m_e_r_8h}{}\section{Sources/hal/\+T\+I\+M\+ER.h File Reference}
+\label{_t_i_m_e_r_8h}\index{Sources/hal/\+T\+I\+M\+E\+R.\+h@{Sources/hal/\+T\+I\+M\+E\+R.\+h}}
+{\ttfamily \#include \char`\"{}Types.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_t_i_m_e_r_8h_a4aa0158d01c964d28f68586ed011cfc7}{vfn\+Pit1\+\_\+\+I\+RQ} (void)
+\item 
+void \hyperlink{_t_i_m_e_r_8h_a2ab5d225c336352ad245833ddd058789}{vfn\+Stop\+Timer} (void)
+\item 
+void \hyperlink{_t_i_m_e_r_8h_ad0e05148477d73b191e83657025450ac}{vfn\+Set\+Timer} (\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32} u32\+L\+D\+V\+AL)
+\item 
+void \hyperlink{_t_i_m_e_r_8h_a9104182624a15ee9ef5381a2a9e8e89a}{vfn\+Timer\+Init} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{T\+I\+M\+E\+R.\+h@{T\+I\+M\+E\+R.\+h}!vfn\+Pit1\+\_\+\+I\+RQ@{vfn\+Pit1\+\_\+\+I\+RQ}}
+\index{vfn\+Pit1\+\_\+\+I\+RQ@{vfn\+Pit1\+\_\+\+I\+RQ}!T\+I\+M\+E\+R.\+h@{T\+I\+M\+E\+R.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Pit1\+\_\+\+I\+R\+Q(void)}{vfnPit1_IRQ(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Pit1\+\_\+\+I\+RQ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_t_i_m_e_r_8h_a4aa0158d01c964d28f68586ed011cfc7}{}\label{_t_i_m_e_r_8h_a4aa0158d01c964d28f68586ed011cfc7}
+
+
+Definition at line 97 of file T\+I\+M\+E\+R.\+c.
+
+
+
+References vfn\+Led\+Toogle(), and vfn\+Set\+Timer().
+
+\index{T\+I\+M\+E\+R.\+h@{T\+I\+M\+E\+R.\+h}!vfn\+Set\+Timer@{vfn\+Set\+Timer}}
+\index{vfn\+Set\+Timer@{vfn\+Set\+Timer}!T\+I\+M\+E\+R.\+h@{T\+I\+M\+E\+R.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Set\+Timer(\+U32 u32\+L\+D\+V\+A\+L)}{vfnSetTimer(U32 u32LDVAL)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Set\+Timer (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{u32\+L\+D\+V\+AL}
+\end{DoxyParamCaption}
+)}\hypertarget{_t_i_m_e_r_8h_ad0e05148477d73b191e83657025450ac}{}\label{_t_i_m_e_r_8h_ad0e05148477d73b191e83657025450ac}
+
+
+Definition at line 72 of file T\+I\+M\+E\+R.\+c.
+
+
+
+References P\+I\+T\+\_\+\+L\+D\+V\+A\+L1, P\+I\+T\+\_\+\+T\+C\+T\+R\+L1, P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+E\+N\+\_\+\+M\+A\+SK, and P\+I\+T\+\_\+\+T\+F\+L\+G1.
+
+
+
+Referenced by vfn\+Pit1\+\_\+\+I\+R\+Q().
+
+\index{T\+I\+M\+E\+R.\+h@{T\+I\+M\+E\+R.\+h}!vfn\+Stop\+Timer@{vfn\+Stop\+Timer}}
+\index{vfn\+Stop\+Timer@{vfn\+Stop\+Timer}!T\+I\+M\+E\+R.\+h@{T\+I\+M\+E\+R.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Stop\+Timer(void)}{vfnStopTimer(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Stop\+Timer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_t_i_m_e_r_8h_a2ab5d225c336352ad245833ddd058789}{}\label{_t_i_m_e_r_8h_a2ab5d225c336352ad245833ddd058789}
+
+
+Definition at line 86 of file T\+I\+M\+E\+R.\+c.
+
+
+
+References P\+I\+T\+\_\+\+T\+C\+T\+R\+L1, and P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+E\+N\+\_\+\+M\+A\+SK.
+
+\index{T\+I\+M\+E\+R.\+h@{T\+I\+M\+E\+R.\+h}!vfn\+Timer\+Init@{vfn\+Timer\+Init}}
+\index{vfn\+Timer\+Init@{vfn\+Timer\+Init}!T\+I\+M\+E\+R.\+h@{T\+I\+M\+E\+R.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Timer\+Init(void)}{vfnTimerInit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Timer\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_t_i_m_e_r_8h_a9104182624a15ee9ef5381a2a9e8e89a}{}\label{_t_i_m_e_r_8h_a9104182624a15ee9ef5381a2a9e8e89a}
+
+
+Definition at line 56 of file T\+I\+M\+E\+R.\+c.
+
+
+
+References N\+V\+I\+C\+\_\+\+I\+S\+ER, P\+I\+T\+\_\+\+L\+D\+V\+A\+L1, P\+I\+T\+\_\+\+M\+CR, P\+I\+T\+\_\+\+T\+C\+T\+R\+L1, P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+E\+N\+\_\+\+M\+A\+SK, P\+I\+T\+\_\+\+T\+C\+T\+R\+L\+\_\+\+T\+I\+E\+\_\+\+M\+A\+SK, S\+I\+M\+\_\+\+S\+C\+G\+C6, and S\+I\+M\+\_\+\+S\+C\+G\+C6\+\_\+\+P\+I\+T\+\_\+\+M\+A\+SK.
+

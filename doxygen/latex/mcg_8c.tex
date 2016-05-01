@@ -1,0 +1,73 @@
+\hypertarget{mcg_8c}{}\section{Sources/hal/mcg.c File Reference}
+\label{mcg_8c}\index{Sources/hal/mcg.\+c@{Sources/hal/mcg.\+c}}
+{\ttfamily \#include \char`\"{}mcg.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}derivative.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{mcg_8c_af8e5a5c6d34e9fb3f80fc94b94708dcd}{pll\+\_\+init} (int crystal\+\_\+val, unsigned char hgo\+\_\+val, unsigned char erefs\+\_\+val, signed char prdiv\+\_\+val, signed char vdiv\+\_\+val, unsigned char mcgout\+\_\+select)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{mcg_8c_a7fa854056a09162506d2e1e8ca57fd6d}{core\+\_\+clk\+\_\+khz}
+\item 
+char \hyperlink{mcg_8c_a66bc4b902ddebd3bd0f8cd71bc2f9441}{drs\+\_\+val}
+\item 
+char \hyperlink{mcg_8c_a4364c6c8ebbce815962149280ea941cc}{dmx32\+\_\+val}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{mcg.\+c@{mcg.\+c}!pll\+\_\+init@{pll\+\_\+init}}
+\index{pll\+\_\+init@{pll\+\_\+init}!mcg.\+c@{mcg.\+c}}
+\subsubsection[{\texorpdfstring{pll\+\_\+init(int crystal\+\_\+val, unsigned char hgo\+\_\+val, unsigned char erefs\+\_\+val, signed char prdiv\+\_\+val, signed char vdiv\+\_\+val, unsigned char mcgout\+\_\+select)}{pll_init(int crystal_val, unsigned char hgo_val, unsigned char erefs_val, signed char prdiv_val, signed char vdiv_val, unsigned char mcgout_select)}}]{\setlength{\rightskip}{0pt plus 5cm}int pll\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{int}]{crystal\+\_\+val, }
+\item[{unsigned char}]{hgo\+\_\+val, }
+\item[{unsigned char}]{erefs\+\_\+val, }
+\item[{signed char}]{prdiv\+\_\+val, }
+\item[{signed char}]{vdiv\+\_\+val, }
+\item[{unsigned char}]{mcgout\+\_\+select}
+\end{DoxyParamCaption}
+)}\hypertarget{mcg_8c_af8e5a5c6d34e9fb3f80fc94b94708dcd}{}\label{mcg_8c_af8e5a5c6d34e9fb3f80fc94b94708dcd}
+
+
+Definition at line 50 of file mcg.\+c.
+
+
+
+References M\+C\+G\+\_\+\+C1, M\+C\+G\+\_\+\+C1\+\_\+\+C\+L\+KS, M\+C\+G\+\_\+\+C1\+\_\+\+C\+L\+K\+S\+\_\+\+M\+A\+SK, M\+C\+G\+\_\+\+C1\+\_\+\+F\+R\+D\+IV, M\+C\+G\+\_\+\+C1\+\_\+\+F\+R\+D\+I\+V\+\_\+\+M\+A\+SK, M\+C\+G\+\_\+\+C1\+\_\+\+I\+R\+E\+F\+S\+\_\+\+M\+A\+SK, M\+C\+G\+\_\+\+C2, M\+C\+G\+\_\+\+C2\+\_\+\+E\+R\+E\+F\+S0\+\_\+\+M\+A\+SK, M\+C\+G\+\_\+\+C2\+\_\+\+E\+R\+E\+F\+S0\+\_\+\+S\+H\+I\+FT, M\+C\+G\+\_\+\+C2\+\_\+\+H\+G\+O0\+\_\+\+M\+A\+SK, M\+C\+G\+\_\+\+C2\+\_\+\+H\+G\+O0\+\_\+\+S\+H\+I\+FT, M\+C\+G\+\_\+\+C2\+\_\+\+R\+A\+N\+G\+E0, M\+C\+G\+\_\+\+C2\+\_\+\+R\+A\+N\+G\+E0\+\_\+\+M\+A\+SK, M\+C\+G\+\_\+\+C5, M\+C\+G\+\_\+\+C5\+\_\+\+P\+R\+D\+I\+V0, M\+C\+G\+\_\+\+C5\+\_\+\+P\+R\+D\+I\+V0\+\_\+\+M\+A\+SK, M\+C\+G\+\_\+\+C6, M\+C\+G\+\_\+\+C6\+\_\+\+C\+M\+E0\+\_\+\+M\+A\+SK, M\+C\+G\+\_\+\+C6\+\_\+\+P\+L\+L\+S\+\_\+\+M\+A\+SK, M\+C\+G\+\_\+\+C6\+\_\+\+V\+D\+I\+V0, M\+C\+G\+\_\+\+C6\+\_\+\+V\+D\+I\+V0\+\_\+\+M\+A\+SK, M\+C\+G\+\_\+S, M\+C\+G\+\_\+\+S\+\_\+\+C\+L\+K\+S\+T\+\_\+\+M\+A\+SK, M\+C\+G\+\_\+\+S\+\_\+\+C\+L\+K\+S\+T\+\_\+\+S\+H\+I\+FT, M\+C\+G\+\_\+\+S\+\_\+\+I\+R\+E\+F\+S\+T\+\_\+\+M\+A\+SK, M\+C\+G\+\_\+\+S\+\_\+\+L\+O\+C\+K0\+\_\+\+M\+A\+SK, M\+C\+G\+\_\+\+S\+\_\+\+O\+S\+C\+I\+N\+I\+T0\+\_\+\+M\+A\+SK, and M\+C\+G\+\_\+\+S\+\_\+\+P\+L\+L\+S\+T\+\_\+\+M\+A\+SK.
+
+
+
+Referenced by sysinit().
+
+
+
+\subsection{Variable Documentation}
+\index{mcg.\+c@{mcg.\+c}!core\+\_\+clk\+\_\+khz@{core\+\_\+clk\+\_\+khz}}
+\index{core\+\_\+clk\+\_\+khz@{core\+\_\+clk\+\_\+khz}!mcg.\+c@{mcg.\+c}}
+\subsubsection[{\texorpdfstring{core\+\_\+clk\+\_\+khz}{core_clk_khz}}]{\setlength{\rightskip}{0pt plus 5cm}int core\+\_\+clk\+\_\+khz}\hypertarget{mcg_8c_a7fa854056a09162506d2e1e8ca57fd6d}{}\label{mcg_8c_a7fa854056a09162506d2e1e8ca57fd6d}
+
+
+Definition at line 12 of file sysinit.\+c.
+
+
+
+Referenced by sysinit().
+
+\index{mcg.\+c@{mcg.\+c}!dmx32\+\_\+val@{dmx32\+\_\+val}}
+\index{dmx32\+\_\+val@{dmx32\+\_\+val}!mcg.\+c@{mcg.\+c}}
+\subsubsection[{\texorpdfstring{dmx32\+\_\+val}{dmx32_val}}]{\setlength{\rightskip}{0pt plus 5cm}char dmx32\+\_\+val}\hypertarget{mcg_8c_a4364c6c8ebbce815962149280ea941cc}{}\label{mcg_8c_a4364c6c8ebbce815962149280ea941cc}
+
+
+Definition at line 15 of file mcg.\+c.
+
+\index{mcg.\+c@{mcg.\+c}!drs\+\_\+val@{drs\+\_\+val}}
+\index{drs\+\_\+val@{drs\+\_\+val}!mcg.\+c@{mcg.\+c}}
+\subsubsection[{\texorpdfstring{drs\+\_\+val}{drs_val}}]{\setlength{\rightskip}{0pt plus 5cm}char drs\+\_\+val}\hypertarget{mcg_8c_a66bc4b902ddebd3bd0f8cd71bc2f9441}{}\label{mcg_8c_a66bc4b902ddebd3bd0f8cd71bc2f9441}
+
+
+Definition at line 15 of file mcg.\+c.
+

@@ -1,0 +1,165 @@
+\hypertarget{_g_p_i_o_8c}{}\section{Sources/hal/\+G\+P\+IO.c File Reference}
+\label{_g_p_i_o_8c}\index{Sources/hal/\+G\+P\+I\+O.\+c@{Sources/hal/\+G\+P\+I\+O.\+c}}
+{\ttfamily \#include \char`\"{}G\+P\+I\+O.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_g_p_i_o_8c_a8b78fd6431c360517c0181bceb8bb2be}{vfn\+Init\+Gpio} (\hyperlink{_p_o_r_t_cfgs_8h_ad42be2970e8608c74557dc05872fc38f}{e\+Ports} port)
+\item 
+void \hyperlink{_g_p_i_o_8c_a5252be2552874175037a6c4226e6a12f}{vfn\+Set\+G\+P\+I\+O\+Port\+Pins} (\hyperlink{_p_o_r_t_cfgs_8h_ad42be2970e8608c74557dc05872fc38f}{e\+Ports} port, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} u08array\+Pins\mbox{[}$\,$\mbox{]}, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} u08array\+Pins\+Size, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} u08\+Pins\+Direction)
+\item 
+void \hyperlink{_g_p_i_o_8c_a99b7ac7b6544b7c6ba675051722dc9df}{vfn\+Set\+Bit} (\hyperlink{_p_o_r_t_cfgs_8h_ad42be2970e8608c74557dc05872fc38f}{e\+Ports} port, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} u08\+Bit)
+\item 
+void \hyperlink{_g_p_i_o_8c_a15fd7c67b571c4564574d46fbb8659fc}{vfn\+Clear\+Bit} (\hyperlink{_p_o_r_t_cfgs_8h_ad42be2970e8608c74557dc05872fc38f}{e\+Ports} port, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} u08\+Bit)
+\item 
+\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{_g_p_i_o_8c_a40a71d4a2ee6fa8e9bde6dd502bc461e}{vfn\+Read\+Data} (\hyperlink{_p_o_r_t_cfgs_8h_ad42be2970e8608c74557dc05872fc38f}{e\+Ports} port)
+\item 
+void \hyperlink{_g_p_i_o_8c_a4ca5f3476f34f2e7adafa025c1c87621}{vfn\+Send\+Byte} (\hyperlink{_p_o_r_t_cfgs_8h_ad42be2970e8608c74557dc05872fc38f}{e\+Ports} port, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} u08\+Byte)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{_g_p_i_o_8c_a9a25b26bdacd3943ea672804c0eac7dc}{arr\+S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+TS} \mbox{[}$\,$\mbox{]} = \{\hyperlink{group___s_i_m___register___masks_ga9c4853233394870202cccd7844fc8a56}{S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+T\+A\+\_\+\+M\+A\+SK}, \hyperlink{group___s_i_m___register___masks_ga5509cf72c7508dd77f0a1a9e631943e8}{S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+T\+B\+\_\+\+M\+A\+SK}, \hyperlink{group___s_i_m___register___masks_gaac31449d101ad0d05f2bed682571be35}{S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+T\+C\+\_\+\+M\+A\+SK}, \hyperlink{group___s_i_m___register___masks_ga723a55222eb5f8fd25da5c956aa50e7b}{S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+T\+D\+\_\+\+M\+A\+SK}, \hyperlink{group___s_i_m___register___masks_ga3d5e3e51d345fe424a4f24aa9ae73dc1}{S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+T\+E\+\_\+\+M\+A\+SK}\}
+\item 
+\hyperlink{group___g_p_i_o___peripheral_ga31c1eddda45aa085f51142987e05ada5}{G\+P\+I\+O\+\_\+\+Mem\+Map\+Ptr} \hyperlink{_g_p_i_o_8c_adf68e567d2b85e90fb0a974b0cda0197}{arr\+G\+P\+I\+O\+Base\+Ptrs} \mbox{[}$\,$\mbox{]} = \hyperlink{group___g_p_i_o___peripheral_gad0f7206167a584b1e75a81a5c30fa1c2}{G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+T\+RS}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}!vfn\+Clear\+Bit@{vfn\+Clear\+Bit}}
+\index{vfn\+Clear\+Bit@{vfn\+Clear\+Bit}!G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Clear\+Bit(e\+Ports port, U08 u08\+Bit)}{vfnClearBit(ePorts port, U08 u08Bit)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Clear\+Bit (
+\begin{DoxyParamCaption}
+\item[{{\bf e\+Ports}}]{port, }
+\item[{{\bf U08}}]{u08\+Bit}
+\end{DoxyParamCaption}
+)}\hypertarget{_g_p_i_o_8c_a15fd7c67b571c4564574d46fbb8659fc}{}\label{_g_p_i_o_8c_a15fd7c67b571c4564574d46fbb8659fc}
+
+
+Definition at line 109 of file G\+P\+I\+O.\+c.
+
+
+
+References G\+P\+I\+O\+\_\+\+P\+D\+O\+R\+\_\+\+R\+EG, and U32\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT.
+
+
+
+Referenced by main(), vfn\+Parar(), and vfn\+Send\+Data().
+
+\index{G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}!vfn\+Init\+Gpio@{vfn\+Init\+Gpio}}
+\index{vfn\+Init\+Gpio@{vfn\+Init\+Gpio}!G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Init\+Gpio(e\+Ports port)}{vfnInitGpio(ePorts port)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Init\+Gpio (
+\begin{DoxyParamCaption}
+\item[{{\bf e\+Ports}}]{port}
+\end{DoxyParamCaption}
+)}\hypertarget{_g_p_i_o_8c_a8b78fd6431c360517c0181bceb8bb2be}{}\label{_g_p_i_o_8c_a8b78fd6431c360517c0181bceb8bb2be}
+
+
+Definition at line 62 of file G\+P\+I\+O.\+c.
+
+
+
+References arr\+S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+TS, and S\+I\+M\+\_\+\+S\+C\+G\+C5.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+init(), main(), vfn\+Init\+Adc(), vfn\+Init\+Motors(), vfn\+Init\+Pantalla(), vfn\+Init\+P\+W\+M(), and vfn\+Init\+Ultrasonico().
+
+\index{G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}!vfn\+Read\+Data@{vfn\+Read\+Data}}
+\index{vfn\+Read\+Data@{vfn\+Read\+Data}!G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Read\+Data(e\+Ports port)}{vfnReadData(ePorts port)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} vfn\+Read\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf e\+Ports}}]{port}
+\end{DoxyParamCaption}
+)}\hypertarget{_g_p_i_o_8c_a40a71d4a2ee6fa8e9bde6dd502bc461e}{}\label{_g_p_i_o_8c_a40a71d4a2ee6fa8e9bde6dd502bc461e}
+
+
+Definition at line 119 of file G\+P\+I\+O.\+c.
+
+
+
+References G\+P\+I\+O\+\_\+\+P\+D\+O\+R\+\_\+\+R\+EG.
+
+\index{G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}!vfn\+Send\+Byte@{vfn\+Send\+Byte}}
+\index{vfn\+Send\+Byte@{vfn\+Send\+Byte}!G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Send\+Byte(e\+Ports port, U08 u08\+Byte)}{vfnSendByte(ePorts port, U08 u08Byte)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Send\+Byte (
+\begin{DoxyParamCaption}
+\item[{{\bf e\+Ports}}]{port, }
+\item[{{\bf U08}}]{u08\+Byte}
+\end{DoxyParamCaption}
+)}\hypertarget{_g_p_i_o_8c_a4ca5f3476f34f2e7adafa025c1c87621}{}\label{_g_p_i_o_8c_a4ca5f3476f34f2e7adafa025c1c87621}
+
+
+Definition at line 123 of file G\+P\+I\+O.\+c.
+
+
+
+References G\+P\+I\+O\+\_\+\+P\+D\+O\+R\+\_\+\+R\+EG.
+
+
+
+Referenced by vfn\+Send\+Data().
+
+\index{G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}!vfn\+Set\+Bit@{vfn\+Set\+Bit}}
+\index{vfn\+Set\+Bit@{vfn\+Set\+Bit}!G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Set\+Bit(e\+Ports port, U08 u08\+Bit)}{vfnSetBit(ePorts port, U08 u08Bit)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Set\+Bit (
+\begin{DoxyParamCaption}
+\item[{{\bf e\+Ports}}]{port, }
+\item[{{\bf U08}}]{u08\+Bit}
+\end{DoxyParamCaption}
+)}\hypertarget{_g_p_i_o_8c_a99b7ac7b6544b7c6ba675051722dc9df}{}\label{_g_p_i_o_8c_a99b7ac7b6544b7c6ba675051722dc9df}
+
+
+Definition at line 99 of file G\+P\+I\+O.\+c.
+
+
+
+References G\+P\+I\+O\+\_\+\+P\+D\+O\+R\+\_\+\+R\+EG, and U32\+\_\+\+S\+E\+T\+\_\+\+B\+IT.
+
+
+
+Referenced by main(), vfn\+Adelante(), vfn\+Atras(), vfn\+Derecha(), vfn\+Izquierda(), and vfn\+Send\+Data().
+
+\index{G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}!vfn\+Set\+G\+P\+I\+O\+Port\+Pins@{vfn\+Set\+G\+P\+I\+O\+Port\+Pins}}
+\index{vfn\+Set\+G\+P\+I\+O\+Port\+Pins@{vfn\+Set\+G\+P\+I\+O\+Port\+Pins}!G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Set\+G\+P\+I\+O\+Port\+Pins(e\+Ports port, U08 u08array\+Pins[], U08 u08array\+Pins\+Size, U08 u08\+Pins\+Direction)}{vfnSetGPIOPortPins(ePorts port, U08 u08arrayPins[], U08 u08arrayPinsSize, U08 u08PinsDirection)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Set\+G\+P\+I\+O\+Port\+Pins (
+\begin{DoxyParamCaption}
+\item[{{\bf e\+Ports}}]{port, }
+\item[{{\bf U08}}]{u08array\+Pins\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf U08}}]{u08array\+Pins\+Size, }
+\item[{{\bf U08}}]{u08\+Pins\+Direction}
+\end{DoxyParamCaption}
+)}\hypertarget{_g_p_i_o_8c_a5252be2552874175037a6c4226e6a12f}{}\label{_g_p_i_o_8c_a5252be2552874175037a6c4226e6a12f}
+
+
+Definition at line 73 of file G\+P\+I\+O.\+c.
+
+
+
+References G\+P\+IO, G\+P\+I\+O\+\_\+\+P\+D\+D\+R\+\_\+\+P\+DD, G\+P\+I\+O\+\_\+\+P\+D\+D\+R\+\_\+\+R\+EG, G\+P\+I\+O\+\_\+\+P\+S\+O\+R\+\_\+\+P\+T\+SO, G\+P\+I\+O\+\_\+\+P\+S\+O\+R\+\_\+\+R\+EG, O\+U\+T\+P\+UT, and vfn\+Config\+Port\+Reg\+Pins().
+
+
+
+Referenced by main(), vfn\+Init\+Motors(), vfn\+Init\+Pantalla(), and vfn\+Init\+Ultrasonico().
+
+
+
+\subsection{Variable Documentation}
+\index{G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}!arr\+G\+P\+I\+O\+Base\+Ptrs@{arr\+G\+P\+I\+O\+Base\+Ptrs}}
+\index{arr\+G\+P\+I\+O\+Base\+Ptrs@{arr\+G\+P\+I\+O\+Base\+Ptrs}!G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}}
+\subsubsection[{\texorpdfstring{arr\+G\+P\+I\+O\+Base\+Ptrs}{arrGPIOBasePtrs}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+P\+I\+O\+\_\+\+Mem\+Map\+Ptr} arr\+G\+P\+I\+O\+Base\+Ptrs\mbox{[}$\,$\mbox{]} = {\bf G\+P\+I\+O\+\_\+\+B\+A\+S\+E\+\_\+\+P\+T\+RS}}\hypertarget{_g_p_i_o_8c_adf68e567d2b85e90fb0a974b0cda0197}{}\label{_g_p_i_o_8c_adf68e567d2b85e90fb0a974b0cda0197}
+
+
+Definition at line 53 of file G\+P\+I\+O.\+c.
+
+\index{G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}!arr\+S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+TS@{arr\+S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+TS}}
+\index{arr\+S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+TS@{arr\+S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+TS}!G\+P\+I\+O.\+c@{G\+P\+I\+O.\+c}}
+\subsubsection[{\texorpdfstring{arr\+S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+TS}{arrSIM_SCGC5_PORTS}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} arr\+S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+TS\mbox{[}$\,$\mbox{]} = \{{\bf S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+T\+A\+\_\+\+M\+A\+SK}, {\bf S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+T\+B\+\_\+\+M\+A\+SK}, {\bf S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+T\+C\+\_\+\+M\+A\+SK}, {\bf S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+T\+D\+\_\+\+M\+A\+SK}, {\bf S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+P\+O\+R\+T\+E\+\_\+\+M\+A\+SK}\}}\hypertarget{_g_p_i_o_8c_a9a25b26bdacd3943ea672804c0eac7dc}{}\label{_g_p_i_o_8c_a9a25b26bdacd3943ea672804c0eac7dc}
+
+
+Definition at line 47 of file G\+P\+I\+O.\+c.
+
+
+
+Referenced by vfn\+Init\+Gpio().
+

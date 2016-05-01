@@ -1,0 +1,94 @@
+\hypertarget{lptmr_8c}{}\section{Sources/hal/lptmr.c File Reference}
+\label{lptmr_8c}\index{Sources/hal/lptmr.\+c@{Sources/hal/lptmr.\+c}}
+{\ttfamily \#include \char`\"{}lptmr.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{lptmr_8c_afb2c32f6ccd4119814f453948b32086e}{time\+\_\+delay\+\_\+ms} (unsigned int count\+\_\+val)
+\item 
+void \hyperlink{lptmr_8c_adf9173a36cd117a72e3e627035c6058f}{lptmr\+\_\+isr} (void)
+\item 
+void \hyperlink{lptmr_8c_a7d09e9b493a29ead9144d746b8a5d2cb}{lptmr\+\_\+init} (int count, int clock\+\_\+source)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{lptmr_8c_a1d9ddc31538ce6e82baa8259d1c50821}{tick} = 0
+\item 
+int \hyperlink{lptmr_8c_ac633d91ed5b5d63bfe9022d8bebecc5b}{re\+\_\+init\+\_\+clk}
+\item 
+int \hyperlink{lptmr_8c_aa6149cfa19da74d33d43a06a12721a9f}{clock\+\_\+freq\+\_\+hz}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{lptmr.\+c@{lptmr.\+c}!lptmr\+\_\+init@{lptmr\+\_\+init}}
+\index{lptmr\+\_\+init@{lptmr\+\_\+init}!lptmr.\+c@{lptmr.\+c}}
+\subsubsection[{\texorpdfstring{lptmr\+\_\+init(int count, int clock\+\_\+source)}{lptmr_init(int count, int clock_source)}}]{\setlength{\rightskip}{0pt plus 5cm}void lptmr\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{int}]{count, }
+\item[{int}]{clock\+\_\+source}
+\end{DoxyParamCaption}
+)}\hypertarget{lptmr_8c_a7d09e9b493a29ead9144d746b8a5d2cb}{}\label{lptmr_8c_a7d09e9b493a29ead9144d746b8a5d2cb}
+
+
+Definition at line 72 of file lptmr.\+c.
+
+
+
+References L\+P\+T\+M\+R0\+\_\+\+C\+MR, L\+P\+T\+M\+R0\+\_\+\+C\+SR, L\+P\+T\+M\+R0\+\_\+\+P\+SR, L\+P\+T\+M\+R\+\_\+\+C\+M\+R\+\_\+\+C\+O\+M\+P\+A\+RE, L\+P\+T\+M\+R\+\_\+\+C\+S\+R\+\_\+\+T\+C\+F\+\_\+\+M\+A\+SK, L\+P\+T\+M\+R\+\_\+\+C\+S\+R\+\_\+\+T\+E\+N\+\_\+\+M\+A\+SK, L\+P\+T\+M\+R\+\_\+\+C\+S\+R\+\_\+\+T\+F\+C\+\_\+\+M\+A\+SK, L\+P\+T\+M\+R\+\_\+\+C\+S\+R\+\_\+\+T\+I\+E\+\_\+\+M\+A\+SK, L\+P\+T\+M\+R\+\_\+\+C\+S\+R\+\_\+\+T\+M\+S\+\_\+\+M\+A\+SK, L\+P\+T\+M\+R\+\_\+\+C\+S\+R\+\_\+\+T\+P\+P\+\_\+\+M\+A\+SK, L\+P\+T\+M\+R\+\_\+\+C\+S\+R\+\_\+\+T\+PS, L\+P\+T\+M\+R\+\_\+\+P\+S\+R\+\_\+\+P\+B\+Y\+P\+\_\+\+M\+A\+SK, L\+P\+T\+M\+R\+\_\+\+P\+S\+R\+\_\+\+P\+CS, L\+P\+T\+M\+R\+\_\+\+P\+S\+R\+\_\+\+P\+R\+E\+S\+C\+A\+LE, S\+I\+M\+\_\+\+S\+C\+G\+C5, and S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+L\+P\+T\+M\+R\+\_\+\+M\+A\+SK.
+
+\index{lptmr.\+c@{lptmr.\+c}!lptmr\+\_\+isr@{lptmr\+\_\+isr}}
+\index{lptmr\+\_\+isr@{lptmr\+\_\+isr}!lptmr.\+c@{lptmr.\+c}}
+\subsubsection[{\texorpdfstring{lptmr\+\_\+isr(void)}{lptmr_isr(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void lptmr\+\_\+isr (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{lptmr_8c_adf9173a36cd117a72e3e627035c6058f}{}\label{lptmr_8c_adf9173a36cd117a72e3e627035c6058f}
+
+
+Definition at line 56 of file lptmr.\+c.
+
+
+
+References L\+P\+T\+M\+R0\+\_\+\+C\+SR, L\+P\+T\+M\+R\+\_\+\+C\+S\+R\+\_\+\+T\+C\+F\+\_\+\+M\+A\+SK, L\+P\+T\+M\+R\+\_\+\+C\+S\+R\+\_\+\+T\+E\+N\+\_\+\+M\+A\+SK, L\+P\+T\+M\+R\+\_\+\+C\+S\+R\+\_\+\+T\+I\+E\+\_\+\+M\+A\+SK, and tick.
+
+\index{lptmr.\+c@{lptmr.\+c}!time\+\_\+delay\+\_\+ms@{time\+\_\+delay\+\_\+ms}}
+\index{time\+\_\+delay\+\_\+ms@{time\+\_\+delay\+\_\+ms}!lptmr.\+c@{lptmr.\+c}}
+\subsubsection[{\texorpdfstring{time\+\_\+delay\+\_\+ms(unsigned int count\+\_\+val)}{time_delay_ms(unsigned int count_val)}}]{\setlength{\rightskip}{0pt plus 5cm}void time\+\_\+delay\+\_\+ms (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{count\+\_\+val}
+\end{DoxyParamCaption}
+)}\hypertarget{lptmr_8c_afb2c32f6ccd4119814f453948b32086e}{}\label{lptmr_8c_afb2c32f6ccd4119814f453948b32086e}
+
+
+Definition at line 30 of file lptmr.\+c.
+
+
+
+References L\+P\+T\+M\+R0\+\_\+\+C\+MR, L\+P\+T\+M\+R0\+\_\+\+C\+SR, L\+P\+T\+M\+R0\+\_\+\+P\+SR, L\+P\+T\+M\+R\+\_\+\+C\+S\+R\+\_\+\+T\+C\+F\+\_\+\+M\+A\+SK, L\+P\+T\+M\+R\+\_\+\+C\+S\+R\+\_\+\+T\+E\+N\+\_\+\+M\+A\+SK, L\+P\+T\+M\+R\+\_\+\+P\+S\+R\+\_\+\+P\+B\+Y\+P\+\_\+\+M\+A\+SK, L\+P\+T\+M\+R\+\_\+\+P\+S\+R\+\_\+\+P\+CS, S\+I\+M\+\_\+\+S\+C\+G\+C5, and S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+L\+P\+T\+M\+R\+\_\+\+M\+A\+SK.
+
+
+
+Referenced by main(), vfn\+Car\+Check\+Front\+Free(), and vfn\+Send\+Data().
+
+
+
+\subsection{Variable Documentation}
+\index{lptmr.\+c@{lptmr.\+c}!clock\+\_\+freq\+\_\+hz@{clock\+\_\+freq\+\_\+hz}}
+\index{clock\+\_\+freq\+\_\+hz@{clock\+\_\+freq\+\_\+hz}!lptmr.\+c@{lptmr.\+c}}
+\subsubsection[{\texorpdfstring{clock\+\_\+freq\+\_\+hz}{clock_freq_hz}}]{\setlength{\rightskip}{0pt plus 5cm}int clock\+\_\+freq\+\_\+hz}\hypertarget{lptmr_8c_aa6149cfa19da74d33d43a06a12721a9f}{}\label{lptmr_8c_aa6149cfa19da74d33d43a06a12721a9f}
+\index{lptmr.\+c@{lptmr.\+c}!re\+\_\+init\+\_\+clk@{re\+\_\+init\+\_\+clk}}
+\index{re\+\_\+init\+\_\+clk@{re\+\_\+init\+\_\+clk}!lptmr.\+c@{lptmr.\+c}}
+\subsubsection[{\texorpdfstring{re\+\_\+init\+\_\+clk}{re_init_clk}}]{\setlength{\rightskip}{0pt plus 5cm}int re\+\_\+init\+\_\+clk}\hypertarget{lptmr_8c_ac633d91ed5b5d63bfe9022d8bebecc5b}{}\label{lptmr_8c_ac633d91ed5b5d63bfe9022d8bebecc5b}
+\index{lptmr.\+c@{lptmr.\+c}!tick@{tick}}
+\index{tick@{tick}!lptmr.\+c@{lptmr.\+c}}
+\subsubsection[{\texorpdfstring{tick}{tick}}]{\setlength{\rightskip}{0pt plus 5cm}char tick = 0}\hypertarget{lptmr_8c_a1d9ddc31538ce6e82baa8259d1c50821}{}\label{lptmr_8c_a1d9ddc31538ce6e82baa8259d1c50821}
+
+
+Definition at line 15 of file lptmr.\+c.
+
+
+
+Referenced by lptmr\+\_\+isr().
+

@@ -1,0 +1,148 @@
+\hypertarget{_motor_dvr_8h}{}\section{Sources/hil/\+Motor\+Dvr.h File Reference}
+\label{_motor_dvr_8h}\index{Sources/hil/\+Motor\+Dvr.\+h@{Sources/hil/\+Motor\+Dvr.\+h}}
+{\ttfamily \#include \char`\"{}G\+P\+I\+O.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_motor_dvr_8h_a20a5ece6b231d17ac70babd668956893}{vfn\+Init\+Motors} (\hyperlink{_p_o_r_t_cfgs_8h_ad42be2970e8608c74557dc05872fc38f}{e\+Ports} port, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} \hyperlink{main_8c_a03893f25acb1338aa924e56bec7b4112}{M\+I\+\_\+1}, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} \hyperlink{main_8c_a582b9ff40b7f55a801292b9e167eefc5}{M\+I\+\_\+2}, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} \hyperlink{main_8c_ac40598eb114eba11e7ab1483f4ddfa58}{M\+D\+\_\+1}, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} \hyperlink{main_8c_aaaf2c5e1fe6086aee899d26dada68777}{M\+D\+\_\+2})
+\item 
+void \hyperlink{_motor_dvr_8h_a3f470f7f6044fc4101317f2789ca8922}{vfn\+Parar} (void)
+\item 
+void \hyperlink{_motor_dvr_8h_aab3f115ea12a3816a0a0f58762abf4ca}{vfn\+Adelante} (void)
+\item 
+void \hyperlink{_motor_dvr_8h_a213294d4a98b9465351d58b142ee0bba}{vfn\+Atras} (void)
+\item 
+void \hyperlink{_motor_dvr_8h_acebc7a5074eb370a5f3b4a02fc906c7e}{vfn\+Izquierda} (void)
+\item 
+void \hyperlink{_motor_dvr_8h_a92241de99dc51a6bee24f2a756c7598e}{vfn\+Derecha} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{Motor\+Dvr.\+h@{Motor\+Dvr.\+h}!vfn\+Adelante@{vfn\+Adelante}}
+\index{vfn\+Adelante@{vfn\+Adelante}!Motor\+Dvr.\+h@{Motor\+Dvr.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Adelante(void)}{vfnAdelante(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Adelante (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_motor_dvr_8h_aab3f115ea12a3816a0a0f58762abf4ca}{}\label{_motor_dvr_8h_aab3f115ea12a3816a0a0f58762abf4ca}
+
+
+Definition at line 78 of file Motor\+Dvr.\+c.
+
+
+
+References Mo\+D\+\_\+1, Mo\+D\+\_\+2, Mo\+I\+\_\+1, Mo\+I\+\_\+2, my\+Port, vfn\+Parar(), and vfn\+Set\+Bit().
+
+
+
+Referenced by main(), and vfn\+Car\+Move\+Front().
+
+\index{Motor\+Dvr.\+h@{Motor\+Dvr.\+h}!vfn\+Atras@{vfn\+Atras}}
+\index{vfn\+Atras@{vfn\+Atras}!Motor\+Dvr.\+h@{Motor\+Dvr.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Atras(void)}{vfnAtras(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Atras (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_motor_dvr_8h_a213294d4a98b9465351d58b142ee0bba}{}\label{_motor_dvr_8h_a213294d4a98b9465351d58b142ee0bba}
+
+
+Definition at line 86 of file Motor\+Dvr.\+c.
+
+
+
+References Mo\+D\+\_\+1, Mo\+D\+\_\+2, Mo\+I\+\_\+1, Mo\+I\+\_\+2, my\+Port, vfn\+Parar(), and vfn\+Set\+Bit().
+
+
+
+Referenced by main(), and vfn\+Car\+Move\+Back().
+
+\index{Motor\+Dvr.\+h@{Motor\+Dvr.\+h}!vfn\+Derecha@{vfn\+Derecha}}
+\index{vfn\+Derecha@{vfn\+Derecha}!Motor\+Dvr.\+h@{Motor\+Dvr.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Derecha(void)}{vfnDerecha(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Derecha (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_motor_dvr_8h_a92241de99dc51a6bee24f2a756c7598e}{}\label{_motor_dvr_8h_a92241de99dc51a6bee24f2a756c7598e}
+
+
+Definition at line 101 of file Motor\+Dvr.\+c.
+
+
+
+References Mo\+D\+\_\+1, Mo\+D\+\_\+2, Mo\+I\+\_\+1, Mo\+I\+\_\+2, my\+Port, vfn\+Parar(), and vfn\+Set\+Bit().
+
+
+
+Referenced by main(), and vfn\+Car\+Turn().
+
+\index{Motor\+Dvr.\+h@{Motor\+Dvr.\+h}!vfn\+Init\+Motors@{vfn\+Init\+Motors}}
+\index{vfn\+Init\+Motors@{vfn\+Init\+Motors}!Motor\+Dvr.\+h@{Motor\+Dvr.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Init\+Motors(e\+Ports port, U08 M\+I\+\_\+1, U08 M\+I\+\_\+2, U08 M\+D\+\_\+1, U08 M\+D\+\_\+2)}{vfnInitMotors(ePorts port, U08 MI_1, U08 MI_2, U08 MD_1, U08 MD_2)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Init\+Motors (
+\begin{DoxyParamCaption}
+\item[{{\bf e\+Ports}}]{port, }
+\item[{{\bf U08}}]{M\+I\+\_\+1, }
+\item[{{\bf U08}}]{M\+I\+\_\+2, }
+\item[{{\bf U08}}]{M\+D\+\_\+1, }
+\item[{{\bf U08}}]{M\+D\+\_\+2}
+\end{DoxyParamCaption}
+)}\hypertarget{_motor_dvr_8h_a20a5ece6b231d17ac70babd668956893}{}\label{_motor_dvr_8h_a20a5ece6b231d17ac70babd668956893}
+
+
+Definition at line 57 of file Motor\+Dvr.\+c.
+
+
+
+References M\+D\+\_\+1, M\+D\+\_\+2, M\+I\+\_\+1, M\+I\+\_\+2, Mo\+D\+\_\+1, Mo\+D\+\_\+2, Mo\+I\+\_\+1, Mo\+I\+\_\+2, my\+Port, O\+U\+T\+P\+UT, vfn\+Init\+Gpio(), and vfn\+Set\+G\+P\+I\+O\+Port\+Pins().
+
+
+
+Referenced by main().
+
+\index{Motor\+Dvr.\+h@{Motor\+Dvr.\+h}!vfn\+Izquierda@{vfn\+Izquierda}}
+\index{vfn\+Izquierda@{vfn\+Izquierda}!Motor\+Dvr.\+h@{Motor\+Dvr.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Izquierda(void)}{vfnIzquierda(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Izquierda (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_motor_dvr_8h_acebc7a5074eb370a5f3b4a02fc906c7e}{}\label{_motor_dvr_8h_acebc7a5074eb370a5f3b4a02fc906c7e}
+
+
+Definition at line 94 of file Motor\+Dvr.\+c.
+
+
+
+References Mo\+D\+\_\+1, Mo\+D\+\_\+2, Mo\+I\+\_\+1, Mo\+I\+\_\+2, my\+Port, vfn\+Parar(), and vfn\+Set\+Bit().
+
+
+
+Referenced by main(), and vfn\+Car\+Turn().
+
+\index{Motor\+Dvr.\+h@{Motor\+Dvr.\+h}!vfn\+Parar@{vfn\+Parar}}
+\index{vfn\+Parar@{vfn\+Parar}!Motor\+Dvr.\+h@{Motor\+Dvr.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Parar(void)}{vfnParar(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Parar (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_motor_dvr_8h_a3f470f7f6044fc4101317f2789ca8922}{}\label{_motor_dvr_8h_a3f470f7f6044fc4101317f2789ca8922}
+
+
+Definition at line 69 of file Motor\+Dvr.\+c.
+
+
+
+References Mo\+D\+\_\+1, Mo\+D\+\_\+2, Mo\+I\+\_\+1, Mo\+I\+\_\+2, my\+Port, and vfn\+Clear\+Bit().
+
+
+
+Referenced by vfn\+Adelante(), vfn\+Atras(), vfn\+Car\+Stop(), vfn\+Derecha(), and vfn\+Izquierda().
+

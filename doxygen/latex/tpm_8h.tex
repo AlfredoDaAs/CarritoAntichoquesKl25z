@@ -1,0 +1,464 @@
+\hypertarget{tpm_8h}{}\section{Sources/hal/tpm.h File Reference}
+\label{tpm_8h}\index{Sources/hal/tpm.\+h@{Sources/hal/tpm.\+h}}
+{\ttfamily \#include \char`\"{}Types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}derivative.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}P\+O\+R\+T\+Cfgs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G\+P\+I\+O.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tpm_8h_acc81e53bf64f3c7dcbc353d52cbd1819}{T\+P\+M\+\_\+\+P\+L\+L\+F\+LL}~1
+\item 
+\#define \hyperlink{tpm_8h_a798afd820bae19e624af56c8601f55ef}{T\+P\+M\+\_\+\+O\+S\+C\+E\+R\+C\+LK}~2
+\item 
+\#define \hyperlink{tpm_8h_af5f5b10c96ffe915043071aaabdef972}{T\+P\+M\+\_\+\+M\+C\+G\+I\+R\+C\+LK}~3
+\item 
+\#define \hyperlink{tpm_8h_a9350cc2857aad08da7bc2fc653f21ba3}{T\+P\+M\+\_\+\+C\+N\+T\+\_\+\+D\+IS}~0
+\item 
+\#define \hyperlink{tpm_8h_ad4acb6bf77fa55af095bb3242009150e}{T\+P\+M\+\_\+\+C\+LK}~1
+\item 
+\#define \hyperlink{tpm_8h_a204d587d289b357d2457eadaf9ba7809}{T\+P\+M\+\_\+\+E\+X\+T\+\_\+\+C\+LK}~2
+\item 
+\#define \hyperlink{tpm_8h_af8c1cc647ec92ffbf73384c2b1d3b1d1}{P\+S\+\_\+1}~0
+\item 
+\#define \hyperlink{tpm_8h_a9c0f90cb04742b102df8cf778e167d73}{P\+S\+\_\+2}~1
+\item 
+\#define \hyperlink{tpm_8h_ab8927f9c31e0bc98758bbf90c7e852b3}{P\+S\+\_\+4}~2
+\item 
+\#define \hyperlink{tpm_8h_a83eab3432f78f8041d140048f9bdc159}{P\+S\+\_\+8}~3
+\item 
+\#define \hyperlink{tpm_8h_aaf52372f79355a3c831511b2fea947ee}{P\+S\+\_\+16}~4
+\item 
+\#define \hyperlink{tpm_8h_a58d367baac81af0dd63111e2faab6c8e}{P\+S\+\_\+32}~5
+\item 
+\#define \hyperlink{tpm_8h_ada495be9420499b4fb148b98ac01731e}{P\+S\+\_\+64}~6
+\item 
+\#define \hyperlink{tpm_8h_a8862127136c67058e7bf4007646bb68d}{P\+S\+\_\+128}~7
+\item 
+\#define \hyperlink{tpm_8h_a5da279ae54c882c605ca22b7da523c04}{T\+P\+M\+\_\+\+O\+C\+\_\+\+T\+O\+G\+G\+LE}~\hyperlink{group___t_p_m___register___masks_ga1701b53531ba658b0a237329ee8e223d}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+A\+\_\+\+M\+A\+SK}$\vert$\hyperlink{group___t_p_m___register___masks_ga2e5b9e774ab4f1ad012602f399949dbf}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+A\+\_\+\+M\+A\+SK}
+\item 
+\#define \hyperlink{tpm_8h_aec59b1291218485944e7d7e707c447db}{T\+P\+M\+\_\+\+O\+C\+\_\+\+C\+LR}~\hyperlink{group___t_p_m___register___masks_ga1701b53531ba658b0a237329ee8e223d}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+A\+\_\+\+M\+A\+SK}$\vert$\hyperlink{group___t_p_m___register___masks_ga147b60bd08ffe27748d03dfeb6fcc327}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+B\+\_\+\+M\+A\+SK}
+\item 
+\#define \hyperlink{tpm_8h_a55a38cc7e47af6b3ade479bbe6fafda6}{T\+P\+M\+\_\+\+O\+C\+\_\+\+S\+ET}~\hyperlink{group___t_p_m___register___masks_ga1701b53531ba658b0a237329ee8e223d}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+A\+\_\+\+M\+A\+SK}$\vert$\hyperlink{group___t_p_m___register___masks_ga2e5b9e774ab4f1ad012602f399949dbf}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+A\+\_\+\+M\+A\+SK}$\vert$\hyperlink{group___t_p_m___register___masks_ga147b60bd08ffe27748d03dfeb6fcc327}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+B\+\_\+\+M\+A\+SK}
+\item 
+\#define \hyperlink{tpm_8h_a0a76d7d9c98304fc74b2e9c3807718e0}{T\+P\+M\+\_\+\+O\+C\+\_\+\+O\+U\+TL}~\hyperlink{group___t_p_m___register___masks_gadcd7434cb96e2f7ea230e9007fc1d438}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+B\+\_\+\+M\+A\+SK}$\vert$\hyperlink{group___t_p_m___register___masks_ga1701b53531ba658b0a237329ee8e223d}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+A\+\_\+\+M\+A\+SK}$\vert$\hyperlink{group___t_p_m___register___masks_ga147b60bd08ffe27748d03dfeb6fcc327}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+B\+\_\+\+M\+A\+SK}
+\item 
+\#define \hyperlink{tpm_8h_a21810412e73d9a2c2796cdf3f549c7b6}{T\+P\+M\+\_\+\+O\+C\+\_\+\+O\+U\+TH}~\hyperlink{group___t_p_m___register___masks_gadcd7434cb96e2f7ea230e9007fc1d438}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+B\+\_\+\+M\+A\+SK}$\vert$\hyperlink{group___t_p_m___register___masks_ga1701b53531ba658b0a237329ee8e223d}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+A\+\_\+\+M\+A\+SK}$\vert$\hyperlink{group___t_p_m___register___masks_ga2e5b9e774ab4f1ad012602f399949dbf}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+A\+\_\+\+M\+A\+SK}
+\item 
+\#define \hyperlink{tpm_8h_a4c51744bef341b41b52365a20813d9fc}{T\+P\+M\+\_\+\+P\+W\+M\+\_\+H}~\hyperlink{group___t_p_m___register___masks_gadcd7434cb96e2f7ea230e9007fc1d438}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+B\+\_\+\+M\+A\+SK}$\vert$\hyperlink{group___t_p_m___register___masks_ga147b60bd08ffe27748d03dfeb6fcc327}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+B\+\_\+\+M\+A\+SK}
+\item 
+\#define \hyperlink{tpm_8h_a4337b59dc6f2b26292da96e128fce86e}{T\+P\+M\+\_\+\+P\+W\+M\+\_\+L}~\hyperlink{group___t_p_m___register___masks_gadcd7434cb96e2f7ea230e9007fc1d438}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+B\+\_\+\+M\+A\+SK}$\vert$\hyperlink{group___t_p_m___register___masks_ga2e5b9e774ab4f1ad012602f399949dbf}{T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+A\+\_\+\+M\+A\+SK}
+\item 
+\#define \hyperlink{tpm_8h_abcba9f6546ae27069d2245bfcf1ca059}{E\+D\+G\+E\+\_\+\+P\+WM}~0
+\item 
+\#define \hyperlink{tpm_8h_a26bb839623c8e21973e5d488ded4d16e}{C\+E\+N\+T\+E\+R\+\_\+\+P\+WM}~1
+\item 
+\#define \hyperlink{tpm_8h_a2e8ec82c7cc4c03d8315b59fdcb35ba7}{T\+P\+M\+\_\+\+M\+O\+D\+U\+LE}~52816
+\item 
+\#define \hyperlink{tpm_8h_a56a1867ee143bfe79f9f68051d5e6f91}{D\+U\+T\+Y\+\_\+\+M\+IN}~1800
+\item 
+\#define \hyperlink{tpm_8h_a374f8b1171df692789afd998235aaad2}{D\+U\+T\+Y\+\_\+\+M\+ED}~3700
+\item 
+\#define \hyperlink{tpm_8h_a0fd8ccea4c0d3fee95da045da247aed6}{D\+U\+T\+Y\+\_\+\+M\+AX}~5900
+\item 
+\#define \hyperlink{tpm_8h_aaea0de8adb434c74f00d700d6d0ba4ab}{T\+P\+M\+\_\+\+M\+UX}~3
+\item 
+\#define \hyperlink{tpm_8h_a599217205dc3092c26567a2bd868ef3a}{T\+I\+M\+ER}~1000000
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{tpm_8h_a50780883372f2b9c01787d14240ed5fc}{vfn\+Select\+Channel\+Port\+Pin} (\hyperlink{_p_o_r_t_cfgs_8h_ad42be2970e8608c74557dc05872fc38f}{e\+Ports} port, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} u08\+Pin)
+\item 
+void \hyperlink{tpm_8h_a68295c986d37fc857f51df35089029ca}{T\+P\+M\+\_\+init\+\_\+\+P\+WM} (\hyperlink{group___t_p_m___peripheral_ga32147338cedc9904efff0d19b3a358ac}{T\+P\+M\+\_\+\+Mem\+Map\+Ptr} T\+P\+Mx, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} clock\+\_\+source, \hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16} module, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} clock\+\_\+mode, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} ps, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} counting\+\_\+mode)
+\item 
+void \hyperlink{tpm_8h_ae6718e300d27da5893cdedfecf50f7bb}{T\+P\+M\+\_\+\+C\+H\+\_\+init} (\hyperlink{group___t_p_m___peripheral_ga32147338cedc9904efff0d19b3a358ac}{T\+P\+M\+\_\+\+Mem\+Map\+Ptr} T\+P\+Mx, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} channel, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} mode)
+\item 
+void \hyperlink{tpm_8h_aa581a8a3f2eb3348257be88b8a0346ec}{set\+\_\+\+T\+P\+M\+\_\+\+CnV} (\hyperlink{group___t_p_m___peripheral_ga32147338cedc9904efff0d19b3a358ac}{T\+P\+M\+\_\+\+Mem\+Map\+Ptr} T\+P\+Mx, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} channel, \hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16} value)
+\item 
+void \hyperlink{tpm_8h_a0f57aca50743cfd291351fb6aa9ea4e4}{set\+\_\+pos} (\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16} angle)
+\item 
+void \hyperlink{tpm_8h_a417d38ec4e85d33c3c88ba1b2ac956f9}{vfn\+Delay\+Tpm} (\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{main_8c_a1f013b79e5781160501ab9d9c8d3c268}{u32\+Delay})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\index{tpm.\+h@{tpm.\+h}!C\+E\+N\+T\+E\+R\+\_\+\+P\+WM@{C\+E\+N\+T\+E\+R\+\_\+\+P\+WM}}
+\index{C\+E\+N\+T\+E\+R\+\_\+\+P\+WM@{C\+E\+N\+T\+E\+R\+\_\+\+P\+WM}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{C\+E\+N\+T\+E\+R\+\_\+\+P\+WM}{CENTER_PWM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+E\+N\+T\+E\+R\+\_\+\+P\+WM~1}\hypertarget{tpm_8h_a26bb839623c8e21973e5d488ded4d16e}{}\label{tpm_8h_a26bb839623c8e21973e5d488ded4d16e}
+
+
+Definition at line 62 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!D\+U\+T\+Y\+\_\+\+M\+AX@{D\+U\+T\+Y\+\_\+\+M\+AX}}
+\index{D\+U\+T\+Y\+\_\+\+M\+AX@{D\+U\+T\+Y\+\_\+\+M\+AX}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{D\+U\+T\+Y\+\_\+\+M\+AX}{DUTY_MAX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+U\+T\+Y\+\_\+\+M\+AX~5900}\hypertarget{tpm_8h_a0fd8ccea4c0d3fee95da045da247aed6}{}\label{tpm_8h_a0fd8ccea4c0d3fee95da045da247aed6}
+
+
+Definition at line 73 of file tpm.\+h.
+
+
+
+Referenced by vfn\+Move\+Left().
+
+\index{tpm.\+h@{tpm.\+h}!D\+U\+T\+Y\+\_\+\+M\+ED@{D\+U\+T\+Y\+\_\+\+M\+ED}}
+\index{D\+U\+T\+Y\+\_\+\+M\+ED@{D\+U\+T\+Y\+\_\+\+M\+ED}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{D\+U\+T\+Y\+\_\+\+M\+ED}{DUTY_MED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+U\+T\+Y\+\_\+\+M\+ED~3700}\hypertarget{tpm_8h_a374f8b1171df692789afd998235aaad2}{}\label{tpm_8h_a374f8b1171df692789afd998235aaad2}
+
+
+Definition at line 70 of file tpm.\+h.
+
+
+
+Referenced by vfn\+Move\+Center().
+
+\index{tpm.\+h@{tpm.\+h}!D\+U\+T\+Y\+\_\+\+M\+IN@{D\+U\+T\+Y\+\_\+\+M\+IN}}
+\index{D\+U\+T\+Y\+\_\+\+M\+IN@{D\+U\+T\+Y\+\_\+\+M\+IN}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{D\+U\+T\+Y\+\_\+\+M\+IN}{DUTY_MIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+U\+T\+Y\+\_\+\+M\+IN~1800}\hypertarget{tpm_8h_a56a1867ee143bfe79f9f68051d5e6f91}{}\label{tpm_8h_a56a1867ee143bfe79f9f68051d5e6f91}
+
+
+Definition at line 67 of file tpm.\+h.
+
+
+
+Referenced by vfn\+Move\+Right().
+
+\index{tpm.\+h@{tpm.\+h}!E\+D\+G\+E\+\_\+\+P\+WM@{E\+D\+G\+E\+\_\+\+P\+WM}}
+\index{E\+D\+G\+E\+\_\+\+P\+WM@{E\+D\+G\+E\+\_\+\+P\+WM}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{E\+D\+G\+E\+\_\+\+P\+WM}{EDGE_PWM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+D\+G\+E\+\_\+\+P\+WM~0}\hypertarget{tpm_8h_abcba9f6546ae27069d2245bfcf1ca059}{}\label{tpm_8h_abcba9f6546ae27069d2245bfcf1ca059}
+
+
+Definition at line 61 of file tpm.\+h.
+
+
+
+Referenced by vfn\+Init\+P\+W\+M().
+
+\index{tpm.\+h@{tpm.\+h}!P\+S\+\_\+1@{P\+S\+\_\+1}}
+\index{P\+S\+\_\+1@{P\+S\+\_\+1}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{P\+S\+\_\+1}{PS_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+S\+\_\+1~0}\hypertarget{tpm_8h_af8c1cc647ec92ffbf73384c2b1d3b1d1}{}\label{tpm_8h_af8c1cc647ec92ffbf73384c2b1d3b1d1}
+
+
+Definition at line 43 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!P\+S\+\_\+128@{P\+S\+\_\+128}}
+\index{P\+S\+\_\+128@{P\+S\+\_\+128}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{P\+S\+\_\+128}{PS_128}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+S\+\_\+128~7}\hypertarget{tpm_8h_a8862127136c67058e7bf4007646bb68d}{}\label{tpm_8h_a8862127136c67058e7bf4007646bb68d}
+
+
+Definition at line 50 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!P\+S\+\_\+16@{P\+S\+\_\+16}}
+\index{P\+S\+\_\+16@{P\+S\+\_\+16}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{P\+S\+\_\+16}{PS_16}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+S\+\_\+16~4}\hypertarget{tpm_8h_aaf52372f79355a3c831511b2fea947ee}{}\label{tpm_8h_aaf52372f79355a3c831511b2fea947ee}
+
+
+Definition at line 47 of file tpm.\+h.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+init().
+
+\index{tpm.\+h@{tpm.\+h}!P\+S\+\_\+2@{P\+S\+\_\+2}}
+\index{P\+S\+\_\+2@{P\+S\+\_\+2}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{P\+S\+\_\+2}{PS_2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+S\+\_\+2~1}\hypertarget{tpm_8h_a9c0f90cb04742b102df8cf778e167d73}{}\label{tpm_8h_a9c0f90cb04742b102df8cf778e167d73}
+
+
+Definition at line 44 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!P\+S\+\_\+32@{P\+S\+\_\+32}}
+\index{P\+S\+\_\+32@{P\+S\+\_\+32}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{P\+S\+\_\+32}{PS_32}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+S\+\_\+32~5}\hypertarget{tpm_8h_a58d367baac81af0dd63111e2faab6c8e}{}\label{tpm_8h_a58d367baac81af0dd63111e2faab6c8e}
+
+
+Definition at line 48 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!P\+S\+\_\+4@{P\+S\+\_\+4}}
+\index{P\+S\+\_\+4@{P\+S\+\_\+4}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{P\+S\+\_\+4}{PS_4}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+S\+\_\+4~2}\hypertarget{tpm_8h_ab8927f9c31e0bc98758bbf90c7e852b3}{}\label{tpm_8h_ab8927f9c31e0bc98758bbf90c7e852b3}
+
+
+Definition at line 45 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!P\+S\+\_\+64@{P\+S\+\_\+64}}
+\index{P\+S\+\_\+64@{P\+S\+\_\+64}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{P\+S\+\_\+64}{PS_64}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+S\+\_\+64~6}\hypertarget{tpm_8h_ada495be9420499b4fb148b98ac01731e}{}\label{tpm_8h_ada495be9420499b4fb148b98ac01731e}
+
+
+Definition at line 49 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!P\+S\+\_\+8@{P\+S\+\_\+8}}
+\index{P\+S\+\_\+8@{P\+S\+\_\+8}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{P\+S\+\_\+8}{PS_8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+S\+\_\+8~3}\hypertarget{tpm_8h_a83eab3432f78f8041d140048f9bdc159}{}\label{tpm_8h_a83eab3432f78f8041d140048f9bdc159}
+
+
+Definition at line 46 of file tpm.\+h.
+
+
+
+Referenced by vfn\+Init\+P\+W\+M().
+
+\index{tpm.\+h@{tpm.\+h}!T\+I\+M\+ER@{T\+I\+M\+ER}}
+\index{T\+I\+M\+ER@{T\+I\+M\+ER}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+ER}{TIMER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+ER~1000000}\hypertarget{tpm_8h_a599217205dc3092c26567a2bd868ef3a}{}\label{tpm_8h_a599217205dc3092c26567a2bd868ef3a}
+
+
+Definition at line 77 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+C\+LK@{T\+P\+M\+\_\+\+C\+LK}}
+\index{T\+P\+M\+\_\+\+C\+LK@{T\+P\+M\+\_\+\+C\+LK}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+C\+LK}{TPM_CLK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+P\+M\+\_\+\+C\+LK~1}\hypertarget{tpm_8h_ad4acb6bf77fa55af095bb3242009150e}{}\label{tpm_8h_ad4acb6bf77fa55af095bb3242009150e}
+
+
+Definition at line 40 of file tpm.\+h.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+init(), hc\+\_\+sr04\+\_\+read(), and vfn\+Init\+P\+W\+M().
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+C\+N\+T\+\_\+\+D\+IS@{T\+P\+M\+\_\+\+C\+N\+T\+\_\+\+D\+IS}}
+\index{T\+P\+M\+\_\+\+C\+N\+T\+\_\+\+D\+IS@{T\+P\+M\+\_\+\+C\+N\+T\+\_\+\+D\+IS}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+C\+N\+T\+\_\+\+D\+IS}{TPM_CNT_DIS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+P\+M\+\_\+\+C\+N\+T\+\_\+\+D\+IS~0}\hypertarget{tpm_8h_a9350cc2857aad08da7bc2fc653f21ba3}{}\label{tpm_8h_a9350cc2857aad08da7bc2fc653f21ba3}
+
+
+Definition at line 39 of file tpm.\+h.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+init(), and hc\+\_\+sr04\+\_\+read().
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+E\+X\+T\+\_\+\+C\+LK@{T\+P\+M\+\_\+\+E\+X\+T\+\_\+\+C\+LK}}
+\index{T\+P\+M\+\_\+\+E\+X\+T\+\_\+\+C\+LK@{T\+P\+M\+\_\+\+E\+X\+T\+\_\+\+C\+LK}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+E\+X\+T\+\_\+\+C\+LK}{TPM_EXT_CLK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+P\+M\+\_\+\+E\+X\+T\+\_\+\+C\+LK~2}\hypertarget{tpm_8h_a204d587d289b357d2457eadaf9ba7809}{}\label{tpm_8h_a204d587d289b357d2457eadaf9ba7809}
+
+
+Definition at line 41 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+M\+C\+G\+I\+R\+C\+LK@{T\+P\+M\+\_\+\+M\+C\+G\+I\+R\+C\+LK}}
+\index{T\+P\+M\+\_\+\+M\+C\+G\+I\+R\+C\+LK@{T\+P\+M\+\_\+\+M\+C\+G\+I\+R\+C\+LK}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+M\+C\+G\+I\+R\+C\+LK}{TPM_MCGIRCLK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+P\+M\+\_\+\+M\+C\+G\+I\+R\+C\+LK~3}\hypertarget{tpm_8h_af5f5b10c96ffe915043071aaabdef972}{}\label{tpm_8h_af5f5b10c96ffe915043071aaabdef972}
+
+
+Definition at line 37 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+M\+O\+D\+U\+LE@{T\+P\+M\+\_\+\+M\+O\+D\+U\+LE}}
+\index{T\+P\+M\+\_\+\+M\+O\+D\+U\+LE@{T\+P\+M\+\_\+\+M\+O\+D\+U\+LE}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+M\+O\+D\+U\+LE}{TPM_MODULE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+P\+M\+\_\+\+M\+O\+D\+U\+LE~52816}\hypertarget{tpm_8h_a2e8ec82c7cc4c03d8315b59fdcb35ba7}{}\label{tpm_8h_a2e8ec82c7cc4c03d8315b59fdcb35ba7}
+
+
+Definition at line 65 of file tpm.\+h.
+
+
+
+Referenced by vfn\+Init\+P\+W\+M().
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+M\+UX@{T\+P\+M\+\_\+\+M\+UX}}
+\index{T\+P\+M\+\_\+\+M\+UX@{T\+P\+M\+\_\+\+M\+UX}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+M\+UX}{TPM_MUX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+P\+M\+\_\+\+M\+UX~3}\hypertarget{tpm_8h_aaea0de8adb434c74f00d700d6d0ba4ab}{}\label{tpm_8h_aaea0de8adb434c74f00d700d6d0ba4ab}
+
+
+Definition at line 75 of file tpm.\+h.
+
+
+
+Referenced by vfn\+Select\+Channel\+Port\+Pin().
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+O\+C\+\_\+\+C\+LR@{T\+P\+M\+\_\+\+O\+C\+\_\+\+C\+LR}}
+\index{T\+P\+M\+\_\+\+O\+C\+\_\+\+C\+LR@{T\+P\+M\+\_\+\+O\+C\+\_\+\+C\+LR}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+O\+C\+\_\+\+C\+LR}{TPM_OC_CLR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+P\+M\+\_\+\+O\+C\+\_\+\+C\+LR~{\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+A\+\_\+\+M\+A\+SK}$\vert${\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+B\+\_\+\+M\+A\+SK}}\hypertarget{tpm_8h_aec59b1291218485944e7d7e707c447db}{}\label{tpm_8h_aec59b1291218485944e7d7e707c447db}
+
+
+Definition at line 53 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+O\+C\+\_\+\+O\+U\+TH@{T\+P\+M\+\_\+\+O\+C\+\_\+\+O\+U\+TH}}
+\index{T\+P\+M\+\_\+\+O\+C\+\_\+\+O\+U\+TH@{T\+P\+M\+\_\+\+O\+C\+\_\+\+O\+U\+TH}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+O\+C\+\_\+\+O\+U\+TH}{TPM_OC_OUTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+P\+M\+\_\+\+O\+C\+\_\+\+O\+U\+TH~{\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+B\+\_\+\+M\+A\+SK}$\vert${\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+A\+\_\+\+M\+A\+SK}$\vert${\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+A\+\_\+\+M\+A\+SK}}\hypertarget{tpm_8h_a21810412e73d9a2c2796cdf3f549c7b6}{}\label{tpm_8h_a21810412e73d9a2c2796cdf3f549c7b6}
+
+
+Definition at line 56 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+O\+C\+\_\+\+O\+U\+TL@{T\+P\+M\+\_\+\+O\+C\+\_\+\+O\+U\+TL}}
+\index{T\+P\+M\+\_\+\+O\+C\+\_\+\+O\+U\+TL@{T\+P\+M\+\_\+\+O\+C\+\_\+\+O\+U\+TL}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+O\+C\+\_\+\+O\+U\+TL}{TPM_OC_OUTL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+P\+M\+\_\+\+O\+C\+\_\+\+O\+U\+TL~{\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+B\+\_\+\+M\+A\+SK}$\vert${\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+A\+\_\+\+M\+A\+SK}$\vert${\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+B\+\_\+\+M\+A\+SK}}\hypertarget{tpm_8h_a0a76d7d9c98304fc74b2e9c3807718e0}{}\label{tpm_8h_a0a76d7d9c98304fc74b2e9c3807718e0}
+
+
+Definition at line 55 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+O\+C\+\_\+\+S\+ET@{T\+P\+M\+\_\+\+O\+C\+\_\+\+S\+ET}}
+\index{T\+P\+M\+\_\+\+O\+C\+\_\+\+S\+ET@{T\+P\+M\+\_\+\+O\+C\+\_\+\+S\+ET}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+O\+C\+\_\+\+S\+ET}{TPM_OC_SET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+P\+M\+\_\+\+O\+C\+\_\+\+S\+ET~{\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+A\+\_\+\+M\+A\+SK}$\vert${\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+A\+\_\+\+M\+A\+SK}$\vert${\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+B\+\_\+\+M\+A\+SK}}\hypertarget{tpm_8h_a55a38cc7e47af6b3ade479bbe6fafda6}{}\label{tpm_8h_a55a38cc7e47af6b3ade479bbe6fafda6}
+
+
+Definition at line 54 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+O\+C\+\_\+\+T\+O\+G\+G\+LE@{T\+P\+M\+\_\+\+O\+C\+\_\+\+T\+O\+G\+G\+LE}}
+\index{T\+P\+M\+\_\+\+O\+C\+\_\+\+T\+O\+G\+G\+LE@{T\+P\+M\+\_\+\+O\+C\+\_\+\+T\+O\+G\+G\+LE}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+O\+C\+\_\+\+T\+O\+G\+G\+LE}{TPM_OC_TOGGLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+P\+M\+\_\+\+O\+C\+\_\+\+T\+O\+G\+G\+LE~{\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+A\+\_\+\+M\+A\+SK}$\vert${\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+A\+\_\+\+M\+A\+SK}}\hypertarget{tpm_8h_a5da279ae54c882c605ca22b7da523c04}{}\label{tpm_8h_a5da279ae54c882c605ca22b7da523c04}
+
+
+Definition at line 52 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+O\+S\+C\+E\+R\+C\+LK@{T\+P\+M\+\_\+\+O\+S\+C\+E\+R\+C\+LK}}
+\index{T\+P\+M\+\_\+\+O\+S\+C\+E\+R\+C\+LK@{T\+P\+M\+\_\+\+O\+S\+C\+E\+R\+C\+LK}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+O\+S\+C\+E\+R\+C\+LK}{TPM_OSCERCLK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+P\+M\+\_\+\+O\+S\+C\+E\+R\+C\+LK~2}\hypertarget{tpm_8h_a798afd820bae19e624af56c8601f55ef}{}\label{tpm_8h_a798afd820bae19e624af56c8601f55ef}
+
+
+Definition at line 36 of file tpm.\+h.
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+P\+L\+L\+F\+LL@{T\+P\+M\+\_\+\+P\+L\+L\+F\+LL}}
+\index{T\+P\+M\+\_\+\+P\+L\+L\+F\+LL@{T\+P\+M\+\_\+\+P\+L\+L\+F\+LL}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+P\+L\+L\+F\+LL}{TPM_PLLFLL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+P\+M\+\_\+\+P\+L\+L\+F\+LL~1}\hypertarget{tpm_8h_acc81e53bf64f3c7dcbc353d52cbd1819}{}\label{tpm_8h_acc81e53bf64f3c7dcbc353d52cbd1819}
+
+
+Definition at line 35 of file tpm.\+h.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+init(), and vfn\+Init\+P\+W\+M().
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+P\+W\+M\+\_\+H@{T\+P\+M\+\_\+\+P\+W\+M\+\_\+H}}
+\index{T\+P\+M\+\_\+\+P\+W\+M\+\_\+H@{T\+P\+M\+\_\+\+P\+W\+M\+\_\+H}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+P\+W\+M\+\_\+H}{TPM_PWM_H}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+P\+M\+\_\+\+P\+W\+M\+\_\+H~{\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+B\+\_\+\+M\+A\+SK}$\vert${\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+B\+\_\+\+M\+A\+SK}}\hypertarget{tpm_8h_a4c51744bef341b41b52365a20813d9fc}{}\label{tpm_8h_a4c51744bef341b41b52365a20813d9fc}
+
+
+Definition at line 58 of file tpm.\+h.
+
+
+
+Referenced by vfn\+Init\+P\+W\+M().
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+P\+W\+M\+\_\+L@{T\+P\+M\+\_\+\+P\+W\+M\+\_\+L}}
+\index{T\+P\+M\+\_\+\+P\+W\+M\+\_\+L@{T\+P\+M\+\_\+\+P\+W\+M\+\_\+L}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+P\+W\+M\+\_\+L}{TPM_PWM_L}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+P\+M\+\_\+\+P\+W\+M\+\_\+L~{\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+M\+S\+B\+\_\+\+M\+A\+SK}$\vert${\bf T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+E\+L\+S\+A\+\_\+\+M\+A\+SK}}\hypertarget{tpm_8h_a4337b59dc6f2b26292da96e128fce86e}{}\label{tpm_8h_a4337b59dc6f2b26292da96e128fce86e}
+
+
+Definition at line 59 of file tpm.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{tpm.\+h@{tpm.\+h}!set\+\_\+pos@{set\+\_\+pos}}
+\index{set\+\_\+pos@{set\+\_\+pos}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+pos(\+U16 angle)}{set_pos(U16 angle)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+pos (
+\begin{DoxyParamCaption}
+\item[{{\bf U16}}]{angle}
+\end{DoxyParamCaption}
+)}\hypertarget{tpm_8h_a0f57aca50743cfd291351fb6aa9ea4e4}{}\label{tpm_8h_a0f57aca50743cfd291351fb6aa9ea4e4}
+
+
+Definition at line 44 of file tpm.\+c.
+
+
+
+References set\+\_\+\+T\+P\+M\+\_\+\+Cn\+V(), and T\+P\+M1\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR.
+
+
+
+Referenced by vfn\+Move\+Center(), vfn\+Move\+Left(), and vfn\+Move\+Right().
+
+\index{tpm.\+h@{tpm.\+h}!set\+\_\+\+T\+P\+M\+\_\+\+CnV@{set\+\_\+\+T\+P\+M\+\_\+\+CnV}}
+\index{set\+\_\+\+T\+P\+M\+\_\+\+CnV@{set\+\_\+\+T\+P\+M\+\_\+\+CnV}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+\+T\+P\+M\+\_\+\+Cn\+V(\+T\+P\+M\+\_\+\+Mem\+Map\+Ptr T\+P\+Mx, U08 channel, U16 value)}{set_TPM_CnV(TPM_MemMapPtr TPMx, U08 channel, U16 value)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+\+T\+P\+M\+\_\+\+CnV (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+P\+M\+\_\+\+Mem\+Map\+Ptr}}]{T\+P\+Mx, }
+\item[{{\bf U08}}]{channel, }
+\item[{{\bf U16}}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{tpm_8h_aa581a8a3f2eb3348257be88b8a0346ec}{}\label{tpm_8h_aa581a8a3f2eb3348257be88b8a0346ec}
+
+
+Definition at line 39 of file tpm.\+c.
+
+
+
+References T\+P\+M\+\_\+\+Cn\+V\+\_\+\+R\+EG.
+
+
+
+Referenced by set\+\_\+pos().
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+\+C\+H\+\_\+init@{T\+P\+M\+\_\+\+C\+H\+\_\+init}}
+\index{T\+P\+M\+\_\+\+C\+H\+\_\+init@{T\+P\+M\+\_\+\+C\+H\+\_\+init}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+C\+H\+\_\+init(\+T\+P\+M\+\_\+\+Mem\+Map\+Ptr T\+P\+Mx, U08 channel, U08 mode)}{TPM_CH_init(TPM_MemMapPtr TPMx, U08 channel, U08 mode)}}]{\setlength{\rightskip}{0pt plus 5cm}void T\+P\+M\+\_\+\+C\+H\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+P\+M\+\_\+\+Mem\+Map\+Ptr}}]{T\+P\+Mx, }
+\item[{{\bf U08}}]{channel, }
+\item[{{\bf U08}}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{tpm_8h_ae6718e300d27da5893cdedfecf50f7bb}{}\label{tpm_8h_ae6718e300d27da5893cdedfecf50f7bb}
+
+
+Definition at line 34 of file tpm.\+c.
+
+
+
+References T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+R\+EG.
+
+
+
+Referenced by vfn\+Init\+P\+W\+M().
+
+\index{tpm.\+h@{tpm.\+h}!T\+P\+M\+\_\+init\+\_\+\+P\+WM@{T\+P\+M\+\_\+init\+\_\+\+P\+WM}}
+\index{T\+P\+M\+\_\+init\+\_\+\+P\+WM@{T\+P\+M\+\_\+init\+\_\+\+P\+WM}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+init\+\_\+\+P\+W\+M(\+T\+P\+M\+\_\+\+Mem\+Map\+Ptr T\+P\+Mx, U08 clock\+\_\+source, U16 module, U08 clock\+\_\+mode, U08 ps, U08 counting\+\_\+mode)}{TPM_init_PWM(TPM_MemMapPtr TPMx, U08 clock_source, U16 module, U08 clock_mode, U08 ps, U08 counting_mode)}}]{\setlength{\rightskip}{0pt plus 5cm}void T\+P\+M\+\_\+init\+\_\+\+P\+WM (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+P\+M\+\_\+\+Mem\+Map\+Ptr}}]{T\+P\+Mx, }
+\item[{{\bf U08}}]{clock\+\_\+source, }
+\item[{{\bf U16}}]{module, }
+\item[{{\bf U08}}]{clock\+\_\+mode, }
+\item[{{\bf U08}}]{ps, }
+\item[{{\bf U08}}]{counting\+\_\+mode}
+\end{DoxyParamCaption}
+)}\hypertarget{tpm_8h_a68295c986d37fc857f51df35089029ca}{}\label{tpm_8h_a68295c986d37fc857f51df35089029ca}
+
+
+Definition at line 14 of file tpm.\+c.
+
+
+
+References S\+I\+M\+\_\+\+S\+C\+G\+C6, S\+I\+M\+\_\+\+S\+C\+G\+C6\+\_\+\+T\+P\+M0\+\_\+\+M\+A\+SK, S\+I\+M\+\_\+\+S\+C\+G\+C6\+\_\+\+T\+P\+M1\+\_\+\+M\+A\+SK, S\+I\+M\+\_\+\+S\+C\+G\+C6\+\_\+\+T\+P\+M2\+\_\+\+M\+A\+SK, S\+I\+M\+\_\+\+S\+O\+P\+T2, S\+I\+M\+\_\+\+S\+O\+P\+T2\+\_\+\+T\+P\+M\+S\+RC, T\+P\+M0\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR, T\+P\+M1\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR, T\+P\+M\+\_\+\+M\+O\+D\+\_\+\+R\+EG, T\+P\+M\+\_\+\+S\+C\+\_\+\+C\+M\+OD, T\+P\+M\+\_\+\+S\+C\+\_\+\+C\+P\+W\+M\+S\+\_\+\+M\+A\+SK, T\+P\+M\+\_\+\+S\+C\+\_\+\+PS, and T\+P\+M\+\_\+\+S\+C\+\_\+\+R\+EG.
+
+
+
+Referenced by vfn\+Init\+P\+W\+M().
+
+\index{tpm.\+h@{tpm.\+h}!vfn\+Delay\+Tpm@{vfn\+Delay\+Tpm}}
+\index{vfn\+Delay\+Tpm@{vfn\+Delay\+Tpm}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Delay\+Tpm(\+U32 u32\+Delay)}{vfnDelayTpm(U32 u32Delay)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Delay\+Tpm (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{u32\+Delay}
+\end{DoxyParamCaption}
+)}\hypertarget{tpm_8h_a417d38ec4e85d33c3c88ba1b2ac956f9}{}\label{tpm_8h_a417d38ec4e85d33c3c88ba1b2ac956f9}
+
+
+Definition at line 49 of file tpm.\+c.
+
+\index{tpm.\+h@{tpm.\+h}!vfn\+Select\+Channel\+Port\+Pin@{vfn\+Select\+Channel\+Port\+Pin}}
+\index{vfn\+Select\+Channel\+Port\+Pin@{vfn\+Select\+Channel\+Port\+Pin}!tpm.\+h@{tpm.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Select\+Channel\+Port\+Pin(e\+Ports port, U08 u08\+Pin)}{vfnSelectChannelPortPin(ePorts port, U08 u08Pin)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Select\+Channel\+Port\+Pin (
+\begin{DoxyParamCaption}
+\item[{{\bf e\+Ports}}]{port, }
+\item[{{\bf U08}}]{u08\+Pin}
+\end{DoxyParamCaption}
+)}\hypertarget{tpm_8h_a50780883372f2b9c01787d14240ed5fc}{}\label{tpm_8h_a50780883372f2b9c01787d14240ed5fc}
+
+
+Definition at line 9 of file tpm.\+c.
+
+
+
+References T\+P\+M\+\_\+\+M\+UX, and vfn\+Config\+Port\+Reg\+Pins().
+
+
+
+Referenced by vfn\+Init\+P\+W\+M().
+

@@ -1,0 +1,110 @@
+\hypertarget{nvic_8h}{}\section{Sources/hal/nvic.h File Reference}
+\label{nvic_8h}\index{Sources/hal/nvic.\+h@{Sources/hal/nvic.\+h}}
+{\ttfamily \#include \char`\"{}derivative.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{nvic_8h_a326ca030e67c4c328ae4990cfa6f0868}{A\+R\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+\+B\+I\+TS}~2
+\item 
+\#define \hyperlink{nvic_8h_a0351077bba47b36e8ada5bfa7ae27872}{Enable\+Interrupts}~asm(\char`\"{} C\+P\+S\+IE i\char`\"{});
+\item 
+\#define \hyperlink{nvic_8h_aa55388751c7ed809215f7d803282345f}{Disable\+Interrupts}~asm(\char`\"{} C\+P\+S\+ID i\char`\"{});
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{nvic_8h_ab906a4e76c24329ce88fa518f1ce44d1}{enable\+\_\+irq} (int)
+\item 
+void \hyperlink{nvic_8h_a7407b1b51f8e49ab7e566875f68f43c0}{disable\+\_\+irq} (int)
+\item 
+void \hyperlink{nvic_8h_adc98ae6d581320bf0438474903768263}{set\+\_\+irq\+\_\+priority} (int, int)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{nvic.\+h@{nvic.\+h}!A\+R\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+\+B\+I\+TS@{A\+R\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+\+B\+I\+TS}}
+\index{A\+R\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+\+B\+I\+TS@{A\+R\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+\+B\+I\+TS}!nvic.\+h@{nvic.\+h}}
+\subsubsection[{\texorpdfstring{A\+R\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+\+B\+I\+TS}{ARM_INTERRUPT_LEVEL_BITS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+R\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+\+B\+I\+TS~2}\hypertarget{nvic_8h_a326ca030e67c4c328ae4990cfa6f0868}{}\label{nvic_8h_a326ca030e67c4c328ae4990cfa6f0868}
+
+
+Definition at line 14 of file nvic.\+h.
+
+
+
+Referenced by set\+\_\+irq\+\_\+priority().
+
+\index{nvic.\+h@{nvic.\+h}!Disable\+Interrupts@{Disable\+Interrupts}}
+\index{Disable\+Interrupts@{Disable\+Interrupts}!nvic.\+h@{nvic.\+h}}
+\subsubsection[{\texorpdfstring{Disable\+Interrupts}{DisableInterrupts}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Disable\+Interrupts~asm(\char`\"{} C\+P\+S\+ID i\char`\"{});}\hypertarget{nvic_8h_aa55388751c7ed809215f7d803282345f}{}\label{nvic_8h_aa55388751c7ed809215f7d803282345f}
+
+
+Definition at line 17 of file nvic.\+h.
+
+\index{nvic.\+h@{nvic.\+h}!Enable\+Interrupts@{Enable\+Interrupts}}
+\index{Enable\+Interrupts@{Enable\+Interrupts}!nvic.\+h@{nvic.\+h}}
+\subsubsection[{\texorpdfstring{Enable\+Interrupts}{EnableInterrupts}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Enable\+Interrupts~asm(\char`\"{} C\+P\+S\+IE i\char`\"{});}\hypertarget{nvic_8h_a0351077bba47b36e8ada5bfa7ae27872}{}\label{nvic_8h_a0351077bba47b36e8ada5bfa7ae27872}
+
+
+Definition at line 16 of file nvic.\+h.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+init().
+
+
+
+\subsection{Function Documentation}
+\index{nvic.\+h@{nvic.\+h}!disable\+\_\+irq@{disable\+\_\+irq}}
+\index{disable\+\_\+irq@{disable\+\_\+irq}!nvic.\+h@{nvic.\+h}}
+\subsubsection[{\texorpdfstring{disable\+\_\+irq(int)}{disable_irq(int)}}]{\setlength{\rightskip}{0pt plus 5cm}void disable\+\_\+irq (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{nvic_8h_a7407b1b51f8e49ab7e566875f68f43c0}{}\label{nvic_8h_a7407b1b51f8e49ab7e566875f68f43c0}
+
+
+Definition at line 45 of file nvic.\+c.
+
+
+
+References N\+V\+I\+C\+\_\+\+I\+C\+ER.
+
+\index{nvic.\+h@{nvic.\+h}!enable\+\_\+irq@{enable\+\_\+irq}}
+\index{enable\+\_\+irq@{enable\+\_\+irq}!nvic.\+h@{nvic.\+h}}
+\subsubsection[{\texorpdfstring{enable\+\_\+irq(int)}{enable_irq(int)}}]{\setlength{\rightskip}{0pt plus 5cm}void enable\+\_\+irq (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{nvic_8h_ab906a4e76c24329ce88fa518f1ce44d1}{}\label{nvic_8h_ab906a4e76c24329ce88fa518f1ce44d1}
+
+
+Definition at line 16 of file nvic.\+c.
+
+
+
+References N\+V\+I\+C\+\_\+\+I\+C\+PR, and N\+V\+I\+C\+\_\+\+I\+S\+ER.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+init().
+
+\index{nvic.\+h@{nvic.\+h}!set\+\_\+irq\+\_\+priority@{set\+\_\+irq\+\_\+priority}}
+\index{set\+\_\+irq\+\_\+priority@{set\+\_\+irq\+\_\+priority}!nvic.\+h@{nvic.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+irq\+\_\+priority(int, int)}{set_irq_priority(int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+irq\+\_\+priority (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{nvic_8h_adc98ae6d581320bf0438474903768263}{}\label{nvic_8h_adc98ae6d581320bf0438474903768263}
+
+
+Definition at line 73 of file nvic.\+c.
+
+
+
+References A\+R\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+\+B\+I\+TS, and N\+V\+I\+C\+\_\+\+IP.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+init().
+

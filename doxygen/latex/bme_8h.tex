@@ -1,0 +1,572 @@
+\hypertarget{bme_8h}{}\section{Project\+\_\+\+Headers/bme.h File Reference}
+\label{bme_8h}\index{Project\+\_\+\+Headers/bme.\+h@{Project\+\_\+\+Headers/bme.\+h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{bme_8h_a6c5269009a5f7be415464a1b11543a27}{B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+M\+A\+SK}~(1$<$$<$26)
+\item 
+\#define \hyperlink{bme_8h_a34b703e728f49f0947f7bde6a138b883}{B\+M\+E\+\_\+\+O\+R\+\_\+\+M\+A\+SK}~(1$<$$<$27)
+\item 
+\#define \hyperlink{bme_8h_ae81f3a391e0f05c04d5e134f6a79d0ca}{B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+M\+A\+SK}~(3$<$$<$26)
+\item 
+\#define \hyperlink{bme_8h_aec5f9be2b04758e8c953589bbe65f73a}{B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+M\+A\+SK}(B\+IT,  W\+I\+D\+TH)~(1$<$$<$28) $\vert$ (B\+IT$<$$<$23) $\vert$ ((W\+I\+D\+TH-\/1)$<$$<$19)
+\item 
+\#define \hyperlink{bme_8h_ad780dfd08580952ca996dc3e2c729c1e}{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+M\+A\+SK}(B\+IT)~(1$<$$<$27) $\vert$ (B\+IT$<$$<$21)
+\item 
+\#define \hyperlink{bme_8h_acb3302ecd0c8a708f503d07392b68f97}{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+M\+A\+SK}(B\+IT)~(3$<$$<$26) $\vert$ (B\+IT$<$$<$21)
+\item 
+\#define \hyperlink{bme_8h_a799964eb3e190cbb8e77338b15566473}{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+M\+A\+SK}(B\+IT,  W\+I\+D\+TH)~(1$<$$<$28) $\vert$ (B\+IT$<$$<$23) $\vert$ ((W\+I\+D\+TH-\/1)$<$$<$19)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{bme_8h_aa4358aae5153f68d496afc2b58c0c186}{B\+M\+E\+\_\+\+A\+N\+D\+\_\+B} (volatile uint8\+\_\+t $\ast$addr, register uint8\+\_\+t wdata)
+\item 
+void \hyperlink{bme_8h_a999b5c235d28140979b59d9fd6d32fba}{B\+M\+E\+\_\+\+A\+N\+D\+\_\+H} (volatile uint16\+\_\+t $\ast$addr, register uint16\+\_\+t wdata)
+\item 
+void \hyperlink{bme_8h_a3e719a93beb000be07db0274d73ed0c9}{B\+M\+E\+\_\+\+A\+N\+D\+\_\+W} (volatile uint32\+\_\+t $\ast$addr, register uint32\+\_\+t wdata)
+\item 
+void \hyperlink{bme_8h_a6e47f59d800eb68421024db6d60d592c}{B\+M\+E\+\_\+\+O\+R\+\_\+B} (volatile uint8\+\_\+t $\ast$addr, register uint8\+\_\+t wdata)
+\item 
+void \hyperlink{bme_8h_ace08fbaaf5e8a57aae0846142aca1298}{B\+M\+E\+\_\+\+O\+R\+\_\+H} (volatile uint16\+\_\+t $\ast$addr, register uint16\+\_\+t wdata)
+\item 
+void \hyperlink{bme_8h_ab3524e88d7f47f90f44426e9558eb24f}{B\+M\+E\+\_\+\+O\+R\+\_\+W} (volatile uint32\+\_\+t $\ast$addr, register uint32\+\_\+t wdata)
+\item 
+void \hyperlink{bme_8h_a80f11f7f5b1a291191c49e0af69d1d94}{B\+M\+E\+\_\+\+X\+O\+R\+\_\+B} (volatile uint8\+\_\+t $\ast$addr, register uint8\+\_\+t wdata)
+\item 
+void \hyperlink{bme_8h_a2cb964120df3bd9c3fa43a87d5672b6f}{B\+M\+E\+\_\+\+X\+O\+R\+\_\+H} (volatile uint16\+\_\+t $\ast$addr, register uint16\+\_\+t wdata)
+\item 
+void \hyperlink{bme_8h_a5003c093c897388a9186e0e194af6a9f}{B\+M\+E\+\_\+\+X\+O\+R\+\_\+W} (volatile uint32\+\_\+t $\ast$addr, register uint32\+\_\+t wdata)
+\item 
+void \hyperlink{bme_8h_a23ea98659eff26c1adc31dfb2b8f2e8a}{B\+M\+E\+\_\+\+B\+F\+I\+\_\+B} (volatile uint8\+\_\+t $\ast$addr, register uint8\+\_\+t wdata, uint8\+\_\+t bit, uint8\+\_\+t width)
+\item 
+void \hyperlink{bme_8h_a39000ba45cf192320359aabe1a8d0212}{B\+M\+E\+\_\+\+B\+F\+I\+\_\+H} (volatile uint16\+\_\+t $\ast$addr, register uint16\+\_\+t wdata, uint8\+\_\+t bit, uint8\+\_\+t width)
+\item 
+void \hyperlink{bme_8h_a2d45bffb4523fbae773f4e5d826420af}{B\+M\+E\+\_\+\+B\+F\+I\+\_\+W} (volatile uint32\+\_\+t $\ast$addr, register uint32\+\_\+t wdata, uint8\+\_\+t bit, uint8\+\_\+t width)
+\item 
+uint8\+\_\+t \hyperlink{bme_8h_a49e7222c55664ab230c9462216ba568f}{B\+M\+E\+\_\+\+L\+D\+C1\+\_\+B} (volatile uint8\+\_\+t $\ast$addr, uint8\+\_\+t bit)
+\item 
+uint16\+\_\+t \hyperlink{bme_8h_a496f6899c1ce3cb1d4070dd1d2c85d5c}{B\+M\+E\+\_\+\+L\+D\+C1\+\_\+H} (volatile uint16\+\_\+t $\ast$addr, uint8\+\_\+t bit)
+\item 
+uint32\+\_\+t \hyperlink{bme_8h_a81cfeb09c424a30c06a35311ee08434e}{B\+M\+E\+\_\+\+L\+D\+C1\+\_\+W} (volatile uint32\+\_\+t $\ast$addr, uint8\+\_\+t bit)
+\item 
+uint8\+\_\+t \hyperlink{bme_8h_a745c20b1e1b70e3773ce48c3aeb3177a}{B\+M\+E\+\_\+\+L\+D\+S1\+\_\+B} (volatile uint8\+\_\+t $\ast$addr, uint8\+\_\+t bit)
+\item 
+uint16\+\_\+t \hyperlink{bme_8h_a9c354e635b378a1a36f3e299cb4ddc23}{B\+M\+E\+\_\+\+L\+D\+S1\+\_\+H} (volatile uint16\+\_\+t $\ast$addr, uint8\+\_\+t bit)
+\item 
+uint32\+\_\+t \hyperlink{bme_8h_a956367de760ccf294164e83fb5fad93b}{B\+M\+E\+\_\+\+L\+D\+S1\+\_\+W} (volatile uint32\+\_\+t $\ast$addr, uint8\+\_\+t bit)
+\item 
+uint8\+\_\+t \hyperlink{bme_8h_a15f655d315693b670da4416d399c5761}{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+B} (volatile uint8\+\_\+t $\ast$addr, uint8\+\_\+t bit, uint8\+\_\+t width)
+\item 
+uint16\+\_\+t \hyperlink{bme_8h_a4b13a278cfc2783ad90ae81bb2e4ae93}{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+H} (volatile uint16\+\_\+t $\ast$addr, uint8\+\_\+t bit, uint8\+\_\+t width)
+\item 
+uint32\+\_\+t \hyperlink{bme_8h_a85bc99d43b387dcb1af64a352ad6806d}{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+W} (volatile uint32\+\_\+t $\ast$addr, uint8\+\_\+t bit, uint8\+\_\+t width)
+\item 
+\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE uint32\+\_\+t \hyperlink{bme_8h_a591bff1195855aae0d7b8aafc9d8e538}{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+W} (volatile uint32\+\_\+t $\ast$addr, uint8\+\_\+t bit)
+\item 
+\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE uint16\+\_\+t \hyperlink{bme_8h_a99f09ae623f5d1ba831681cf046a3ef3}{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+H} (volatile uint16\+\_\+t $\ast$addr, uint8\+\_\+t bit)
+\item 
+\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE uint8\+\_\+t \hyperlink{bme_8h_ad6b435592a1f491cbe4b15aa13f1622a}{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+B} (volatile uint8\+\_\+t $\ast$addr, uint8\+\_\+t bit)
+\item 
+\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE uint32\+\_\+t \hyperlink{bme_8h_a044f8d08aed7f9713d233414ea9e08e4}{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+W} (volatile uint32\+\_\+t $\ast$addr, uint8\+\_\+t bit)
+\item 
+\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE uint16\+\_\+t \hyperlink{bme_8h_af693a197aad4b186e4f89f4003106d63}{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+H} (volatile uint16\+\_\+t $\ast$addr, uint8\+\_\+t bit)
+\item 
+\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE uint8\+\_\+t \hyperlink{bme_8h_afbc4f3358d1174f66e7b4582601b67a4}{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+B} (volatile uint8\+\_\+t $\ast$addr, uint8\+\_\+t bit)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+M\+A\+SK@{B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+M\+A\+SK}}
+\index{B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+M\+A\+SK@{B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+M\+A\+SK}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+M\+A\+SK}{BME_AND_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+M\+A\+SK~(1$<$$<$26)}\hypertarget{bme_8h_a6c5269009a5f7be415464a1b11543a27}{}\label{bme_8h_a6c5269009a5f7be415464a1b11543a27}
+
+
+Definition at line 40 of file bme.\+h.
+
+
+
+Referenced by B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+B(), B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+H(), and B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+W().
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+M\+A\+SK@{B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+M\+A\+SK}}
+\index{B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+M\+A\+SK@{B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+M\+A\+SK}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+M\+A\+SK}{BME_BFI_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+M\+A\+SK(
+\begin{DoxyParamCaption}
+\item[{}]{B\+IT, }
+\item[{}]{W\+I\+D\+TH}
+\end{DoxyParamCaption}
+)~(1$<$$<$28) $\vert$ (B\+IT$<$$<$23) $\vert$ ((W\+I\+D\+TH-\/1)$<$$<$19)}\hypertarget{bme_8h_aec5f9be2b04758e8c953589bbe65f73a}{}\label{bme_8h_aec5f9be2b04758e8c953589bbe65f73a}
+
+
+Definition at line 43 of file bme.\+h.
+
+
+
+Referenced by B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+B(), B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+H(), and B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+W().
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+M\+A\+SK@{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+M\+A\+SK}}
+\index{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+M\+A\+SK@{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+M\+A\+SK}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+M\+A\+SK}{BME_LAC1_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+M\+A\+SK(
+\begin{DoxyParamCaption}
+\item[{}]{B\+IT}
+\end{DoxyParamCaption}
+)~(1$<$$<$27) $\vert$ (B\+IT$<$$<$21)}\hypertarget{bme_8h_ad780dfd08580952ca996dc3e2c729c1e}{}\label{bme_8h_ad780dfd08580952ca996dc3e2c729c1e}
+
+
+Definition at line 44 of file bme.\+h.
+
+
+
+Referenced by B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+B(), B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+H(), and B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+W().
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+M\+A\+SK@{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+M\+A\+SK}}
+\index{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+M\+A\+SK@{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+M\+A\+SK}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+M\+A\+SK}{BME_LAS1_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+M\+A\+SK(
+\begin{DoxyParamCaption}
+\item[{}]{B\+IT}
+\end{DoxyParamCaption}
+)~(3$<$$<$26) $\vert$ (B\+IT$<$$<$21)}\hypertarget{bme_8h_acb3302ecd0c8a708f503d07392b68f97}{}\label{bme_8h_acb3302ecd0c8a708f503d07392b68f97}
+
+
+Definition at line 45 of file bme.\+h.
+
+
+
+Referenced by B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+B(), B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+H(), and B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+W().
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+O\+R\+\_\+\+M\+A\+SK@{B\+M\+E\+\_\+\+O\+R\+\_\+\+M\+A\+SK}}
+\index{B\+M\+E\+\_\+\+O\+R\+\_\+\+M\+A\+SK@{B\+M\+E\+\_\+\+O\+R\+\_\+\+M\+A\+SK}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+O\+R\+\_\+\+M\+A\+SK}{BME_OR_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+E\+\_\+\+O\+R\+\_\+\+M\+A\+SK~(1$<$$<$27)}\hypertarget{bme_8h_a34b703e728f49f0947f7bde6a138b883}{}\label{bme_8h_a34b703e728f49f0947f7bde6a138b883}
+
+
+Definition at line 41 of file bme.\+h.
+
+
+
+Referenced by B\+M\+E\+\_\+\+O\+R\+\_\+\+B(), B\+M\+E\+\_\+\+O\+R\+\_\+\+H(), and B\+M\+E\+\_\+\+O\+R\+\_\+\+W().
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+M\+A\+SK@{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+M\+A\+SK}}
+\index{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+M\+A\+SK@{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+M\+A\+SK}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+M\+A\+SK}{BME_UBFX_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+M\+A\+SK(
+\begin{DoxyParamCaption}
+\item[{}]{B\+IT, }
+\item[{}]{W\+I\+D\+TH}
+\end{DoxyParamCaption}
+)~(1$<$$<$28) $\vert$ (B\+IT$<$$<$23) $\vert$ ((W\+I\+D\+TH-\/1)$<$$<$19)}\hypertarget{bme_8h_a799964eb3e190cbb8e77338b15566473}{}\label{bme_8h_a799964eb3e190cbb8e77338b15566473}
+
+
+Definition at line 46 of file bme.\+h.
+
+
+
+Referenced by B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+B(), B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+H(), and B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+W().
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+M\+A\+SK@{B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+M\+A\+SK}}
+\index{B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+M\+A\+SK@{B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+M\+A\+SK}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+M\+A\+SK}{BME_XOR_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+M\+A\+SK~(3$<$$<$26)}\hypertarget{bme_8h_ae81f3a391e0f05c04d5e134f6a79d0ca}{}\label{bme_8h_ae81f3a391e0f05c04d5e134f6a79d0ca}
+
+
+Definition at line 42 of file bme.\+h.
+
+
+
+Referenced by B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+B(), B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+H(), and B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+W().
+
+
+
+\subsection{Function Documentation}
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+A\+N\+D\+\_\+B@{B\+M\+E\+\_\+\+A\+N\+D\+\_\+B}}
+\index{B\+M\+E\+\_\+\+A\+N\+D\+\_\+B@{B\+M\+E\+\_\+\+A\+N\+D\+\_\+B}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+B(volatile uint8\+\_\+t $\ast$addr, register uint8\+\_\+t wdata)}{BME_AND_B(volatile uint8_t *addr, register uint8_t wdata)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE void B\+M\+E\+\_\+\+A\+N\+D\+\_\+B (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\+\_\+t $\ast$}]{addr, }
+\item[{register uint8\+\_\+t}]{wdata}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_aa4358aae5153f68d496afc2b58c0c186}{}\label{bme_8h_aa4358aae5153f68d496afc2b58c0c186}
+
+
+Definition at line 95 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+A\+N\+D\+\_\+H@{B\+M\+E\+\_\+\+A\+N\+D\+\_\+H}}
+\index{B\+M\+E\+\_\+\+A\+N\+D\+\_\+H@{B\+M\+E\+\_\+\+A\+N\+D\+\_\+H}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+H(volatile uint16\+\_\+t $\ast$addr, register uint16\+\_\+t wdata)}{BME_AND_H(volatile uint16_t *addr, register uint16_t wdata)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE void B\+M\+E\+\_\+\+A\+N\+D\+\_\+H (
+\begin{DoxyParamCaption}
+\item[{volatile uint16\+\_\+t $\ast$}]{addr, }
+\item[{register uint16\+\_\+t}]{wdata}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a999b5c235d28140979b59d9fd6d32fba}{}\label{bme_8h_a999b5c235d28140979b59d9fd6d32fba}
+
+
+Definition at line 90 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+A\+N\+D\+\_\+W@{B\+M\+E\+\_\+\+A\+N\+D\+\_\+W}}
+\index{B\+M\+E\+\_\+\+A\+N\+D\+\_\+W@{B\+M\+E\+\_\+\+A\+N\+D\+\_\+W}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+W(volatile uint32\+\_\+t $\ast$addr, register uint32\+\_\+t wdata)}{BME_AND_W(volatile uint32_t *addr, register uint32_t wdata)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE void B\+M\+E\+\_\+\+A\+N\+D\+\_\+W (
+\begin{DoxyParamCaption}
+\item[{volatile uint32\+\_\+t $\ast$}]{addr, }
+\item[{register uint32\+\_\+t}]{wdata}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a3e719a93beb000be07db0274d73ed0c9}{}\label{bme_8h_a3e719a93beb000be07db0274d73ed0c9}
+
+
+Definition at line 85 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+A\+N\+D\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+B\+F\+I\+\_\+B@{B\+M\+E\+\_\+\+B\+F\+I\+\_\+B}}
+\index{B\+M\+E\+\_\+\+B\+F\+I\+\_\+B@{B\+M\+E\+\_\+\+B\+F\+I\+\_\+B}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+B(volatile uint8\+\_\+t $\ast$addr, register uint8\+\_\+t wdata, uint8\+\_\+t bit, uint8\+\_\+t width)}{BME_BFI_B(volatile uint8_t *addr, register uint8_t wdata, uint8_t bit, uint8_t width)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE void B\+M\+E\+\_\+\+B\+F\+I\+\_\+B (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\+\_\+t $\ast$}]{addr, }
+\item[{register uint8\+\_\+t}]{wdata, }
+\item[{uint8\+\_\+t}]{bit, }
+\item[{uint8\+\_\+t}]{width}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a23ea98659eff26c1adc31dfb2b8f2e8a}{}\label{bme_8h_a23ea98659eff26c1adc31dfb2b8f2e8a}
+
+
+Definition at line 141 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+B\+F\+I\+\_\+H@{B\+M\+E\+\_\+\+B\+F\+I\+\_\+H}}
+\index{B\+M\+E\+\_\+\+B\+F\+I\+\_\+H@{B\+M\+E\+\_\+\+B\+F\+I\+\_\+H}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+H(volatile uint16\+\_\+t $\ast$addr, register uint16\+\_\+t wdata, uint8\+\_\+t bit, uint8\+\_\+t width)}{BME_BFI_H(volatile uint16_t *addr, register uint16_t wdata, uint8_t bit, uint8_t width)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE void B\+M\+E\+\_\+\+B\+F\+I\+\_\+H (
+\begin{DoxyParamCaption}
+\item[{volatile uint16\+\_\+t $\ast$}]{addr, }
+\item[{register uint16\+\_\+t}]{wdata, }
+\item[{uint8\+\_\+t}]{bit, }
+\item[{uint8\+\_\+t}]{width}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a39000ba45cf192320359aabe1a8d0212}{}\label{bme_8h_a39000ba45cf192320359aabe1a8d0212}
+
+
+Definition at line 136 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+B\+F\+I\+\_\+W@{B\+M\+E\+\_\+\+B\+F\+I\+\_\+W}}
+\index{B\+M\+E\+\_\+\+B\+F\+I\+\_\+W@{B\+M\+E\+\_\+\+B\+F\+I\+\_\+W}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+W(volatile uint32\+\_\+t $\ast$addr, register uint32\+\_\+t wdata, uint8\+\_\+t bit, uint8\+\_\+t width)}{BME_BFI_W(volatile uint32_t *addr, register uint32_t wdata, uint8_t bit, uint8_t width)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE void B\+M\+E\+\_\+\+B\+F\+I\+\_\+W (
+\begin{DoxyParamCaption}
+\item[{volatile uint32\+\_\+t $\ast$}]{addr, }
+\item[{register uint32\+\_\+t}]{wdata, }
+\item[{uint8\+\_\+t}]{bit, }
+\item[{uint8\+\_\+t}]{width}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a2d45bffb4523fbae773f4e5d826420af}{}\label{bme_8h_a2d45bffb4523fbae773f4e5d826420af}
+
+
+Definition at line 131 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+B\+F\+I\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+L\+A\+C1\+\_\+B@{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+B}}
+\index{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+B@{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+B}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+B(volatile uint8\+\_\+t $\ast$addr, uint8\+\_\+t bit)}{BME_LAC1_B(volatile uint8_t *addr, uint8_t bit)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE uint8\+\_\+t B\+M\+E\+\_\+\+L\+A\+C1\+\_\+B (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{bit}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_ad6b435592a1f491cbe4b15aa13f1622a}{}\label{bme_8h_ad6b435592a1f491cbe4b15aa13f1622a}
+
+
+Definition at line 156 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+L\+A\+C1\+\_\+H@{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+H}}
+\index{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+H@{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+H}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+H(volatile uint16\+\_\+t $\ast$addr, uint8\+\_\+t bit)}{BME_LAC1_H(volatile uint16_t *addr, uint8_t bit)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE uint16\+\_\+t B\+M\+E\+\_\+\+L\+A\+C1\+\_\+H (
+\begin{DoxyParamCaption}
+\item[{volatile uint16\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{bit}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a99f09ae623f5d1ba831681cf046a3ef3}{}\label{bme_8h_a99f09ae623f5d1ba831681cf046a3ef3}
+
+
+Definition at line 151 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+L\+A\+C1\+\_\+W@{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+W}}
+\index{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+W@{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+W}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+W(volatile uint32\+\_\+t $\ast$addr, uint8\+\_\+t bit)}{BME_LAC1_W(volatile uint32_t *addr, uint8_t bit)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE uint32\+\_\+t B\+M\+E\+\_\+\+L\+A\+C1\+\_\+W (
+\begin{DoxyParamCaption}
+\item[{volatile uint32\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{bit}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a591bff1195855aae0d7b8aafc9d8e538}{}\label{bme_8h_a591bff1195855aae0d7b8aafc9d8e538}
+
+
+Definition at line 146 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+L\+A\+C1\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+L\+A\+S1\+\_\+B@{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+B}}
+\index{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+B@{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+B}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+B(volatile uint8\+\_\+t $\ast$addr, uint8\+\_\+t bit)}{BME_LAS1_B(volatile uint8_t *addr, uint8_t bit)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE uint8\+\_\+t B\+M\+E\+\_\+\+L\+A\+S1\+\_\+B (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{bit}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_afbc4f3358d1174f66e7b4582601b67a4}{}\label{bme_8h_afbc4f3358d1174f66e7b4582601b67a4}
+
+
+Definition at line 171 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+L\+A\+S1\+\_\+H@{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+H}}
+\index{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+H@{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+H}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+H(volatile uint16\+\_\+t $\ast$addr, uint8\+\_\+t bit)}{BME_LAS1_H(volatile uint16_t *addr, uint8_t bit)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE uint16\+\_\+t B\+M\+E\+\_\+\+L\+A\+S1\+\_\+H (
+\begin{DoxyParamCaption}
+\item[{volatile uint16\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{bit}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_af693a197aad4b186e4f89f4003106d63}{}\label{bme_8h_af693a197aad4b186e4f89f4003106d63}
+
+
+Definition at line 166 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+L\+A\+S1\+\_\+W@{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+W}}
+\index{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+W@{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+W}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+W(volatile uint32\+\_\+t $\ast$addr, uint8\+\_\+t bit)}{BME_LAS1_W(volatile uint32_t *addr, uint8_t bit)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE uint32\+\_\+t B\+M\+E\+\_\+\+L\+A\+S1\+\_\+W (
+\begin{DoxyParamCaption}
+\item[{volatile uint32\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{bit}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a044f8d08aed7f9713d233414ea9e08e4}{}\label{bme_8h_a044f8d08aed7f9713d233414ea9e08e4}
+
+
+Definition at line 161 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+L\+A\+S1\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+L\+D\+C1\+\_\+B@{B\+M\+E\+\_\+\+L\+D\+C1\+\_\+B}}
+\index{B\+M\+E\+\_\+\+L\+D\+C1\+\_\+B@{B\+M\+E\+\_\+\+L\+D\+C1\+\_\+B}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+L\+D\+C1\+\_\+\+B(volatile uint8\+\_\+t $\ast$addr, uint8\+\_\+t bit)}{BME_LDC1_B(volatile uint8_t *addr, uint8_t bit)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t B\+M\+E\+\_\+\+L\+D\+C1\+\_\+B (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{bit}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a49e7222c55664ab230c9462216ba568f}{}\label{bme_8h_a49e7222c55664ab230c9462216ba568f}
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+L\+D\+C1\+\_\+H@{B\+M\+E\+\_\+\+L\+D\+C1\+\_\+H}}
+\index{B\+M\+E\+\_\+\+L\+D\+C1\+\_\+H@{B\+M\+E\+\_\+\+L\+D\+C1\+\_\+H}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+L\+D\+C1\+\_\+\+H(volatile uint16\+\_\+t $\ast$addr, uint8\+\_\+t bit)}{BME_LDC1_H(volatile uint16_t *addr, uint8_t bit)}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t B\+M\+E\+\_\+\+L\+D\+C1\+\_\+H (
+\begin{DoxyParamCaption}
+\item[{volatile uint16\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{bit}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a496f6899c1ce3cb1d4070dd1d2c85d5c}{}\label{bme_8h_a496f6899c1ce3cb1d4070dd1d2c85d5c}
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+L\+D\+C1\+\_\+W@{B\+M\+E\+\_\+\+L\+D\+C1\+\_\+W}}
+\index{B\+M\+E\+\_\+\+L\+D\+C1\+\_\+W@{B\+M\+E\+\_\+\+L\+D\+C1\+\_\+W}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+L\+D\+C1\+\_\+\+W(volatile uint32\+\_\+t $\ast$addr, uint8\+\_\+t bit)}{BME_LDC1_W(volatile uint32_t *addr, uint8_t bit)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t B\+M\+E\+\_\+\+L\+D\+C1\+\_\+W (
+\begin{DoxyParamCaption}
+\item[{volatile uint32\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{bit}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a81cfeb09c424a30c06a35311ee08434e}{}\label{bme_8h_a81cfeb09c424a30c06a35311ee08434e}
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+L\+D\+S1\+\_\+B@{B\+M\+E\+\_\+\+L\+D\+S1\+\_\+B}}
+\index{B\+M\+E\+\_\+\+L\+D\+S1\+\_\+B@{B\+M\+E\+\_\+\+L\+D\+S1\+\_\+B}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+L\+D\+S1\+\_\+\+B(volatile uint8\+\_\+t $\ast$addr, uint8\+\_\+t bit)}{BME_LDS1_B(volatile uint8_t *addr, uint8_t bit)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t B\+M\+E\+\_\+\+L\+D\+S1\+\_\+B (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{bit}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a745c20b1e1b70e3773ce48c3aeb3177a}{}\label{bme_8h_a745c20b1e1b70e3773ce48c3aeb3177a}
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+L\+D\+S1\+\_\+H@{B\+M\+E\+\_\+\+L\+D\+S1\+\_\+H}}
+\index{B\+M\+E\+\_\+\+L\+D\+S1\+\_\+H@{B\+M\+E\+\_\+\+L\+D\+S1\+\_\+H}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+L\+D\+S1\+\_\+\+H(volatile uint16\+\_\+t $\ast$addr, uint8\+\_\+t bit)}{BME_LDS1_H(volatile uint16_t *addr, uint8_t bit)}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t B\+M\+E\+\_\+\+L\+D\+S1\+\_\+H (
+\begin{DoxyParamCaption}
+\item[{volatile uint16\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{bit}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a9c354e635b378a1a36f3e299cb4ddc23}{}\label{bme_8h_a9c354e635b378a1a36f3e299cb4ddc23}
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+L\+D\+S1\+\_\+W@{B\+M\+E\+\_\+\+L\+D\+S1\+\_\+W}}
+\index{B\+M\+E\+\_\+\+L\+D\+S1\+\_\+W@{B\+M\+E\+\_\+\+L\+D\+S1\+\_\+W}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+L\+D\+S1\+\_\+\+W(volatile uint32\+\_\+t $\ast$addr, uint8\+\_\+t bit)}{BME_LDS1_W(volatile uint32_t *addr, uint8_t bit)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t B\+M\+E\+\_\+\+L\+D\+S1\+\_\+W (
+\begin{DoxyParamCaption}
+\item[{volatile uint32\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{bit}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a956367de760ccf294164e83fb5fad93b}{}\label{bme_8h_a956367de760ccf294164e83fb5fad93b}
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+O\+R\+\_\+B@{B\+M\+E\+\_\+\+O\+R\+\_\+B}}
+\index{B\+M\+E\+\_\+\+O\+R\+\_\+B@{B\+M\+E\+\_\+\+O\+R\+\_\+B}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+O\+R\+\_\+\+B(volatile uint8\+\_\+t $\ast$addr, register uint8\+\_\+t wdata)}{BME_OR_B(volatile uint8_t *addr, register uint8_t wdata)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE void B\+M\+E\+\_\+\+O\+R\+\_\+B (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\+\_\+t $\ast$}]{addr, }
+\item[{register uint8\+\_\+t}]{wdata}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a6e47f59d800eb68421024db6d60d592c}{}\label{bme_8h_a6e47f59d800eb68421024db6d60d592c}
+
+
+Definition at line 110 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+O\+R\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+O\+R\+\_\+H@{B\+M\+E\+\_\+\+O\+R\+\_\+H}}
+\index{B\+M\+E\+\_\+\+O\+R\+\_\+H@{B\+M\+E\+\_\+\+O\+R\+\_\+H}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+O\+R\+\_\+\+H(volatile uint16\+\_\+t $\ast$addr, register uint16\+\_\+t wdata)}{BME_OR_H(volatile uint16_t *addr, register uint16_t wdata)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE void B\+M\+E\+\_\+\+O\+R\+\_\+H (
+\begin{DoxyParamCaption}
+\item[{volatile uint16\+\_\+t $\ast$}]{addr, }
+\item[{register uint16\+\_\+t}]{wdata}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_ace08fbaaf5e8a57aae0846142aca1298}{}\label{bme_8h_ace08fbaaf5e8a57aae0846142aca1298}
+
+
+Definition at line 105 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+O\+R\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+O\+R\+\_\+W@{B\+M\+E\+\_\+\+O\+R\+\_\+W}}
+\index{B\+M\+E\+\_\+\+O\+R\+\_\+W@{B\+M\+E\+\_\+\+O\+R\+\_\+W}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+O\+R\+\_\+\+W(volatile uint32\+\_\+t $\ast$addr, register uint32\+\_\+t wdata)}{BME_OR_W(volatile uint32_t *addr, register uint32_t wdata)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE void B\+M\+E\+\_\+\+O\+R\+\_\+W (
+\begin{DoxyParamCaption}
+\item[{volatile uint32\+\_\+t $\ast$}]{addr, }
+\item[{register uint32\+\_\+t}]{wdata}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_ab3524e88d7f47f90f44426e9558eb24f}{}\label{bme_8h_ab3524e88d7f47f90f44426e9558eb24f}
+
+
+Definition at line 100 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+O\+R\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+B@{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+B}}
+\index{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+B@{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+B}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+B(volatile uint8\+\_\+t $\ast$addr, uint8\+\_\+t bit, uint8\+\_\+t width)}{BME_UBFX_B(volatile uint8_t *addr, uint8_t bit, uint8_t width)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE uint8\+\_\+t B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+B (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{bit, }
+\item[{uint8\+\_\+t}]{width}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a15f655d315693b670da4416d399c5761}{}\label{bme_8h_a15f655d315693b670da4416d399c5761}
+
+
+Definition at line 187 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+H@{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+H}}
+\index{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+H@{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+H}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+H(volatile uint16\+\_\+t $\ast$addr, uint8\+\_\+t bit, uint8\+\_\+t width)}{BME_UBFX_H(volatile uint16_t *addr, uint8_t bit, uint8_t width)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE uint16\+\_\+t B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+H (
+\begin{DoxyParamCaption}
+\item[{volatile uint16\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{bit, }
+\item[{uint8\+\_\+t}]{width}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a4b13a278cfc2783ad90ae81bb2e4ae93}{}\label{bme_8h_a4b13a278cfc2783ad90ae81bb2e4ae93}
+
+
+Definition at line 182 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+W@{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+W}}
+\index{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+W@{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+W}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+W(volatile uint32\+\_\+t $\ast$addr, uint8\+\_\+t bit, uint8\+\_\+t width)}{BME_UBFX_W(volatile uint32_t *addr, uint8_t bit, uint8_t width)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE uint32\+\_\+t B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+W (
+\begin{DoxyParamCaption}
+\item[{volatile uint32\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{bit, }
+\item[{uint8\+\_\+t}]{width}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a85bc99d43b387dcb1af64a352ad6806d}{}\label{bme_8h_a85bc99d43b387dcb1af64a352ad6806d}
+
+
+Definition at line 177 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+U\+B\+F\+X\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+X\+O\+R\+\_\+B@{B\+M\+E\+\_\+\+X\+O\+R\+\_\+B}}
+\index{B\+M\+E\+\_\+\+X\+O\+R\+\_\+B@{B\+M\+E\+\_\+\+X\+O\+R\+\_\+B}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+B(volatile uint8\+\_\+t $\ast$addr, register uint8\+\_\+t wdata)}{BME_XOR_B(volatile uint8_t *addr, register uint8_t wdata)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE void B\+M\+E\+\_\+\+X\+O\+R\+\_\+B (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\+\_\+t $\ast$}]{addr, }
+\item[{register uint8\+\_\+t}]{wdata}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a80f11f7f5b1a291191c49e0af69d1d94}{}\label{bme_8h_a80f11f7f5b1a291191c49e0af69d1d94}
+
+
+Definition at line 125 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+X\+O\+R\+\_\+H@{B\+M\+E\+\_\+\+X\+O\+R\+\_\+H}}
+\index{B\+M\+E\+\_\+\+X\+O\+R\+\_\+H@{B\+M\+E\+\_\+\+X\+O\+R\+\_\+H}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+H(volatile uint16\+\_\+t $\ast$addr, register uint16\+\_\+t wdata)}{BME_XOR_H(volatile uint16_t *addr, register uint16_t wdata)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE void B\+M\+E\+\_\+\+X\+O\+R\+\_\+H (
+\begin{DoxyParamCaption}
+\item[{volatile uint16\+\_\+t $\ast$}]{addr, }
+\item[{register uint16\+\_\+t}]{wdata}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a2cb964120df3bd9c3fa43a87d5672b6f}{}\label{bme_8h_a2cb964120df3bd9c3fa43a87d5672b6f}
+
+
+Definition at line 120 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+M\+A\+SK.
+
+\index{bme.\+h@{bme.\+h}!B\+M\+E\+\_\+\+X\+O\+R\+\_\+W@{B\+M\+E\+\_\+\+X\+O\+R\+\_\+W}}
+\index{B\+M\+E\+\_\+\+X\+O\+R\+\_\+W@{B\+M\+E\+\_\+\+X\+O\+R\+\_\+W}!bme.\+h@{bme.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+W(volatile uint32\+\_\+t $\ast$addr, register uint32\+\_\+t wdata)}{BME_XOR_W(volatile uint32_t *addr, register uint32_t wdata)}}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+\+B\+M\+E\+\_\+\+I\+N\+L\+I\+NE void B\+M\+E\+\_\+\+X\+O\+R\+\_\+W (
+\begin{DoxyParamCaption}
+\item[{volatile uint32\+\_\+t $\ast$}]{addr, }
+\item[{register uint32\+\_\+t}]{wdata}
+\end{DoxyParamCaption}
+)}\hypertarget{bme_8h_a5003c093c897388a9186e0e194af6a9f}{}\label{bme_8h_a5003c093c897388a9186e0e194af6a9f}
+
+
+Definition at line 115 of file bme.\+h.
+
+
+
+References B\+M\+E\+\_\+\+X\+O\+R\+\_\+\+M\+A\+SK.
+

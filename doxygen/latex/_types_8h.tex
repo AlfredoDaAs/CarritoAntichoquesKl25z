@@ -1,0 +1,293 @@
+\hypertarget{_types_8h}{}\section{Sources/\+Types.h File Reference}
+\label{_types_8h}\index{Sources/\+Types.\+h@{Sources/\+Types.\+h}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__s_s_m__}{\+\_\+s\+S\+M\+\_\+}
+\item 
+union \hyperlink{union__u_access_long_as_chars}{\+\_\+u\+Access\+Long\+As\+Chars}
+\item 
+union \hyperlink{union__u8_bit_flags}{\+\_\+u8\+Bit\+Flags}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_types_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+UE}~(1)
+\item 
+\#define \hyperlink{_types_8h_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+SE}~(0)
+\item 
+\#define \hyperlink{_types_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}~(void$\ast$)0
+\item 
+\#define \hyperlink{_types_8h_aaab10a78fbcd1df1b49c2e169e0cd3e9}{U08\+\_\+\+S\+E\+T\+\_\+\+B\+IT}(var,  bit)                          ~((var) $\vert$=  (\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08})((\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08})1 $<$$<$ (\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08})(bit)))
+\item 
+\#define \hyperlink{_types_8h_a58e9b958035654e3b8687f810c3bc2ba}{U08\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT}(var,  bit)                      ~((var) \&= $\sim$(\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08})((\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08})1 $<$$<$ (\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08})(bit)))
+\item 
+\#define \hyperlink{_types_8h_a29575fd99157caf1da89ccf570dd14c1}{U08\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT}(var,  bit)                      ~((\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08})(var) \& ((\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08})(1) $<$$<$ (\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08})(bit)))
+\item 
+\#define \hyperlink{_types_8h_ab89ce141f1f22b12afa993113c532b70}{U08\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}(var,  bit)                    ~((var) $^\wedge$=  (\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08})((\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08})1 $<$$<$ (\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08})(bit)))
+\item 
+\#define \hyperlink{_types_8h_aeb3d855a9f96969d756819b14b6b2484}{U16\+\_\+\+S\+E\+T\+\_\+\+B\+IT}(var,  bit)                          ~((var) $\vert$=  (\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16})((\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16})1 $<$$<$ (\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16})(bit)))
+\item 
+\#define \hyperlink{_types_8h_a43476f99c9c5c263ba66c1716bd2058c}{U16\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT}(var,  bit)                      ~((var) \&= $\sim$(\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16})((\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16})1 $<$$<$ (\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16})(bit)))
+\item 
+\#define \hyperlink{_types_8h_ac339495bec6e18085abdd094177d6fd3}{U16\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT}(var,  bit)                      ~((\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16})(var) \& ((\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16})(1) $<$$<$ (\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16})(bit)))
+\item 
+\#define \hyperlink{_types_8h_a4c241ba162f32145e8262844390d7812}{U16\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}(var,  bit)                    ~((var) $^\wedge$=  (\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16})((\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16})1 $<$$<$ (\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16})(bit)))
+\item 
+\#define \hyperlink{_types_8h_a62b9e11ed5cc1749f50365844484d2ed}{U32\+\_\+\+S\+E\+T\+\_\+\+B\+IT}(var,  bit)                          ~((var) $\vert$=  (\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32})((\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32})1 $<$$<$ (\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32})(bit)))
+\item 
+\#define \hyperlink{_types_8h_ae353afb6eb5e0ef2742389b3a22b652f}{U32\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT}(var,  bit)                      ~((var) \&= $\sim$(\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32})((\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32})1 $<$$<$ (\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32})(bit)))
+\item 
+\#define \hyperlink{_types_8h_a191a28231b556296cf85df26fb9e7fce}{U32\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT}(var,  bit)                      ~((\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32})(var) \& ((\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32})(1) $<$$<$ (\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32})(bit)))
+\item 
+\#define \hyperlink{_types_8h_aeff4ac3ece2eb492f7776bd3bd4141fe}{U32\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}(var,  bit)                    ~((var) $^\wedge$=  (\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32})((\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32})1 $<$$<$ (\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32})(bit)))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08}
+\item 
+typedef unsigned short \hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16}
+\item 
+typedef unsigned long \hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32}
+\item 
+typedef signed char \hyperlink{_types_8h_a2365469991b5c36f5830730dac30d0e7}{S08}
+\item 
+typedef signed short \hyperlink{_types_8h_ae08f9a6ee81e70f713a74a5860062841}{S16}
+\item 
+typedef signed long \hyperlink{_types_8h_aa2db49128944fb6df8ee8aa636a47634}{S32}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\index{Types.\+h@{Types.\+h}!F\+A\+L\+SE@{F\+A\+L\+SE}}
+\index{F\+A\+L\+SE@{F\+A\+L\+SE}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{F\+A\+L\+SE}{FALSE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+A\+L\+SE~(0)}\hypertarget{_types_8h_aa93f0eb578d23995850d61f7d61c55c1}{}\label{_types_8h_aa93f0eb578d23995850d61f7d61c55c1}
+
+
+Definition at line 25 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!N\+U\+LL@{N\+U\+LL}}
+\index{N\+U\+LL@{N\+U\+LL}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{N\+U\+LL}{NULL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+LL~(void$\ast$)0}\hypertarget{_types_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{}\label{_types_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}
+
+
+Definition at line 29 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!T\+R\+UE@{T\+R\+UE}}
+\index{T\+R\+UE@{T\+R\+UE}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{T\+R\+UE}{TRUE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+R\+UE~(1)}\hypertarget{_types_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{}\label{_types_8h_aa8cecfc5c5c054d2875c03e77b7be15d}
+
+
+Definition at line 21 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!U08\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT@{U08\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT}}
+\index{U08\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT@{U08\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{U08\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT}{U08_CHECK_BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U08\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{bit}
+\end{DoxyParamCaption}
+)~(({\bf U08})(var) \& (({\bf U08})(1) $<$$<$ ({\bf U08})(bit)))}\hypertarget{_types_8h_a29575fd99157caf1da89ccf570dd14c1}{}\label{_types_8h_a29575fd99157caf1da89ccf570dd14c1}
+
+
+Definition at line 35 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!U08\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT@{U08\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT}}
+\index{U08\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT@{U08\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{U08\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT}{U08_CLEAR_BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U08\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{bit}
+\end{DoxyParamCaption}
+)~((var) \&= $\sim$({\bf U08})(({\bf U08})1 $<$$<$ ({\bf U08})(bit)))}\hypertarget{_types_8h_a58e9b958035654e3b8687f810c3bc2ba}{}\label{_types_8h_a58e9b958035654e3b8687f810c3bc2ba}
+
+
+Definition at line 34 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!U08\+\_\+\+S\+E\+T\+\_\+\+B\+IT@{U08\+\_\+\+S\+E\+T\+\_\+\+B\+IT}}
+\index{U08\+\_\+\+S\+E\+T\+\_\+\+B\+IT@{U08\+\_\+\+S\+E\+T\+\_\+\+B\+IT}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{U08\+\_\+\+S\+E\+T\+\_\+\+B\+IT}{U08_SET_BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U08\+\_\+\+S\+E\+T\+\_\+\+B\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{bit}
+\end{DoxyParamCaption}
+)~((var) $\vert$=  ({\bf U08})(({\bf U08})1 $<$$<$ ({\bf U08})(bit)))}\hypertarget{_types_8h_aaab10a78fbcd1df1b49c2e169e0cd3e9}{}\label{_types_8h_aaab10a78fbcd1df1b49c2e169e0cd3e9}
+
+
+Definition at line 33 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!U08\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT@{U08\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}}
+\index{U08\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT@{U08\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{U08\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}{U08_TOGGLE_BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U08\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{bit}
+\end{DoxyParamCaption}
+)~((var) $^\wedge$=  ({\bf U08})(({\bf U08})1 $<$$<$ ({\bf U08})(bit)))}\hypertarget{_types_8h_ab89ce141f1f22b12afa993113c532b70}{}\label{_types_8h_ab89ce141f1f22b12afa993113c532b70}
+
+
+Definition at line 36 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!U16\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT@{U16\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT}}
+\index{U16\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT@{U16\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{U16\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT}{U16_CHECK_BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U16\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{bit}
+\end{DoxyParamCaption}
+)~(({\bf U16})(var) \& (({\bf U16})(1) $<$$<$ ({\bf U16})(bit)))}\hypertarget{_types_8h_ac339495bec6e18085abdd094177d6fd3}{}\label{_types_8h_ac339495bec6e18085abdd094177d6fd3}
+
+
+Definition at line 41 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!U16\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT@{U16\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT}}
+\index{U16\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT@{U16\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{U16\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT}{U16_CLEAR_BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U16\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{bit}
+\end{DoxyParamCaption}
+)~((var) \&= $\sim$({\bf U16})(({\bf U16})1 $<$$<$ ({\bf U16})(bit)))}\hypertarget{_types_8h_a43476f99c9c5c263ba66c1716bd2058c}{}\label{_types_8h_a43476f99c9c5c263ba66c1716bd2058c}
+
+
+Definition at line 40 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!U16\+\_\+\+S\+E\+T\+\_\+\+B\+IT@{U16\+\_\+\+S\+E\+T\+\_\+\+B\+IT}}
+\index{U16\+\_\+\+S\+E\+T\+\_\+\+B\+IT@{U16\+\_\+\+S\+E\+T\+\_\+\+B\+IT}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{U16\+\_\+\+S\+E\+T\+\_\+\+B\+IT}{U16_SET_BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U16\+\_\+\+S\+E\+T\+\_\+\+B\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{bit}
+\end{DoxyParamCaption}
+)~((var) $\vert$=  ({\bf U16})(({\bf U16})1 $<$$<$ ({\bf U16})(bit)))}\hypertarget{_types_8h_aeb3d855a9f96969d756819b14b6b2484}{}\label{_types_8h_aeb3d855a9f96969d756819b14b6b2484}
+
+
+Definition at line 39 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!U16\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT@{U16\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}}
+\index{U16\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT@{U16\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{U16\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}{U16_TOGGLE_BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U16\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{bit}
+\end{DoxyParamCaption}
+)~((var) $^\wedge$=  ({\bf U16})(({\bf U16})1 $<$$<$ ({\bf U16})(bit)))}\hypertarget{_types_8h_a4c241ba162f32145e8262844390d7812}{}\label{_types_8h_a4c241ba162f32145e8262844390d7812}
+
+
+Definition at line 42 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!U32\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT@{U32\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT}}
+\index{U32\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT@{U32\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{U32\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT}{U32_CHECK_BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U32\+\_\+\+C\+H\+E\+C\+K\+\_\+\+B\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{bit}
+\end{DoxyParamCaption}
+)~(({\bf U32})(var) \& (({\bf U32})(1) $<$$<$ ({\bf U32})(bit)))}\hypertarget{_types_8h_a191a28231b556296cf85df26fb9e7fce}{}\label{_types_8h_a191a28231b556296cf85df26fb9e7fce}
+
+
+Definition at line 47 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!U32\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT@{U32\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT}}
+\index{U32\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT@{U32\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{U32\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT}{U32_CLEAR_BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U32\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{bit}
+\end{DoxyParamCaption}
+)~((var) \&= $\sim$({\bf U32})(({\bf U32})1 $<$$<$ ({\bf U32})(bit)))}\hypertarget{_types_8h_ae353afb6eb5e0ef2742389b3a22b652f}{}\label{_types_8h_ae353afb6eb5e0ef2742389b3a22b652f}
+
+
+Definition at line 46 of file Types.\+h.
+
+
+
+Referenced by vfn\+Clear\+Bit().
+
+\index{Types.\+h@{Types.\+h}!U32\+\_\+\+S\+E\+T\+\_\+\+B\+IT@{U32\+\_\+\+S\+E\+T\+\_\+\+B\+IT}}
+\index{U32\+\_\+\+S\+E\+T\+\_\+\+B\+IT@{U32\+\_\+\+S\+E\+T\+\_\+\+B\+IT}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{U32\+\_\+\+S\+E\+T\+\_\+\+B\+IT}{U32_SET_BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U32\+\_\+\+S\+E\+T\+\_\+\+B\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{bit}
+\end{DoxyParamCaption}
+)~((var) $\vert$=  ({\bf U32})(({\bf U32})1 $<$$<$ ({\bf U32})(bit)))}\hypertarget{_types_8h_a62b9e11ed5cc1749f50365844484d2ed}{}\label{_types_8h_a62b9e11ed5cc1749f50365844484d2ed}
+
+
+Definition at line 45 of file Types.\+h.
+
+
+
+Referenced by vfn\+Init\+Leds(), and vfn\+Set\+Bit().
+
+\index{Types.\+h@{Types.\+h}!U32\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT@{U32\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}}
+\index{U32\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT@{U32\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{U32\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT}{U32_TOGGLE_BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U32\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{bit}
+\end{DoxyParamCaption}
+)~((var) $^\wedge$=  ({\bf U32})(({\bf U32})1 $<$$<$ ({\bf U32})(bit)))}\hypertarget{_types_8h_aeff4ac3ece2eb492f7776bd3bd4141fe}{}\label{_types_8h_aeff4ac3ece2eb492f7776bd3bd4141fe}
+
+
+Definition at line 48 of file Types.\+h.
+
+
+
+Referenced by vfn\+Led\+Toogle().
+
+
+
+\subsection{Typedef Documentation}
+\index{Types.\+h@{Types.\+h}!S08@{S08}}
+\index{S08@{S08}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{S08}{S08}}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed char {\bf S08}}\hypertarget{_types_8h_a2365469991b5c36f5830730dac30d0e7}{}\label{_types_8h_a2365469991b5c36f5830730dac30d0e7}
+
+
+Definition at line 56 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!S16@{S16}}
+\index{S16@{S16}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{S16}{S16}}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed short {\bf S16}}\hypertarget{_types_8h_ae08f9a6ee81e70f713a74a5860062841}{}\label{_types_8h_ae08f9a6ee81e70f713a74a5860062841}
+
+
+Definition at line 57 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!S32@{S32}}
+\index{S32@{S32}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{S32}{S32}}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed long {\bf S32}}\hypertarget{_types_8h_aa2db49128944fb6df8ee8aa636a47634}{}\label{_types_8h_aa2db49128944fb6df8ee8aa636a47634}
+
+
+Definition at line 58 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!U08@{U08}}
+\index{U08@{U08}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{U08}{U08}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf U08}}\hypertarget{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{}\label{_types_8h_a3fd534ebc238a0e487b81bda78811de6}
+
+
+Definition at line 53 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!U16@{U16}}
+\index{U16@{U16}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{U16}{U16}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf U16}}\hypertarget{_types_8h_adf928e51a60dba0df29d615401cc55a8}{}\label{_types_8h_adf928e51a60dba0df29d615401cc55a8}
+
+
+Definition at line 54 of file Types.\+h.
+
+\index{Types.\+h@{Types.\+h}!U32@{U32}}
+\index{U32@{U32}!Types.\+h@{Types.\+h}}
+\subsubsection[{\texorpdfstring{U32}{U32}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long {\bf U32}}\hypertarget{_types_8h_a811024d35b9b8a41095b1f583b649e56}{}\label{_types_8h_a811024d35b9b8a41095b1f583b649e56}
+
+
+Definition at line 55 of file Types.\+h.
+

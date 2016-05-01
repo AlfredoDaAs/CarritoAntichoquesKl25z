@@ -1,0 +1,568 @@
+\hypertarget{main_8c}{}\section{Sources/app/main.c File Reference}
+\label{main_8c}\index{Sources/app/main.\+c@{Sources/app/main.\+c}}
+
+
+History\+: 20130207\+\_\+1635 \+:  
+
+
+{\ttfamily \#include \char`\"{}derivative.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Motor\+Dvr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Pantalla\+Dvr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}P\+W\+M.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}H\+C-\/\+S\+R04.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lptmr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G\+P\+I\+O.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8c_a03893f25acb1338aa924e56bec7b4112}{M\+I\+\_\+1}~30
+\item 
+\#define \hyperlink{main_8c_a582b9ff40b7f55a801292b9e167eefc5}{M\+I\+\_\+2}~29
+\item 
+\#define \hyperlink{main_8c_ac40598eb114eba11e7ab1483f4ddfa58}{M\+D\+\_\+1}~23
+\item 
+\#define \hyperlink{main_8c_aaaf2c5e1fe6086aee899d26dada68777}{M\+D\+\_\+2}~22
+\item 
+\#define \hyperlink{main_8c_ab2bffd2f30ecb7e7e71105faabdf3d16}{S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT}~0
+\item 
+\#define \hyperlink{main_8c_af25543ca2bfd8f9fa1c1664aa4b45510}{S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT}~1
+\item 
+\#define \hyperlink{main_8c_a4b70b9631f1ec99f7753b078ad3b39ce}{S\+E\+N\+S\+O\+R\+\_\+\+B\+L\+O\+CK}~2
+\item 
+\#define \hyperlink{main_8c_ad45e4f41816b50149f3166af9efaf836}{D\+E\+L\+A\+Y\+\_\+\+T\+U\+R\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}~100000
+\item 
+\#define \hyperlink{main_8c_ad8cee25ba114961c1ba8a1f9845cd8c9}{D\+E\+L\+A\+Y\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+M\+O\+V\+E\+M\+E\+NT}~100000
+\item 
+\#define \hyperlink{main_8c_a902daf6b7200485bf53a4911a3e9677f}{D\+E\+L\+A\+Y\+\_\+\+M\+O\+V\+E\+M\+E\+N\+T\+\_\+\+B\+A\+CK}~100000
+\item 
+\#define \hyperlink{main_8c_a270af228f9f2d657c400b486c3646fc9}{D\+E\+L\+A\+Y\+\_\+\+S\+E\+N\+S\+OR}~100000
+\item 
+\#define \hyperlink{main_8c_aa4f6d78c3379d4e2400c73da22b55fff}{M\+O\+T\+O\+R\+\_\+\+D\+R\+I\+V\+ER}~1
+\item 
+\#define \hyperlink{main_8c_a57dfb2ddf01cd8deef0b8c8c55fd66fb}{T\+E\+M\+P\+E\+R\+A\+T\+U\+RA}~2
+\item 
+\#define \hyperlink{main_8c_a2b2d75ae43543d29892e6b7961b2b5ee}{S\+E\+R\+V\+O\+\_\+\+M\+O\+T\+OR}~3
+\item 
+\#define \hyperlink{main_8c_a62938d99a5a0babaa670312655564713}{P\+A\+N\+T\+A\+L\+LA}~4
+\item 
+\#define \hyperlink{main_8c_a2f6aac97054cb454297c7d65bef7a93c}{U\+L\+T\+R\+A\+S\+O\+N\+I\+CO}~5
+\item 
+\#define \hyperlink{main_8c_a9cc145d4f67f161fc93b574f3aea51c3}{D\+E\+B\+B\+U\+G\+\_\+\+S\+T\+A\+T\+US}~6
+\item 
+\#define \hyperlink{main_8c_ae9e6c5e9863015bf372c286dcbc8614a}{P\+R\+O\+D\+U\+C\+T\+I\+VO}~7
+\item 
+\#define \hyperlink{main_8c_ab946e2e7f7679350627acfded8e2658b}{T\+E\+ST}~\hyperlink{main_8c_ae9e6c5e9863015bf372c286dcbc8614a}{P\+R\+O\+D\+U\+C\+T\+I\+VO}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{main_8c_aad33a452b7186091ac15301743ebf93c}{e\+Move\+Car\+States} \{ \\*
+\hyperlink{main_8c_aad33a452b7186091ac15301743ebf93cad597946b4bc7c009a5a771da21da3632}{C\+A\+R\+\_\+\+S\+T\+OP}, 
+\hyperlink{main_8c_aad33a452b7186091ac15301743ebf93ca0a467d0247a4047830b4f4c6e2066b22}{C\+A\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+O\+N\+T\+\_\+\+F\+R\+EE}, 
+\hyperlink{main_8c_aad33a452b7186091ac15301743ebf93ca1893de244c55f75a38b0e69817431ee4}{C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+F\+R\+O\+NT}, 
+\hyperlink{main_8c_aad33a452b7186091ac15301743ebf93ca910b4067fa8c413ed83dbd38ac4b0648}{C\+A\+R\+\_\+\+T\+U\+R\+N\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT}, 
+\\*
+\hyperlink{main_8c_aad33a452b7186091ac15301743ebf93ca7f937ef10ed70f4fbb4e0da1362f1148}{C\+A\+R\+\_\+\+T\+U\+R\+N\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT}, 
+\hyperlink{main_8c_aad33a452b7186091ac15301743ebf93ca8a25d0c57ed056f845a62b8c7db17155}{C\+A\+R\+\_\+\+T\+U\+RN}, 
+\hyperlink{main_8c_aad33a452b7186091ac15301743ebf93caa02ae8d5f4f04b0320bdbf763002b6e5}{C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+B\+A\+CK}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8c_a6a7937c719ee0ca979d616e00412bff3}{vfn\+Car\+Stop} (void)
+\item 
+void \hyperlink{main_8c_aeabd69c8875665732dac97854496036e}{vfn\+Car\+Check\+Front\+Free} (void)
+\item 
+void \hyperlink{main_8c_ad56d4314e36e03ec7d1a1ecda82d7b55}{vfn\+Car\+Move\+Front} (void)
+\item 
+void \hyperlink{main_8c_a24b864edbe40d87d741f37855dcc9775}{vfn\+Car\+Turn\+Sensor\+Left} (void)
+\item 
+void \hyperlink{main_8c_ae5611e01f9ad61f23628d327b64f75c2}{vfn\+Car\+Turn\+Sensor\+Right} (void)
+\item 
+void \hyperlink{main_8c_a463ebd208fe9db151e3d75a57c999144}{vfn\+Car\+Turn} (void)
+\item 
+void \hyperlink{main_8c_ae177f397b0e4ea9bf9e94686290cefe5}{vfn\+Car\+Move\+Back} (void)
+\item 
+int \hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{main_8c_aad33a452b7186091ac15301743ebf93c}{e\+Move\+Car\+States} \hyperlink{main_8c_a25cba4b8f681a3810c4f1d277cf7298a}{car\+State} = \hyperlink{main_8c_aad33a452b7186091ac15301743ebf93ca0a467d0247a4047830b4f4c6e2066b22}{C\+A\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+O\+N\+T\+\_\+\+F\+R\+EE}
+\item 
+void($\ast$ \hyperlink{main_8c_a038e3994f7afab1993d2652d568c2760}{vfn\+State\+Machine\+Func\+Ptr\+Car} \mbox{[}$\,$\mbox{]})(void) = \{\hyperlink{main_8c_a6a7937c719ee0ca979d616e00412bff3}{vfn\+Car\+Stop}, \hyperlink{main_8c_aeabd69c8875665732dac97854496036e}{vfn\+Car\+Check\+Front\+Free}, \hyperlink{main_8c_ad56d4314e36e03ec7d1a1ecda82d7b55}{vfn\+Car\+Move\+Front}, \hyperlink{main_8c_a24b864edbe40d87d741f37855dcc9775}{vfn\+Car\+Turn\+Sensor\+Left}, \hyperlink{main_8c_ae5611e01f9ad61f23628d327b64f75c2}{vfn\+Car\+Turn\+Sensor\+Right}, \hyperlink{main_8c_a463ebd208fe9db151e3d75a57c999144}{vfn\+Car\+Turn}, \hyperlink{main_8c_ae177f397b0e4ea9bf9e94686290cefe5}{vfn\+Car\+Move\+Back}\}
+\item 
+\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16} \hyperlink{main_8c_a7a4a917611a7cd6ec96abaaefa1fac54}{read} = 0
+\item 
+\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16} \hyperlink{main_8c_a257f4202cf4693f6ca9aab1c16c36c77}{cm} = 0
+\item 
+volatile \hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{main_8c_a1f013b79e5781160501ab9d9c8d3c268}{u32\+Delay} = \hyperlink{main_8c_ad45e4f41816b50149f3166af9efaf836}{D\+E\+L\+A\+Y\+\_\+\+T\+U\+R\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}
+\item 
+volatile \hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{main_8c_a6fbcd3595f5e846d3a0406b6d2e7dc96}{u32\+Delay\+Prepare\+To\+Move} = \hyperlink{main_8c_ad8cee25ba114961c1ba8a1f9845cd8c9}{D\+E\+L\+A\+Y\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+M\+O\+V\+E\+M\+E\+NT}
+\item 
+volatile \hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{main_8c_ab217e9469d481357064ee77911ac42c0}{u32\+Delay\+Sensor} = \hyperlink{main_8c_a270af228f9f2d657c400b486c3646fc9}{D\+E\+L\+A\+Y\+\_\+\+S\+E\+N\+S\+OR}
+\item 
+volatile \hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{main_8c_a303b9509e204348c6fffe42b473ddfed}{u32\+Delay\+Back} = \hyperlink{main_8c_a902daf6b7200485bf53a4911a3e9677f}{D\+E\+L\+A\+Y\+\_\+\+M\+O\+V\+E\+M\+E\+N\+T\+\_\+\+B\+A\+CK}
+\item 
+\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} \hyperlink{main_8c_a02c787aa97a6eea84b875856e50cff69}{u08turn\+Sensor} = \hyperlink{main_8c_ab2bffd2f30ecb7e7e71105faabdf3d16}{S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT}
+\item 
+\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} \hyperlink{main_8c_a8f00a89d0d79d6f2f5a390b9f277a60f}{u08need\+To\+Turn\+Car} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+History\+: 20130207\+\_\+1635 \+: 
+
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\index{main.\+c@{main.\+c}!D\+E\+B\+B\+U\+G\+\_\+\+S\+T\+A\+T\+US@{D\+E\+B\+B\+U\+G\+\_\+\+S\+T\+A\+T\+US}}
+\index{D\+E\+B\+B\+U\+G\+\_\+\+S\+T\+A\+T\+US@{D\+E\+B\+B\+U\+G\+\_\+\+S\+T\+A\+T\+US}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+B\+U\+G\+\_\+\+S\+T\+A\+T\+US}{DEBBUG_STATUS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+B\+U\+G\+\_\+\+S\+T\+A\+T\+US~6}\hypertarget{main_8c_a9cc145d4f67f161fc93b574f3aea51c3}{}\label{main_8c_a9cc145d4f67f161fc93b574f3aea51c3}
+
+
+Definition at line 100 of file main.\+c.
+
+\index{main.\+c@{main.\+c}!D\+E\+L\+A\+Y\+\_\+\+M\+O\+V\+E\+M\+E\+N\+T\+\_\+\+B\+A\+CK@{D\+E\+L\+A\+Y\+\_\+\+M\+O\+V\+E\+M\+E\+N\+T\+\_\+\+B\+A\+CK}}
+\index{D\+E\+L\+A\+Y\+\_\+\+M\+O\+V\+E\+M\+E\+N\+T\+\_\+\+B\+A\+CK@{D\+E\+L\+A\+Y\+\_\+\+M\+O\+V\+E\+M\+E\+N\+T\+\_\+\+B\+A\+CK}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{D\+E\+L\+A\+Y\+\_\+\+M\+O\+V\+E\+M\+E\+N\+T\+\_\+\+B\+A\+CK}{DELAY_MOVEMENT_BACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+L\+A\+Y\+\_\+\+M\+O\+V\+E\+M\+E\+N\+T\+\_\+\+B\+A\+CK~100000}\hypertarget{main_8c_a902daf6b7200485bf53a4911a3e9677f}{}\label{main_8c_a902daf6b7200485bf53a4911a3e9677f}
+
+
+Definition at line 87 of file main.\+c.
+
+
+
+Referenced by vfn\+Car\+Move\+Back().
+
+\index{main.\+c@{main.\+c}!D\+E\+L\+A\+Y\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+M\+O\+V\+E\+M\+E\+NT@{D\+E\+L\+A\+Y\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+M\+O\+V\+E\+M\+E\+NT}}
+\index{D\+E\+L\+A\+Y\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+M\+O\+V\+E\+M\+E\+NT@{D\+E\+L\+A\+Y\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+M\+O\+V\+E\+M\+E\+NT}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{D\+E\+L\+A\+Y\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+M\+O\+V\+E\+M\+E\+NT}{DELAY_PREPARE_MOVEMENT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+L\+A\+Y\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+M\+O\+V\+E\+M\+E\+NT~100000}\hypertarget{main_8c_ad8cee25ba114961c1ba8a1f9845cd8c9}{}\label{main_8c_ad8cee25ba114961c1ba8a1f9845cd8c9}
+
+
+Definition at line 81 of file main.\+c.
+
+
+
+Referenced by vfn\+Car\+Move\+Front().
+
+\index{main.\+c@{main.\+c}!D\+E\+L\+A\+Y\+\_\+\+S\+E\+N\+S\+OR@{D\+E\+L\+A\+Y\+\_\+\+S\+E\+N\+S\+OR}}
+\index{D\+E\+L\+A\+Y\+\_\+\+S\+E\+N\+S\+OR@{D\+E\+L\+A\+Y\+\_\+\+S\+E\+N\+S\+OR}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{D\+E\+L\+A\+Y\+\_\+\+S\+E\+N\+S\+OR}{DELAY_SENSOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+L\+A\+Y\+\_\+\+S\+E\+N\+S\+OR~100000}\hypertarget{main_8c_a270af228f9f2d657c400b486c3646fc9}{}\label{main_8c_a270af228f9f2d657c400b486c3646fc9}
+
+
+Definition at line 93 of file main.\+c.
+
+
+
+Referenced by vfn\+Car\+Turn\+Sensor\+Left(), and vfn\+Car\+Turn\+Sensor\+Right().
+
+\index{main.\+c@{main.\+c}!D\+E\+L\+A\+Y\+\_\+\+T\+U\+R\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON@{D\+E\+L\+A\+Y\+\_\+\+T\+U\+R\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}
+\index{D\+E\+L\+A\+Y\+\_\+\+T\+U\+R\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON@{D\+E\+L\+A\+Y\+\_\+\+T\+U\+R\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{D\+E\+L\+A\+Y\+\_\+\+T\+U\+R\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}{DELAY_TURN_DIRECTION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+L\+A\+Y\+\_\+\+T\+U\+R\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON~100000}\hypertarget{main_8c_ad45e4f41816b50149f3166af9efaf836}{}\label{main_8c_ad45e4f41816b50149f3166af9efaf836}
+
+
+Definition at line 75 of file main.\+c.
+
+
+
+Referenced by vfn\+Car\+Check\+Front\+Free(), and vfn\+Car\+Turn().
+
+\index{main.\+c@{main.\+c}!M\+D\+\_\+1@{M\+D\+\_\+1}}
+\index{M\+D\+\_\+1@{M\+D\+\_\+1}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{M\+D\+\_\+1}{MD_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+D\+\_\+1~23}\hypertarget{main_8c_ac40598eb114eba11e7ab1483f4ddfa58}{}\label{main_8c_ac40598eb114eba11e7ab1483f4ddfa58}
+
+
+Definition at line 44 of file main.\+c.
+
+
+
+Referenced by main(), and vfn\+Init\+Motors().
+
+\index{main.\+c@{main.\+c}!M\+D\+\_\+2@{M\+D\+\_\+2}}
+\index{M\+D\+\_\+2@{M\+D\+\_\+2}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{M\+D\+\_\+2}{MD_2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+D\+\_\+2~22}\hypertarget{main_8c_aaaf2c5e1fe6086aee899d26dada68777}{}\label{main_8c_aaaf2c5e1fe6086aee899d26dada68777}
+
+
+Definition at line 50 of file main.\+c.
+
+
+
+Referenced by main(), and vfn\+Init\+Motors().
+
+\index{main.\+c@{main.\+c}!M\+I\+\_\+1@{M\+I\+\_\+1}}
+\index{M\+I\+\_\+1@{M\+I\+\_\+1}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{M\+I\+\_\+1}{MI_1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+\_\+1~30}\hypertarget{main_8c_a03893f25acb1338aa924e56bec7b4112}{}\label{main_8c_a03893f25acb1338aa924e56bec7b4112}
+
+
+Definition at line 32 of file main.\+c.
+
+
+
+Referenced by main(), and vfn\+Init\+Motors().
+
+\index{main.\+c@{main.\+c}!M\+I\+\_\+2@{M\+I\+\_\+2}}
+\index{M\+I\+\_\+2@{M\+I\+\_\+2}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{M\+I\+\_\+2}{MI_2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+\_\+2~29}\hypertarget{main_8c_a582b9ff40b7f55a801292b9e167eefc5}{}\label{main_8c_a582b9ff40b7f55a801292b9e167eefc5}
+
+
+Definition at line 38 of file main.\+c.
+
+
+
+Referenced by main(), and vfn\+Init\+Motors().
+
+\index{main.\+c@{main.\+c}!M\+O\+T\+O\+R\+\_\+\+D\+R\+I\+V\+ER@{M\+O\+T\+O\+R\+\_\+\+D\+R\+I\+V\+ER}}
+\index{M\+O\+T\+O\+R\+\_\+\+D\+R\+I\+V\+ER@{M\+O\+T\+O\+R\+\_\+\+D\+R\+I\+V\+ER}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{M\+O\+T\+O\+R\+\_\+\+D\+R\+I\+V\+ER}{MOTOR_DRIVER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+T\+O\+R\+\_\+\+D\+R\+I\+V\+ER~1}\hypertarget{main_8c_aa4f6d78c3379d4e2400c73da22b55fff}{}\label{main_8c_aa4f6d78c3379d4e2400c73da22b55fff}
+
+
+Definition at line 95 of file main.\+c.
+
+\index{main.\+c@{main.\+c}!P\+A\+N\+T\+A\+L\+LA@{P\+A\+N\+T\+A\+L\+LA}}
+\index{P\+A\+N\+T\+A\+L\+LA@{P\+A\+N\+T\+A\+L\+LA}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{P\+A\+N\+T\+A\+L\+LA}{PANTALLA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+N\+T\+A\+L\+LA~4}\hypertarget{main_8c_a62938d99a5a0babaa670312655564713}{}\label{main_8c_a62938d99a5a0babaa670312655564713}
+
+
+Definition at line 98 of file main.\+c.
+
+\index{main.\+c@{main.\+c}!P\+R\+O\+D\+U\+C\+T\+I\+VO@{P\+R\+O\+D\+U\+C\+T\+I\+VO}}
+\index{P\+R\+O\+D\+U\+C\+T\+I\+VO@{P\+R\+O\+D\+U\+C\+T\+I\+VO}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{P\+R\+O\+D\+U\+C\+T\+I\+VO}{PRODUCTIVO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+O\+D\+U\+C\+T\+I\+VO~7}\hypertarget{main_8c_ae9e6c5e9863015bf372c286dcbc8614a}{}\label{main_8c_ae9e6c5e9863015bf372c286dcbc8614a}
+
+
+Definition at line 101 of file main.\+c.
+
+\index{main.\+c@{main.\+c}!S\+E\+N\+S\+O\+R\+\_\+\+B\+L\+O\+CK@{S\+E\+N\+S\+O\+R\+\_\+\+B\+L\+O\+CK}}
+\index{S\+E\+N\+S\+O\+R\+\_\+\+B\+L\+O\+CK@{S\+E\+N\+S\+O\+R\+\_\+\+B\+L\+O\+CK}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{S\+E\+N\+S\+O\+R\+\_\+\+B\+L\+O\+CK}{SENSOR_BLOCK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+N\+S\+O\+R\+\_\+\+B\+L\+O\+CK~2}\hypertarget{main_8c_a4b70b9631f1ec99f7753b078ad3b39ce}{}\label{main_8c_a4b70b9631f1ec99f7753b078ad3b39ce}
+
+
+Definition at line 68 of file main.\+c.
+
+
+
+Referenced by vfn\+Car\+Check\+Front\+Free().
+
+\index{main.\+c@{main.\+c}!S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT@{S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT}}
+\index{S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT@{S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT}{SENSOR_LEFT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT~0}\hypertarget{main_8c_ab2bffd2f30ecb7e7e71105faabdf3d16}{}\label{main_8c_ab2bffd2f30ecb7e7e71105faabdf3d16}
+
+
+Definition at line 56 of file main.\+c.
+
+
+
+Referenced by vfn\+Car\+Check\+Front\+Free(), vfn\+Car\+Turn(), and vfn\+Car\+Turn\+Sensor\+Left().
+
+\index{main.\+c@{main.\+c}!S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT@{S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT}}
+\index{S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT@{S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT}{SENSOR_RIGHT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT~1}\hypertarget{main_8c_af25543ca2bfd8f9fa1c1664aa4b45510}{}\label{main_8c_af25543ca2bfd8f9fa1c1664aa4b45510}
+
+
+Definition at line 62 of file main.\+c.
+
+
+
+Referenced by vfn\+Car\+Check\+Front\+Free(), vfn\+Car\+Turn(), and vfn\+Car\+Turn\+Sensor\+Right().
+
+\index{main.\+c@{main.\+c}!S\+E\+R\+V\+O\+\_\+\+M\+O\+T\+OR@{S\+E\+R\+V\+O\+\_\+\+M\+O\+T\+OR}}
+\index{S\+E\+R\+V\+O\+\_\+\+M\+O\+T\+OR@{S\+E\+R\+V\+O\+\_\+\+M\+O\+T\+OR}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{S\+E\+R\+V\+O\+\_\+\+M\+O\+T\+OR}{SERVO_MOTOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+R\+V\+O\+\_\+\+M\+O\+T\+OR~3}\hypertarget{main_8c_a2b2d75ae43543d29892e6b7961b2b5ee}{}\label{main_8c_a2b2d75ae43543d29892e6b7961b2b5ee}
+
+
+Definition at line 97 of file main.\+c.
+
+\index{main.\+c@{main.\+c}!T\+E\+M\+P\+E\+R\+A\+T\+U\+RA@{T\+E\+M\+P\+E\+R\+A\+T\+U\+RA}}
+\index{T\+E\+M\+P\+E\+R\+A\+T\+U\+RA@{T\+E\+M\+P\+E\+R\+A\+T\+U\+RA}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{T\+E\+M\+P\+E\+R\+A\+T\+U\+RA}{TEMPERATURA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+M\+P\+E\+R\+A\+T\+U\+RA~2}\hypertarget{main_8c_a57dfb2ddf01cd8deef0b8c8c55fd66fb}{}\label{main_8c_a57dfb2ddf01cd8deef0b8c8c55fd66fb}
+
+
+Definition at line 96 of file main.\+c.
+
+\index{main.\+c@{main.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{T\+E\+ST}{TEST}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+ST~{\bf P\+R\+O\+D\+U\+C\+T\+I\+VO}}\hypertarget{main_8c_ab946e2e7f7679350627acfded8e2658b}{}\label{main_8c_ab946e2e7f7679350627acfded8e2658b}
+
+
+Definition at line 102 of file main.\+c.
+
+\index{main.\+c@{main.\+c}!U\+L\+T\+R\+A\+S\+O\+N\+I\+CO@{U\+L\+T\+R\+A\+S\+O\+N\+I\+CO}}
+\index{U\+L\+T\+R\+A\+S\+O\+N\+I\+CO@{U\+L\+T\+R\+A\+S\+O\+N\+I\+CO}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{U\+L\+T\+R\+A\+S\+O\+N\+I\+CO}{ULTRASONICO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+L\+T\+R\+A\+S\+O\+N\+I\+CO~5}\hypertarget{main_8c_a2f6aac97054cb454297c7d65bef7a93c}{}\label{main_8c_a2f6aac97054cb454297c7d65bef7a93c}
+
+
+Definition at line 99 of file main.\+c.
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{main.\+c@{main.\+c}!e\+Move\+Car\+States@{e\+Move\+Car\+States}}
+\index{e\+Move\+Car\+States@{e\+Move\+Car\+States}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{e\+Move\+Car\+States}{eMoveCarStates}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf e\+Move\+Car\+States}}\hypertarget{main_8c_aad33a452b7186091ac15301743ebf93c}{}\label{main_8c_aad33a452b7186091ac15301743ebf93c}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{C\+A\+R\+\_\+\+S\+T\+OP@{C\+A\+R\+\_\+\+S\+T\+OP}!main.\+c@{main.\+c}}\index{main.\+c@{main.\+c}!C\+A\+R\+\_\+\+S\+T\+OP@{C\+A\+R\+\_\+\+S\+T\+OP}}\item[{\em 
+C\+A\+R\+\_\+\+S\+T\+OP\hypertarget{main_8c_aad33a452b7186091ac15301743ebf93cad597946b4bc7c009a5a771da21da3632}{}\label{main_8c_aad33a452b7186091ac15301743ebf93cad597946b4bc7c009a5a771da21da3632}
+}]\index{C\+A\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+O\+N\+T\+\_\+\+F\+R\+EE@{C\+A\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+O\+N\+T\+\_\+\+F\+R\+EE}!main.\+c@{main.\+c}}\index{main.\+c@{main.\+c}!C\+A\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+O\+N\+T\+\_\+\+F\+R\+EE@{C\+A\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+O\+N\+T\+\_\+\+F\+R\+EE}}\item[{\em 
+C\+A\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+O\+N\+T\+\_\+\+F\+R\+EE\hypertarget{main_8c_aad33a452b7186091ac15301743ebf93ca0a467d0247a4047830b4f4c6e2066b22}{}\label{main_8c_aad33a452b7186091ac15301743ebf93ca0a467d0247a4047830b4f4c6e2066b22}
+}]\index{C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+F\+R\+O\+NT@{C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+F\+R\+O\+NT}!main.\+c@{main.\+c}}\index{main.\+c@{main.\+c}!C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+F\+R\+O\+NT@{C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+F\+R\+O\+NT}}\item[{\em 
+C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+F\+R\+O\+NT\hypertarget{main_8c_aad33a452b7186091ac15301743ebf93ca1893de244c55f75a38b0e69817431ee4}{}\label{main_8c_aad33a452b7186091ac15301743ebf93ca1893de244c55f75a38b0e69817431ee4}
+}]\index{C\+A\+R\+\_\+\+T\+U\+R\+N\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT@{C\+A\+R\+\_\+\+T\+U\+R\+N\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT}!main.\+c@{main.\+c}}\index{main.\+c@{main.\+c}!C\+A\+R\+\_\+\+T\+U\+R\+N\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT@{C\+A\+R\+\_\+\+T\+U\+R\+N\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT}}\item[{\em 
+C\+A\+R\+\_\+\+T\+U\+R\+N\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT\hypertarget{main_8c_aad33a452b7186091ac15301743ebf93ca910b4067fa8c413ed83dbd38ac4b0648}{}\label{main_8c_aad33a452b7186091ac15301743ebf93ca910b4067fa8c413ed83dbd38ac4b0648}
+}]\index{C\+A\+R\+\_\+\+T\+U\+R\+N\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT@{C\+A\+R\+\_\+\+T\+U\+R\+N\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT}!main.\+c@{main.\+c}}\index{main.\+c@{main.\+c}!C\+A\+R\+\_\+\+T\+U\+R\+N\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT@{C\+A\+R\+\_\+\+T\+U\+R\+N\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT}}\item[{\em 
+C\+A\+R\+\_\+\+T\+U\+R\+N\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT\hypertarget{main_8c_aad33a452b7186091ac15301743ebf93ca7f937ef10ed70f4fbb4e0da1362f1148}{}\label{main_8c_aad33a452b7186091ac15301743ebf93ca7f937ef10ed70f4fbb4e0da1362f1148}
+}]\index{C\+A\+R\+\_\+\+T\+U\+RN@{C\+A\+R\+\_\+\+T\+U\+RN}!main.\+c@{main.\+c}}\index{main.\+c@{main.\+c}!C\+A\+R\+\_\+\+T\+U\+RN@{C\+A\+R\+\_\+\+T\+U\+RN}}\item[{\em 
+C\+A\+R\+\_\+\+T\+U\+RN\hypertarget{main_8c_aad33a452b7186091ac15301743ebf93ca8a25d0c57ed056f845a62b8c7db17155}{}\label{main_8c_aad33a452b7186091ac15301743ebf93ca8a25d0c57ed056f845a62b8c7db17155}
+}]\index{C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+B\+A\+CK@{C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+B\+A\+CK}!main.\+c@{main.\+c}}\index{main.\+c@{main.\+c}!C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+B\+A\+CK@{C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+B\+A\+CK}}\item[{\em 
+C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+B\+A\+CK\hypertarget{main_8c_aad33a452b7186091ac15301743ebf93caa02ae8d5f4f04b0320bdbf763002b6e5}{}\label{main_8c_aad33a452b7186091ac15301743ebf93caa02ae8d5f4f04b0320bdbf763002b6e5}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 110 of file main.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}
+
+
+Definition at line 157 of file main.\+c.
+
+
+
+References car\+State, cm, hc\+\_\+sr04\+\_\+init(), hc\+\_\+sr04\+\_\+read(), M\+D\+\_\+1, M\+D\+\_\+2, M\+I\+\_\+1, M\+I\+\_\+2, O\+U\+T\+P\+UT, P\+O\+R\+TA, P\+O\+R\+TE, read, R\+S\+L\+TN, time\+\_\+delay\+\_\+ms(), u32\+Delay, vfn\+Adelante(), vfn\+Atras(), vfn\+Clear\+Bit(), vfn\+Derecha(), vfn\+Init\+Gpio(), vfn\+Init\+Motors(), vfn\+Init\+P\+W\+M(), vfn\+Izquierda(), vfn\+Move\+Left(), vfn\+Set\+Bit(), vfn\+Set\+G\+P\+I\+O\+Port\+Pins(), and vfn\+State\+Machine\+Func\+Ptr\+Car.
+
+\index{main.\+c@{main.\+c}!vfn\+Car\+Check\+Front\+Free@{vfn\+Car\+Check\+Front\+Free}}
+\index{vfn\+Car\+Check\+Front\+Free@{vfn\+Car\+Check\+Front\+Free}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Car\+Check\+Front\+Free(void)}{vfnCarCheckFrontFree(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Car\+Check\+Front\+Free (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_aeabd69c8875665732dac97854496036e}{}\label{main_8c_aeabd69c8875665732dac97854496036e}
+
+
+Definition at line 232 of file main.\+c.
+
+
+
+References C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+B\+A\+CK, C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+F\+R\+O\+NT, C\+A\+R\+\_\+\+S\+T\+OP, C\+A\+R\+\_\+\+T\+U\+RN, car\+State, cm, D\+E\+L\+A\+Y\+\_\+\+T\+U\+R\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON, hc\+\_\+sr04\+\_\+read(), read, R\+S\+L\+TN, S\+E\+N\+S\+O\+R\+\_\+\+B\+L\+O\+CK, S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT, S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT, time\+\_\+delay\+\_\+ms(), u08need\+To\+Turn\+Car, u08turn\+Sensor, and u32\+Delay.
+
+\index{main.\+c@{main.\+c}!vfn\+Car\+Move\+Back@{vfn\+Car\+Move\+Back}}
+\index{vfn\+Car\+Move\+Back@{vfn\+Car\+Move\+Back}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Car\+Move\+Back(void)}{vfnCarMoveBack(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Car\+Move\+Back (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ae177f397b0e4ea9bf9e94686290cefe5}{}\label{main_8c_ae177f397b0e4ea9bf9e94686290cefe5}
+
+
+Definition at line 308 of file main.\+c.
+
+
+
+References C\+A\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+O\+N\+T\+\_\+\+F\+R\+EE, car\+State, D\+E\+L\+A\+Y\+\_\+\+M\+O\+V\+E\+M\+E\+N\+T\+\_\+\+B\+A\+CK, u32\+Delay\+Back, and vfn\+Atras().
+
+\index{main.\+c@{main.\+c}!vfn\+Car\+Move\+Front@{vfn\+Car\+Move\+Front}}
+\index{vfn\+Car\+Move\+Front@{vfn\+Car\+Move\+Front}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Car\+Move\+Front(void)}{vfnCarMoveFront(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Car\+Move\+Front (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ad56d4314e36e03ec7d1a1ecda82d7b55}{}\label{main_8c_ad56d4314e36e03ec7d1a1ecda82d7b55}
+
+
+Definition at line 257 of file main.\+c.
+
+
+
+References C\+A\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+O\+N\+T\+\_\+\+F\+R\+EE, car\+State, D\+E\+L\+A\+Y\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+M\+O\+V\+E\+M\+E\+NT, u32\+Delay\+Prepare\+To\+Move, vfn\+Adelante(), and vfn\+Move\+Center().
+
+\index{main.\+c@{main.\+c}!vfn\+Car\+Stop@{vfn\+Car\+Stop}}
+\index{vfn\+Car\+Stop@{vfn\+Car\+Stop}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Car\+Stop(void)}{vfnCarStop(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Car\+Stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a6a7937c719ee0ca979d616e00412bff3}{}\label{main_8c_a6a7937c719ee0ca979d616e00412bff3}
+
+
+Definition at line 227 of file main.\+c.
+
+
+
+References C\+A\+R\+\_\+\+T\+U\+R\+N\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT, car\+State, and vfn\+Parar().
+
+\index{main.\+c@{main.\+c}!vfn\+Car\+Turn@{vfn\+Car\+Turn}}
+\index{vfn\+Car\+Turn@{vfn\+Car\+Turn}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Car\+Turn(void)}{vfnCarTurn(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Car\+Turn (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a463ebd208fe9db151e3d75a57c999144}{}\label{main_8c_a463ebd208fe9db151e3d75a57c999144}
+
+
+Definition at line 295 of file main.\+c.
+
+
+
+References C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+F\+R\+O\+NT, car\+State, D\+E\+L\+A\+Y\+\_\+\+T\+U\+R\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON, S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT, S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT, u08turn\+Sensor, u32\+Delay, vfn\+Derecha(), and vfn\+Izquierda().
+
+\index{main.\+c@{main.\+c}!vfn\+Car\+Turn\+Sensor\+Left@{vfn\+Car\+Turn\+Sensor\+Left}}
+\index{vfn\+Car\+Turn\+Sensor\+Left@{vfn\+Car\+Turn\+Sensor\+Left}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Car\+Turn\+Sensor\+Left(void)}{vfnCarTurnSensorLeft(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Car\+Turn\+Sensor\+Left (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a24b864edbe40d87d741f37855dcc9775}{}\label{main_8c_a24b864edbe40d87d741f37855dcc9775}
+
+
+Definition at line 267 of file main.\+c.
+
+
+
+References C\+A\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+O\+N\+T\+\_\+\+F\+R\+EE, C\+A\+R\+\_\+\+T\+U\+R\+N\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT, car\+State, D\+E\+L\+A\+Y\+\_\+\+S\+E\+N\+S\+OR, S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT, u08need\+To\+Turn\+Car, u08turn\+Sensor, u32\+Delay\+Sensor, and vfn\+Move\+Left().
+
+\index{main.\+c@{main.\+c}!vfn\+Car\+Turn\+Sensor\+Right@{vfn\+Car\+Turn\+Sensor\+Right}}
+\index{vfn\+Car\+Turn\+Sensor\+Right@{vfn\+Car\+Turn\+Sensor\+Right}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Car\+Turn\+Sensor\+Right(void)}{vfnCarTurnSensorRight(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Car\+Turn\+Sensor\+Right (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ae5611e01f9ad61f23628d327b64f75c2}{}\label{main_8c_ae5611e01f9ad61f23628d327b64f75c2}
+
+
+Definition at line 281 of file main.\+c.
+
+
+
+References C\+A\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+O\+N\+T\+\_\+\+F\+R\+EE, C\+A\+R\+\_\+\+M\+O\+V\+E\+\_\+\+B\+A\+CK, car\+State, D\+E\+L\+A\+Y\+\_\+\+S\+E\+N\+S\+OR, S\+E\+N\+S\+O\+R\+\_\+\+R\+I\+G\+HT, u08need\+To\+Turn\+Car, u08turn\+Sensor, u32\+Delay\+Sensor, and vfn\+Move\+Right().
+
+
+
+\subsection{Variable Documentation}
+\index{main.\+c@{main.\+c}!car\+State@{car\+State}}
+\index{car\+State@{car\+State}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{car\+State}{carState}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e\+Move\+Car\+States} car\+State = {\bf C\+A\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+O\+N\+T\+\_\+\+F\+R\+EE}}\hypertarget{main_8c_a25cba4b8f681a3810c4f1d277cf7298a}{}\label{main_8c_a25cba4b8f681a3810c4f1d277cf7298a}
+
+
+Definition at line 138 of file main.\+c.
+
+
+
+Referenced by main(), vfn\+Car\+Check\+Front\+Free(), vfn\+Car\+Move\+Back(), vfn\+Car\+Move\+Front(), vfn\+Car\+Stop(), vfn\+Car\+Turn(), vfn\+Car\+Turn\+Sensor\+Left(), and vfn\+Car\+Turn\+Sensor\+Right().
+
+\index{main.\+c@{main.\+c}!cm@{cm}}
+\index{cm@{cm}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{cm}{cm}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U16} cm = 0}\hypertarget{main_8c_a257f4202cf4693f6ca9aab1c16c36c77}{}\label{main_8c_a257f4202cf4693f6ca9aab1c16c36c77}
+
+
+Definition at line 149 of file main.\+c.
+
+
+
+Referenced by main(), and vfn\+Car\+Check\+Front\+Free().
+
+\index{main.\+c@{main.\+c}!read@{read}}
+\index{read@{read}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{read}{read}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U16} read = 0}\hypertarget{main_8c_a7a4a917611a7cd6ec96abaaefa1fac54}{}\label{main_8c_a7a4a917611a7cd6ec96abaaefa1fac54}
+
+
+Definition at line 149 of file main.\+c.
+
+
+
+Referenced by main(), and vfn\+Car\+Check\+Front\+Free().
+
+\index{main.\+c@{main.\+c}!u08need\+To\+Turn\+Car@{u08need\+To\+Turn\+Car}}
+\index{u08need\+To\+Turn\+Car@{u08need\+To\+Turn\+Car}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{u08need\+To\+Turn\+Car}{u08needToTurnCar}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U08} u08need\+To\+Turn\+Car = 0}\hypertarget{main_8c_a8f00a89d0d79d6f2f5a390b9f277a60f}{}\label{main_8c_a8f00a89d0d79d6f2f5a390b9f277a60f}
+
+
+Definition at line 151 of file main.\+c.
+
+
+
+Referenced by vfn\+Car\+Check\+Front\+Free(), vfn\+Car\+Turn\+Sensor\+Left(), and vfn\+Car\+Turn\+Sensor\+Right().
+
+\index{main.\+c@{main.\+c}!u08turn\+Sensor@{u08turn\+Sensor}}
+\index{u08turn\+Sensor@{u08turn\+Sensor}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{u08turn\+Sensor}{u08turnSensor}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U08} u08turn\+Sensor = {\bf S\+E\+N\+S\+O\+R\+\_\+\+L\+E\+FT}}\hypertarget{main_8c_a02c787aa97a6eea84b875856e50cff69}{}\label{main_8c_a02c787aa97a6eea84b875856e50cff69}
+
+
+Definition at line 151 of file main.\+c.
+
+
+
+Referenced by vfn\+Car\+Check\+Front\+Free(), vfn\+Car\+Turn(), vfn\+Car\+Turn\+Sensor\+Left(), and vfn\+Car\+Turn\+Sensor\+Right().
+
+\index{main.\+c@{main.\+c}!u32\+Delay@{u32\+Delay}}
+\index{u32\+Delay@{u32\+Delay}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{u32\+Delay}{u32Delay}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf U32} u32\+Delay = {\bf D\+E\+L\+A\+Y\+\_\+\+T\+U\+R\+N\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}}\hypertarget{main_8c_a1f013b79e5781160501ab9d9c8d3c268}{}\label{main_8c_a1f013b79e5781160501ab9d9c8d3c268}
+
+
+Definition at line 150 of file main.\+c.
+
+
+
+Referenced by main(), vfn\+Car\+Check\+Front\+Free(), and vfn\+Car\+Turn().
+
+\index{main.\+c@{main.\+c}!u32\+Delay\+Back@{u32\+Delay\+Back}}
+\index{u32\+Delay\+Back@{u32\+Delay\+Back}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{u32\+Delay\+Back}{u32DelayBack}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf U32} u32\+Delay\+Back = {\bf D\+E\+L\+A\+Y\+\_\+\+M\+O\+V\+E\+M\+E\+N\+T\+\_\+\+B\+A\+CK}}\hypertarget{main_8c_a303b9509e204348c6fffe42b473ddfed}{}\label{main_8c_a303b9509e204348c6fffe42b473ddfed}
+
+
+Definition at line 150 of file main.\+c.
+
+
+
+Referenced by vfn\+Car\+Move\+Back().
+
+\index{main.\+c@{main.\+c}!u32\+Delay\+Prepare\+To\+Move@{u32\+Delay\+Prepare\+To\+Move}}
+\index{u32\+Delay\+Prepare\+To\+Move@{u32\+Delay\+Prepare\+To\+Move}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{u32\+Delay\+Prepare\+To\+Move}{u32DelayPrepareToMove}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf U32} u32\+Delay\+Prepare\+To\+Move = {\bf D\+E\+L\+A\+Y\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+M\+O\+V\+E\+M\+E\+NT}}\hypertarget{main_8c_a6fbcd3595f5e846d3a0406b6d2e7dc96}{}\label{main_8c_a6fbcd3595f5e846d3a0406b6d2e7dc96}
+
+
+Definition at line 150 of file main.\+c.
+
+
+
+Referenced by vfn\+Car\+Move\+Front().
+
+\index{main.\+c@{main.\+c}!u32\+Delay\+Sensor@{u32\+Delay\+Sensor}}
+\index{u32\+Delay\+Sensor@{u32\+Delay\+Sensor}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{u32\+Delay\+Sensor}{u32DelaySensor}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf U32} u32\+Delay\+Sensor = {\bf D\+E\+L\+A\+Y\+\_\+\+S\+E\+N\+S\+OR}}\hypertarget{main_8c_ab217e9469d481357064ee77911ac42c0}{}\label{main_8c_ab217e9469d481357064ee77911ac42c0}
+
+
+Definition at line 150 of file main.\+c.
+
+
+
+Referenced by vfn\+Car\+Turn\+Sensor\+Left(), and vfn\+Car\+Turn\+Sensor\+Right().
+
+\index{main.\+c@{main.\+c}!vfn\+State\+Machine\+Func\+Ptr\+Car@{vfn\+State\+Machine\+Func\+Ptr\+Car}}
+\index{vfn\+State\+Machine\+Func\+Ptr\+Car@{vfn\+State\+Machine\+Func\+Ptr\+Car}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+State\+Machine\+Func\+Ptr\+Car}{vfnStateMachineFuncPtrCar}}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$  vfn\+State\+Machine\+Func\+Ptr\+Car\mbox{[}$\,$\mbox{]})(void) = \{{\bf vfn\+Car\+Stop}, {\bf vfn\+Car\+Check\+Front\+Free}, {\bf vfn\+Car\+Move\+Front}, {\bf vfn\+Car\+Turn\+Sensor\+Left}, {\bf vfn\+Car\+Turn\+Sensor\+Right}, {\bf vfn\+Car\+Turn}, {\bf vfn\+Car\+Move\+Back}\}}\hypertarget{main_8c_a038e3994f7afab1993d2652d568c2760}{}\label{main_8c_a038e3994f7afab1993d2652d568c2760}
+
+
+Definition at line 143 of file main.\+c.
+
+
+
+Referenced by main().
+

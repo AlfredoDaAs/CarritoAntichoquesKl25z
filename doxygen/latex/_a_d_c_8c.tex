@@ -1,0 +1,76 @@
+\hypertarget{_a_d_c_8c}{}\section{Sources/hal/\+A\+DC.c File Reference}
+\label{_a_d_c_8c}\index{Sources/hal/\+A\+D\+C.\+c@{Sources/hal/\+A\+D\+C.\+c}}
+{\ttfamily \#include \char`\"{}A\+D\+C.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_a_d_c_8c_abed5993ef0fb5467efc728750101a793}{vfn\+Init\+Adc} (\hyperlink{_p_o_r_t_cfgs_8h_ad42be2970e8608c74557dc05872fc38f}{e\+Ports} port, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} u08\+Pin)
+\item 
+void \hyperlink{_a_d_c_8c_a21ab19703c5cf1e6dfeae3e6bdf6b44a}{vfn\+A\+D\+C\+\_\+\+I\+RQ} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16} \hyperlink{_a_d_c_8c_a9030b6b454f440c68a16592ed07c24e8}{U16v\+A\+D\+C\+Value}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{A\+D\+C.\+c@{A\+D\+C.\+c}!vfn\+A\+D\+C\+\_\+\+I\+RQ@{vfn\+A\+D\+C\+\_\+\+I\+RQ}}
+\index{vfn\+A\+D\+C\+\_\+\+I\+RQ@{vfn\+A\+D\+C\+\_\+\+I\+RQ}!A\+D\+C.\+c@{A\+D\+C.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+A\+D\+C\+\_\+\+I\+R\+Q(void)}{vfnADC_IRQ(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+A\+D\+C\+\_\+\+I\+RQ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_a_d_c_8c_a21ab19703c5cf1e6dfeae3e6bdf6b44a}{}\label{_a_d_c_8c_a21ab19703c5cf1e6dfeae3e6bdf6b44a}
+
+
+Definition at line 70 of file A\+D\+C.\+c.
+
+
+
+References A\+D\+C0\+\_\+\+RA, A\+D\+C0\+\_\+\+S\+C1A, A\+D\+C\+\_\+\+S\+C1\+\_\+\+C\+O\+C\+O\+\_\+\+M\+A\+SK, and U16v\+A\+D\+C\+Value.
+
+\index{A\+D\+C.\+c@{A\+D\+C.\+c}!vfn\+Init\+Adc@{vfn\+Init\+Adc}}
+\index{vfn\+Init\+Adc@{vfn\+Init\+Adc}!A\+D\+C.\+c@{A\+D\+C.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Init\+Adc(e\+Ports port, U08 u08\+Pin)}{vfnInitAdc(ePorts port, U08 u08Pin)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Init\+Adc (
+\begin{DoxyParamCaption}
+\item[{{\bf e\+Ports}}]{port, }
+\item[{{\bf U08}}]{u08\+Pin}
+\end{DoxyParamCaption}
+)}\hypertarget{_a_d_c_8c_abed5993ef0fb5467efc728750101a793}{}\label{_a_d_c_8c_abed5993ef0fb5467efc728750101a793}
+
+
+Definition at line 54 of file A\+D\+C.\+c.
+
+
+
+References A\+DC, A\+D\+C0\+\_\+\+C\+F\+G1, A\+D\+C0\+\_\+\+S\+C1A, A\+D\+C0\+\_\+\+S\+C3, A\+D\+C\+\_\+\+C\+F\+G1\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+SK, A\+D\+C\+\_\+\+S\+C1\+\_\+\+A\+D\+C\+H\+\_\+\+M\+A\+SK, A\+D\+C\+\_\+\+S\+C3\+\_\+\+A\+D\+C\+O\+\_\+\+M\+A\+SK, A\+D\+C\+\_\+\+S\+C3\+\_\+\+A\+V\+G\+E\+\_\+\+M\+A\+SK, S\+I\+M\+\_\+\+S\+C\+G\+C6, S\+I\+M\+\_\+\+S\+C\+G\+C6\+\_\+\+A\+D\+C0\+\_\+\+M\+A\+SK, vfn\+Config\+Port\+Reg\+Pins(), and vfn\+Init\+Gpio().
+
+
+
+Referenced by vfn\+Init\+Temperatura().
+
+
+
+\subsection{Variable Documentation}
+\index{A\+D\+C.\+c@{A\+D\+C.\+c}!U16v\+A\+D\+C\+Value@{U16v\+A\+D\+C\+Value}}
+\index{U16v\+A\+D\+C\+Value@{U16v\+A\+D\+C\+Value}!A\+D\+C.\+c@{A\+D\+C.\+c}}
+\subsubsection[{\texorpdfstring{U16v\+A\+D\+C\+Value}{U16vADCValue}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U16} U16v\+A\+D\+C\+Value}\hypertarget{_a_d_c_8c_a9030b6b454f440c68a16592ed07c24e8}{}\label{_a_d_c_8c_a9030b6b454f440c68a16592ed07c24e8}
+
+
+Definition at line 46 of file A\+D\+C.\+c.
+
+
+
+Referenced by vfn\+A\+D\+C\+\_\+\+I\+R\+Q().
+

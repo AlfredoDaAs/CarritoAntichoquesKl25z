@@ -1,0 +1,106 @@
+\hypertarget{_p_w_m_8h}{}\section{Sources/hil/\+P\+WM.h File Reference}
+\label{_p_w_m_8h}\index{Sources/hil/\+P\+W\+M.\+h@{Sources/hil/\+P\+W\+M.\+h}}
+{\ttfamily \#include \char`\"{}derivative.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tpm.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G\+P\+I\+O.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_p_w_m_8h_a7bee94b8e86518c9e210fa0426ca3dae}{vfn\+Init\+P\+WM} (\hyperlink{_p_o_r_t_cfgs_8h_ad42be2970e8608c74557dc05872fc38f}{e\+Ports} port, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} u08\+Pin)
+\item 
+void \hyperlink{_p_w_m_8h_a02ff674abf5f35009b1c44a8395df050}{vfn\+Move\+Left} ()
+\item 
+void \hyperlink{_p_w_m_8h_a310370d5840a7ed33f62ea2a068457e3}{vfn\+Move\+Center} ()
+\item 
+void \hyperlink{_p_w_m_8h_a520fd661387daa0404da2fd90d1745bd}{vfn\+Move\+Right} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{P\+W\+M.\+h@{P\+W\+M.\+h}!vfn\+Init\+P\+WM@{vfn\+Init\+P\+WM}}
+\index{vfn\+Init\+P\+WM@{vfn\+Init\+P\+WM}!P\+W\+M.\+h@{P\+W\+M.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Init\+P\+W\+M(e\+Ports port, U08 u08\+Pin)}{vfnInitPWM(ePorts port, U08 u08Pin)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Init\+P\+WM (
+\begin{DoxyParamCaption}
+\item[{{\bf e\+Ports}}]{port, }
+\item[{{\bf U08}}]{u08\+Pin}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_w_m_8h_a7bee94b8e86518c9e210fa0426ca3dae}{}\label{_p_w_m_8h_a7bee94b8e86518c9e210fa0426ca3dae}
+
+
+Definition at line 54 of file P\+W\+M.\+c.
+
+
+
+References E\+D\+G\+E\+\_\+\+P\+WM, P\+S\+\_\+8, T\+P\+M1\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR, T\+P\+M\+\_\+\+C\+H\+\_\+init(), T\+P\+M\+\_\+\+C\+LK, T\+P\+M\+\_\+init\+\_\+\+P\+W\+M(), T\+P\+M\+\_\+\+M\+O\+D\+U\+LE, T\+P\+M\+\_\+\+P\+L\+L\+F\+LL, T\+P\+M\+\_\+\+P\+W\+M\+\_\+H, vfn\+Init\+Gpio(), and vfn\+Select\+Channel\+Port\+Pin().
+
+
+
+Referenced by main().
+
+\index{P\+W\+M.\+h@{P\+W\+M.\+h}!vfn\+Move\+Center@{vfn\+Move\+Center}}
+\index{vfn\+Move\+Center@{vfn\+Move\+Center}!P\+W\+M.\+h@{P\+W\+M.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Move\+Center()}{vfnMoveCenter()}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Move\+Center (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_w_m_8h_a310370d5840a7ed33f62ea2a068457e3}{}\label{_p_w_m_8h_a310370d5840a7ed33f62ea2a068457e3}
+
+
+Definition at line 65 of file P\+W\+M.\+c.
+
+
+
+References D\+U\+T\+Y\+\_\+\+M\+ED, and set\+\_\+pos().
+
+
+
+Referenced by vfn\+Car\+Move\+Front().
+
+\index{P\+W\+M.\+h@{P\+W\+M.\+h}!vfn\+Move\+Left@{vfn\+Move\+Left}}
+\index{vfn\+Move\+Left@{vfn\+Move\+Left}!P\+W\+M.\+h@{P\+W\+M.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Move\+Left()}{vfnMoveLeft()}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Move\+Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_w_m_8h_a02ff674abf5f35009b1c44a8395df050}{}\label{_p_w_m_8h_a02ff674abf5f35009b1c44a8395df050}
+
+
+Definition at line 61 of file P\+W\+M.\+c.
+
+
+
+References D\+U\+T\+Y\+\_\+\+M\+AX, and set\+\_\+pos().
+
+
+
+Referenced by main(), and vfn\+Car\+Turn\+Sensor\+Left().
+
+\index{P\+W\+M.\+h@{P\+W\+M.\+h}!vfn\+Move\+Right@{vfn\+Move\+Right}}
+\index{vfn\+Move\+Right@{vfn\+Move\+Right}!P\+W\+M.\+h@{P\+W\+M.\+h}}
+\subsubsection[{\texorpdfstring{vfn\+Move\+Right()}{vfnMoveRight()}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Move\+Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_p_w_m_8h_a520fd661387daa0404da2fd90d1745bd}{}\label{_p_w_m_8h_a520fd661387daa0404da2fd90d1745bd}
+
+
+Definition at line 69 of file P\+W\+M.\+c.
+
+
+
+References D\+U\+T\+Y\+\_\+\+M\+IN, and set\+\_\+pos().
+
+
+
+Referenced by vfn\+Car\+Turn\+Sensor\+Right().
+

@@ -1,0 +1,137 @@
+\hypertarget{tpm_8c}{}\section{Sources/hal/tpm.c File Reference}
+\label{tpm_8c}\index{Sources/hal/tpm.\+c@{Sources/hal/tpm.\+c}}
+{\ttfamily \#include \char`\"{}tpm.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{tpm_8c_a50780883372f2b9c01787d14240ed5fc}{vfn\+Select\+Channel\+Port\+Pin} (\hyperlink{_p_o_r_t_cfgs_8h_ad42be2970e8608c74557dc05872fc38f}{e\+Ports} port, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} u08\+Pin)
+\item 
+void \hyperlink{tpm_8c_a68295c986d37fc857f51df35089029ca}{T\+P\+M\+\_\+init\+\_\+\+P\+WM} (\hyperlink{group___t_p_m___peripheral_ga32147338cedc9904efff0d19b3a358ac}{T\+P\+M\+\_\+\+Mem\+Map\+Ptr} T\+P\+Mx, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} clock\+\_\+source, \hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16} module, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} clock\+\_\+mode, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} ps, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} counting\+\_\+mode)
+\item 
+void \hyperlink{tpm_8c_ae6718e300d27da5893cdedfecf50f7bb}{T\+P\+M\+\_\+\+C\+H\+\_\+init} (\hyperlink{group___t_p_m___peripheral_ga32147338cedc9904efff0d19b3a358ac}{T\+P\+M\+\_\+\+Mem\+Map\+Ptr} T\+P\+Mx, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} channel, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} mode)
+\item 
+void \hyperlink{tpm_8c_aa581a8a3f2eb3348257be88b8a0346ec}{set\+\_\+\+T\+P\+M\+\_\+\+CnV} (\hyperlink{group___t_p_m___peripheral_ga32147338cedc9904efff0d19b3a358ac}{T\+P\+M\+\_\+\+Mem\+Map\+Ptr} T\+P\+Mx, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} channel, \hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16} value)
+\item 
+void \hyperlink{tpm_8c_adf91a3910a264d60e33ae894be0dea63}{set\+\_\+pos} (\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16} duty)
+\item 
+void \hyperlink{tpm_8c_a417d38ec4e85d33c3c88ba1b2ac956f9}{vfn\+Delay\+Tpm} (\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{main_8c_a1f013b79e5781160501ab9d9c8d3c268}{u32\+Delay})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{tpm.\+c@{tpm.\+c}!set\+\_\+pos@{set\+\_\+pos}}
+\index{set\+\_\+pos@{set\+\_\+pos}!tpm.\+c@{tpm.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+pos(\+U16 duty)}{set_pos(U16 duty)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+pos (
+\begin{DoxyParamCaption}
+\item[{{\bf U16}}]{duty}
+\end{DoxyParamCaption}
+)}\hypertarget{tpm_8c_adf91a3910a264d60e33ae894be0dea63}{}\label{tpm_8c_adf91a3910a264d60e33ae894be0dea63}
+
+
+Definition at line 44 of file tpm.\+c.
+
+
+
+References set\+\_\+\+T\+P\+M\+\_\+\+Cn\+V(), and T\+P\+M1\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR.
+
+
+
+Referenced by vfn\+Move\+Center(), vfn\+Move\+Left(), and vfn\+Move\+Right().
+
+\index{tpm.\+c@{tpm.\+c}!set\+\_\+\+T\+P\+M\+\_\+\+CnV@{set\+\_\+\+T\+P\+M\+\_\+\+CnV}}
+\index{set\+\_\+\+T\+P\+M\+\_\+\+CnV@{set\+\_\+\+T\+P\+M\+\_\+\+CnV}!tpm.\+c@{tpm.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+\+T\+P\+M\+\_\+\+Cn\+V(\+T\+P\+M\+\_\+\+Mem\+Map\+Ptr T\+P\+Mx, U08 channel, U16 value)}{set_TPM_CnV(TPM_MemMapPtr TPMx, U08 channel, U16 value)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+\+T\+P\+M\+\_\+\+CnV (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+P\+M\+\_\+\+Mem\+Map\+Ptr}}]{T\+P\+Mx, }
+\item[{{\bf U08}}]{channel, }
+\item[{{\bf U16}}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{tpm_8c_aa581a8a3f2eb3348257be88b8a0346ec}{}\label{tpm_8c_aa581a8a3f2eb3348257be88b8a0346ec}
+
+
+Definition at line 39 of file tpm.\+c.
+
+
+
+References T\+P\+M\+\_\+\+Cn\+V\+\_\+\+R\+EG.
+
+
+
+Referenced by set\+\_\+pos().
+
+\index{tpm.\+c@{tpm.\+c}!T\+P\+M\+\_\+\+C\+H\+\_\+init@{T\+P\+M\+\_\+\+C\+H\+\_\+init}}
+\index{T\+P\+M\+\_\+\+C\+H\+\_\+init@{T\+P\+M\+\_\+\+C\+H\+\_\+init}!tpm.\+c@{tpm.\+c}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+\+C\+H\+\_\+init(\+T\+P\+M\+\_\+\+Mem\+Map\+Ptr T\+P\+Mx, U08 channel, U08 mode)}{TPM_CH_init(TPM_MemMapPtr TPMx, U08 channel, U08 mode)}}]{\setlength{\rightskip}{0pt plus 5cm}void T\+P\+M\+\_\+\+C\+H\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+P\+M\+\_\+\+Mem\+Map\+Ptr}}]{T\+P\+Mx, }
+\item[{{\bf U08}}]{channel, }
+\item[{{\bf U08}}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{tpm_8c_ae6718e300d27da5893cdedfecf50f7bb}{}\label{tpm_8c_ae6718e300d27da5893cdedfecf50f7bb}
+
+
+Definition at line 34 of file tpm.\+c.
+
+
+
+References T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+R\+EG.
+
+
+
+Referenced by vfn\+Init\+P\+W\+M().
+
+\index{tpm.\+c@{tpm.\+c}!T\+P\+M\+\_\+init\+\_\+\+P\+WM@{T\+P\+M\+\_\+init\+\_\+\+P\+WM}}
+\index{T\+P\+M\+\_\+init\+\_\+\+P\+WM@{T\+P\+M\+\_\+init\+\_\+\+P\+WM}!tpm.\+c@{tpm.\+c}}
+\subsubsection[{\texorpdfstring{T\+P\+M\+\_\+init\+\_\+\+P\+W\+M(\+T\+P\+M\+\_\+\+Mem\+Map\+Ptr T\+P\+Mx, U08 clock\+\_\+source, U16 module, U08 clock\+\_\+mode, U08 ps, U08 counting\+\_\+mode)}{TPM_init_PWM(TPM_MemMapPtr TPMx, U08 clock_source, U16 module, U08 clock_mode, U08 ps, U08 counting_mode)}}]{\setlength{\rightskip}{0pt plus 5cm}void T\+P\+M\+\_\+init\+\_\+\+P\+WM (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+P\+M\+\_\+\+Mem\+Map\+Ptr}}]{T\+P\+Mx, }
+\item[{{\bf U08}}]{clock\+\_\+source, }
+\item[{{\bf U16}}]{module, }
+\item[{{\bf U08}}]{clock\+\_\+mode, }
+\item[{{\bf U08}}]{ps, }
+\item[{{\bf U08}}]{counting\+\_\+mode}
+\end{DoxyParamCaption}
+)}\hypertarget{tpm_8c_a68295c986d37fc857f51df35089029ca}{}\label{tpm_8c_a68295c986d37fc857f51df35089029ca}
+
+
+Definition at line 14 of file tpm.\+c.
+
+
+
+References S\+I\+M\+\_\+\+S\+C\+G\+C6, S\+I\+M\+\_\+\+S\+C\+G\+C6\+\_\+\+T\+P\+M0\+\_\+\+M\+A\+SK, S\+I\+M\+\_\+\+S\+C\+G\+C6\+\_\+\+T\+P\+M1\+\_\+\+M\+A\+SK, S\+I\+M\+\_\+\+S\+C\+G\+C6\+\_\+\+T\+P\+M2\+\_\+\+M\+A\+SK, S\+I\+M\+\_\+\+S\+O\+P\+T2, S\+I\+M\+\_\+\+S\+O\+P\+T2\+\_\+\+T\+P\+M\+S\+RC, T\+P\+M0\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR, T\+P\+M1\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR, T\+P\+M\+\_\+\+M\+O\+D\+\_\+\+R\+EG, T\+P\+M\+\_\+\+S\+C\+\_\+\+C\+M\+OD, T\+P\+M\+\_\+\+S\+C\+\_\+\+C\+P\+W\+M\+S\+\_\+\+M\+A\+SK, T\+P\+M\+\_\+\+S\+C\+\_\+\+PS, and T\+P\+M\+\_\+\+S\+C\+\_\+\+R\+EG.
+
+
+
+Referenced by vfn\+Init\+P\+W\+M().
+
+\index{tpm.\+c@{tpm.\+c}!vfn\+Delay\+Tpm@{vfn\+Delay\+Tpm}}
+\index{vfn\+Delay\+Tpm@{vfn\+Delay\+Tpm}!tpm.\+c@{tpm.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Delay\+Tpm(\+U32 u32\+Delay)}{vfnDelayTpm(U32 u32Delay)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Delay\+Tpm (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{u32\+Delay}
+\end{DoxyParamCaption}
+)}\hypertarget{tpm_8c_a417d38ec4e85d33c3c88ba1b2ac956f9}{}\label{tpm_8c_a417d38ec4e85d33c3c88ba1b2ac956f9}
+
+
+Definition at line 49 of file tpm.\+c.
+
+\index{tpm.\+c@{tpm.\+c}!vfn\+Select\+Channel\+Port\+Pin@{vfn\+Select\+Channel\+Port\+Pin}}
+\index{vfn\+Select\+Channel\+Port\+Pin@{vfn\+Select\+Channel\+Port\+Pin}!tpm.\+c@{tpm.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Select\+Channel\+Port\+Pin(e\+Ports port, U08 u08\+Pin)}{vfnSelectChannelPortPin(ePorts port, U08 u08Pin)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Select\+Channel\+Port\+Pin (
+\begin{DoxyParamCaption}
+\item[{{\bf e\+Ports}}]{port, }
+\item[{{\bf U08}}]{u08\+Pin}
+\end{DoxyParamCaption}
+)}\hypertarget{tpm_8c_a50780883372f2b9c01787d14240ed5fc}{}\label{tpm_8c_a50780883372f2b9c01787d14240ed5fc}
+
+
+Definition at line 9 of file tpm.\+c.
+
+
+
+References T\+P\+M\+\_\+\+M\+UX, and vfn\+Config\+Port\+Reg\+Pins().
+
+
+
+Referenced by vfn\+Init\+P\+W\+M().
+

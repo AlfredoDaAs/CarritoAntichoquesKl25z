@@ -1,0 +1,115 @@
+\hypertarget{_pantalla_dvr_8c}{}\section{Sources/hil/\+Pantalla\+Dvr.c File Reference}
+\label{_pantalla_dvr_8c}\index{Sources/hil/\+Pantalla\+Dvr.\+c@{Sources/hil/\+Pantalla\+Dvr.\+c}}
+{\ttfamily \#include \char`\"{}Pantalla\+Dvr.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_pantalla_dvr_8c_ab1b270cb7ebc7fb9db6144944e6921a2}{vfn\+Init\+Pantalla} (void)
+\item 
+void \hyperlink{_pantalla_dvr_8c_a3ab156a2ae083288a4f93d8b2917662f}{vfn\+Send\+Data} (\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} u08\+Type, \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} u08\+Code)
+\item 
+void \hyperlink{_pantalla_dvr_8c_a791309026306fe63494a30918926acc7}{vfn\+Delay\+Pantalla} (\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{main_8c_a1f013b79e5781160501ab9d9c8d3c268}{u32\+Delay})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} \hyperlink{_pantalla_dvr_8c_a270fc522bb3e356774f79c1c37f602f5}{u08\+Pines\+Control} \mbox{[}$\,$\mbox{]} = \{\hyperlink{_pantalla_dvr_8h_af8903d8eea3868940c60af887473b152}{RS}, \hyperlink{_pantalla_dvr_8h_a07484107e6d9fdf38b53edf631d6511d}{E}\}
+\item 
+\hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} \hyperlink{_pantalla_dvr_8c_aa825885c9a21a1827e2117284247586c}{u08\+Pines\+Datos} \mbox{[}$\,$\mbox{]} = \{\hyperlink{_pantalla_dvr_8h_a24a5611002d30ab6e2b7cc3126492145}{P\+I\+N\+\_\+0}, \hyperlink{_pantalla_dvr_8h_a61a1b7885b5f44435c82fb29749fded1}{P\+I\+N\+\_\+1}, \hyperlink{_pantalla_dvr_8h_a6d66f3c31b8d0d21e539ba4b381ad5c7}{P\+I\+N\+\_\+2}, \hyperlink{_pantalla_dvr_8h_a884c9578ffc28c044539d3c0176207e4}{P\+I\+N\+\_\+3}, \hyperlink{_pantalla_dvr_8h_a8088a3b9bfae1f46b55824cb7ba21b7a}{P\+I\+N\+\_\+4}, \hyperlink{_pantalla_dvr_8h_a1d222f0684a8413a38c257d9938af585}{P\+I\+N\+\_\+5}, \hyperlink{_pantalla_dvr_8h_a347ca13449e59d7377624b64bc42d464}{P\+I\+N\+\_\+6}, \hyperlink{_pantalla_dvr_8h_af56aad34f1635c1a7866a06b52f92d8f}{P\+I\+N\+\_\+7}\}
+\item 
+const unsigned char \hyperlink{_pantalla_dvr_8c_aead6ea2c7c021f664346c6e617de6108}{Initialize\+L\+CD} \mbox{[}5\mbox{]} = \{0x38, 0x0\+C, 0x01\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{Pantalla\+Dvr.\+c@{Pantalla\+Dvr.\+c}!vfn\+Delay\+Pantalla@{vfn\+Delay\+Pantalla}}
+\index{vfn\+Delay\+Pantalla@{vfn\+Delay\+Pantalla}!Pantalla\+Dvr.\+c@{Pantalla\+Dvr.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Delay\+Pantalla(\+U32 u32\+Delay)}{vfnDelayPantalla(U32 u32Delay)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Delay\+Pantalla (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{u32\+Delay}
+\end{DoxyParamCaption}
+)}\hypertarget{_pantalla_dvr_8c_a791309026306fe63494a30918926acc7}{}\label{_pantalla_dvr_8c_a791309026306fe63494a30918926acc7}
+
+
+Definition at line 97 of file Pantalla\+Dvr.\+c.
+
+\index{Pantalla\+Dvr.\+c@{Pantalla\+Dvr.\+c}!vfn\+Init\+Pantalla@{vfn\+Init\+Pantalla}}
+\index{vfn\+Init\+Pantalla@{vfn\+Init\+Pantalla}!Pantalla\+Dvr.\+c@{Pantalla\+Dvr.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Init\+Pantalla(void)}{vfnInitPantalla(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Init\+Pantalla (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_pantalla_dvr_8c_ab1b270cb7ebc7fb9db6144944e6921a2}{}\label{_pantalla_dvr_8c_ab1b270cb7ebc7fb9db6144944e6921a2}
+
+
+Definition at line 59 of file Pantalla\+Dvr.\+c.
+
+
+
+References Initialize\+L\+CD, I\+N\+S\+T\+R\+U\+C\+T\+I\+ON, O\+U\+T\+P\+UT, P\+O\+R\+TB, P\+O\+R\+TC, u08\+Pines\+Control, u08\+Pines\+Datos, vfn\+Init\+Gpio(), vfn\+Send\+Data(), and vfn\+Set\+G\+P\+I\+O\+Port\+Pins().
+
+\index{Pantalla\+Dvr.\+c@{Pantalla\+Dvr.\+c}!vfn\+Send\+Data@{vfn\+Send\+Data}}
+\index{vfn\+Send\+Data@{vfn\+Send\+Data}!Pantalla\+Dvr.\+c@{Pantalla\+Dvr.\+c}}
+\subsubsection[{\texorpdfstring{vfn\+Send\+Data(\+U08 u08\+Type, U08 u08\+Code)}{vfnSendData(U08 u08Type, U08 u08Code)}}]{\setlength{\rightskip}{0pt plus 5cm}void vfn\+Send\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf U08}}]{u08\+Type, }
+\item[{{\bf U08}}]{u08\+Code}
+\end{DoxyParamCaption}
+)}\hypertarget{_pantalla_dvr_8c_a3ab156a2ae083288a4f93d8b2917662f}{}\label{_pantalla_dvr_8c_a3ab156a2ae083288a4f93d8b2917662f}
+
+
+Definition at line 76 of file Pantalla\+Dvr.\+c.
+
+
+
+References D\+A\+TA, E, I\+N\+S\+T\+R\+U\+C\+T\+I\+ON, P\+O\+R\+TB, P\+O\+R\+TC, RS, time\+\_\+delay\+\_\+ms(), vfn\+Clear\+Bit(), vfn\+Send\+Byte(), and vfn\+Set\+Bit().
+
+
+
+Referenced by vfn\+Init\+Pantalla().
+
+
+
+\subsection{Variable Documentation}
+\index{Pantalla\+Dvr.\+c@{Pantalla\+Dvr.\+c}!Initialize\+L\+CD@{Initialize\+L\+CD}}
+\index{Initialize\+L\+CD@{Initialize\+L\+CD}!Pantalla\+Dvr.\+c@{Pantalla\+Dvr.\+c}}
+\subsubsection[{\texorpdfstring{Initialize\+L\+CD}{InitializeLCD}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char Initialize\+L\+CD\mbox{[}5\mbox{]} = \{0x38, 0x0\+C, 0x01\}}\hypertarget{_pantalla_dvr_8c_aead6ea2c7c021f664346c6e617de6108}{}\label{_pantalla_dvr_8c_aead6ea2c7c021f664346c6e617de6108}
+
+
+Definition at line 51 of file Pantalla\+Dvr.\+c.
+
+
+
+Referenced by vfn\+Init\+Pantalla().
+
+\index{Pantalla\+Dvr.\+c@{Pantalla\+Dvr.\+c}!u08\+Pines\+Control@{u08\+Pines\+Control}}
+\index{u08\+Pines\+Control@{u08\+Pines\+Control}!Pantalla\+Dvr.\+c@{Pantalla\+Dvr.\+c}}
+\subsubsection[{\texorpdfstring{u08\+Pines\+Control}{u08PinesControl}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U08} u08\+Pines\+Control\mbox{[}$\,$\mbox{]} = \{{\bf RS}, {\bf E}\}}\hypertarget{_pantalla_dvr_8c_a270fc522bb3e356774f79c1c37f602f5}{}\label{_pantalla_dvr_8c_a270fc522bb3e356774f79c1c37f602f5}
+
+
+Definition at line 47 of file Pantalla\+Dvr.\+c.
+
+
+
+Referenced by vfn\+Init\+Pantalla().
+
+\index{Pantalla\+Dvr.\+c@{Pantalla\+Dvr.\+c}!u08\+Pines\+Datos@{u08\+Pines\+Datos}}
+\index{u08\+Pines\+Datos@{u08\+Pines\+Datos}!Pantalla\+Dvr.\+c@{Pantalla\+Dvr.\+c}}
+\subsubsection[{\texorpdfstring{u08\+Pines\+Datos}{u08PinesDatos}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U08} u08\+Pines\+Datos\mbox{[}$\,$\mbox{]} = \{{\bf P\+I\+N\+\_\+0}, {\bf P\+I\+N\+\_\+1}, {\bf P\+I\+N\+\_\+2}, {\bf P\+I\+N\+\_\+3}, {\bf P\+I\+N\+\_\+4}, {\bf P\+I\+N\+\_\+5}, {\bf P\+I\+N\+\_\+6}, {\bf P\+I\+N\+\_\+7}\}}\hypertarget{_pantalla_dvr_8c_aa825885c9a21a1827e2117284247586c}{}\label{_pantalla_dvr_8c_aa825885c9a21a1827e2117284247586c}
+
+
+Definition at line 48 of file Pantalla\+Dvr.\+c.
+
+
+
+Referenced by vfn\+Init\+Pantalla().
+

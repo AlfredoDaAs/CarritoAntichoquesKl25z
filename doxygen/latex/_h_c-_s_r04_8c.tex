@@ -1,0 +1,207 @@
+\hypertarget{_h_c-_s_r04_8c}{}\section{Sources/hil/\+H\+C-\/\+S\+R04.c File Reference}
+\label{_h_c-_s_r04_8c}\index{Sources/hil/\+H\+C-\/\+S\+R04.\+c@{Sources/hil/\+H\+C-\/\+S\+R04.\+c}}
+{\ttfamily \#include \char`\"{}H\+C-\/\+S\+R04.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_h_c-_s_r04_8c_aeeb99876e51267cb0eb34b8aeadee08b}{hc\+\_\+sr04\+\_\+init} (void)
+\item 
+\hyperlink{_types_8h_adf928e51a60dba0df29d615401cc55a8}{U16} \hyperlink{_h_c-_s_r04_8c_a35ee97390c578d1ae3cc173abcbd4ff3}{hc\+\_\+sr04\+\_\+read} (void)
+\item 
+void \hyperlink{_h_c-_s_r04_8c_aa781766c52781b5d7ca4838019d40dfa}{hc\+\_\+sr04\+\_\+trigger} (void)
+\item 
+void \hyperlink{_h_c-_s_r04_8c_a346f8023e360ddffd61e34867b30d157}{T\+P\+M0\+\_\+\+I\+R\+Q\+Handler} (void)
+\item 
+void \hyperlink{_h_c-_s_r04_8c_a83cdb8d63e8beb61594f296426783711}{T\+P\+M1\+\_\+\+I\+R\+Q\+Handler} (void)
+\item 
+void \hyperlink{_h_c-_s_r04_8c_ab36e33a3eb4d6a9f21aa876c6f0af5b4}{T\+P\+M2\+\_\+\+I\+R\+Q\+Handler} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile \hyperlink{_types_8h_a3fd534ebc238a0e487b81bda78811de6}{U08} \hyperlink{_h_c-_s_r04_8c_ad5ea6fe6d0c4db57abe39c72c5c17b87}{ready} = 0
+\item 
+volatile \hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{_h_c-_s_r04_8c_aafe0cd76d673304e5b435fdef6969662}{start} = 0
+\item 
+volatile \hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{_h_c-_s_r04_8c_a19a318200cf33a699fecac244ede52e8}{end} = 0
+\item 
+volatile \hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{_h_c-_s_r04_8c_aa930652f952c7908d8bb5cec900aa5de}{OvF} = 0
+\item 
+\hyperlink{_types_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{_h_c-_s_r04_8c_a5d1011673607a4854ece241942a4d686}{tpm\+\_\+clk\+\_\+hz} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}!hc\+\_\+sr04\+\_\+init@{hc\+\_\+sr04\+\_\+init}}
+\index{hc\+\_\+sr04\+\_\+init@{hc\+\_\+sr04\+\_\+init}!H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}}
+\subsubsection[{\texorpdfstring{hc\+\_\+sr04\+\_\+init(void)}{hc_sr04_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void hc\+\_\+sr04\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_h_c-_s_r04_8c_aeeb99876e51267cb0eb34b8aeadee08b}{}\label{_h_c-_s_r04_8c_aeeb99876e51267cb0eb34b8aeadee08b}
+
+
+Definition at line 58 of file H\+C-\/\+S\+R04.\+c.
+
+
+
+References enable\+\_\+irq(), Enable\+Interrupts, G\+P\+I\+O\+\_\+\+P\+C\+O\+R\+\_\+\+P\+T\+CO, G\+P\+I\+O\+\_\+\+P\+D\+D\+R\+\_\+\+P\+DD, G\+P\+I\+O\+C\+\_\+\+P\+C\+OR, G\+P\+I\+O\+C\+\_\+\+P\+D\+DR, I\+N\+T\+\_\+\+T\+P\+M0, P\+O\+R\+T\+\_\+\+P\+C\+R\+\_\+\+M\+UX, P\+O\+R\+T\+\_\+\+P\+C\+R\+\_\+\+P\+E\+\_\+\+M\+A\+SK, P\+O\+R\+TC, P\+O\+R\+T\+C\+\_\+\+P\+C\+R8, P\+O\+R\+TD, P\+O\+R\+T\+D\+\_\+\+P\+C\+R1, P\+S\+\_\+16, set\+\_\+irq\+\_\+priority(), sysinit(), T\+P\+M0\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR, T\+P\+M\+\_\+\+C\+H\+\_\+init\+\_\+hcsr04(), T\+P\+M\+\_\+\+C\+LK, tpm\+\_\+clk\+\_\+hz, T\+P\+M\+\_\+\+C\+L\+K\+\_\+\+M\+O\+D\+E(), T\+P\+M\+\_\+\+C\+N\+T\+\_\+\+D\+IS, T\+P\+M\+\_\+\+I\+C\+\_\+\+B\+O\+TH, T\+P\+M\+\_\+init\+\_\+\+I\+C(), T\+P\+M\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+H\+C\+\_\+\+S\+R04, T\+P\+M\+\_\+\+P\+L\+L\+F\+LL, and vfn\+Init\+Gpio().
+
+
+
+Referenced by main().
+
+\index{H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}!hc\+\_\+sr04\+\_\+read@{hc\+\_\+sr04\+\_\+read}}
+\index{hc\+\_\+sr04\+\_\+read@{hc\+\_\+sr04\+\_\+read}!H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}}
+\subsubsection[{\texorpdfstring{hc\+\_\+sr04\+\_\+read(void)}{hc_sr04_read(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U16} hc\+\_\+sr04\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_h_c-_s_r04_8c_a35ee97390c578d1ae3cc173abcbd4ff3}{}\label{_h_c-_s_r04_8c_a35ee97390c578d1ae3cc173abcbd4ff3}
+
+
+Definition at line 83 of file H\+C-\/\+S\+R04.\+c.
+
+
+
+References end, hc\+\_\+sr04\+\_\+trigger(), OvF, ready, R\+S\+L\+TN, S\+N\+S\+R\+\_\+1\+C\+M\+\_\+hz, start, T\+P\+M0\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR, T\+P\+M\+\_\+\+C\+LK, tpm\+\_\+clk\+\_\+hz, T\+P\+M\+\_\+\+C\+L\+K\+\_\+\+M\+O\+D\+E(), and T\+P\+M\+\_\+\+C\+N\+T\+\_\+\+D\+IS.
+
+
+
+Referenced by main(), and vfn\+Car\+Check\+Front\+Free().
+
+\index{H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}!hc\+\_\+sr04\+\_\+trigger@{hc\+\_\+sr04\+\_\+trigger}}
+\index{hc\+\_\+sr04\+\_\+trigger@{hc\+\_\+sr04\+\_\+trigger}!H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}}
+\subsubsection[{\texorpdfstring{hc\+\_\+sr04\+\_\+trigger(void)}{hc_sr04_trigger(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void hc\+\_\+sr04\+\_\+trigger (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_h_c-_s_r04_8c_aa781766c52781b5d7ca4838019d40dfa}{}\label{_h_c-_s_r04_8c_aa781766c52781b5d7ca4838019d40dfa}
+
+
+Definition at line 101 of file H\+C-\/\+S\+R04.\+c.
+
+
+
+References G\+P\+I\+O\+\_\+\+P\+C\+O\+R\+\_\+\+P\+T\+CO, G\+P\+I\+O\+\_\+\+P\+S\+O\+R\+\_\+\+P\+T\+SO, G\+P\+I\+O\+C\+\_\+\+P\+C\+OR, and G\+P\+I\+O\+C\+\_\+\+P\+S\+OR.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+read().
+
+\index{H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}!T\+P\+M0\+\_\+\+I\+R\+Q\+Handler@{T\+P\+M0\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+P\+M0\+\_\+\+I\+R\+Q\+Handler@{T\+P\+M0\+\_\+\+I\+R\+Q\+Handler}!H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}}
+\subsubsection[{\texorpdfstring{T\+P\+M0\+\_\+\+I\+R\+Q\+Handler(void)}{TPM0_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void T\+P\+M0\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_h_c-_s_r04_8c_a346f8023e360ddffd61e34867b30d157}{}\label{_h_c-_s_r04_8c_a346f8023e360ddffd61e34867b30d157}
+
+
+Definition at line 110 of file H\+C-\/\+S\+R04.\+c.
+
+
+
+References end, OvF, ready, start, T\+P\+M0\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR, T\+P\+M0\+\_\+\+C1\+SC, T\+P\+M0\+\_\+\+C\+NT, T\+P\+M0\+\_\+\+SC, T\+P\+M\+\_\+clear\+\_\+counter(), T\+P\+M\+\_\+\+Cn\+S\+C\+\_\+\+C\+H\+F\+\_\+\+M\+A\+SK, T\+P\+M\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+H\+C\+\_\+\+S\+R04, and T\+P\+M\+\_\+\+S\+C\+\_\+\+T\+O\+F\+\_\+\+M\+A\+SK.
+
+
+
+Referenced by N\+M\+I\+\_\+\+Handler().
+
+\index{H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}!T\+P\+M1\+\_\+\+I\+R\+Q\+Handler@{T\+P\+M1\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+P\+M1\+\_\+\+I\+R\+Q\+Handler@{T\+P\+M1\+\_\+\+I\+R\+Q\+Handler}!H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}}
+\subsubsection[{\texorpdfstring{T\+P\+M1\+\_\+\+I\+R\+Q\+Handler(void)}{TPM1_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void T\+P\+M1\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_h_c-_s_r04_8c_a83cdb8d63e8beb61594f296426783711}{}\label{_h_c-_s_r04_8c_a83cdb8d63e8beb61594f296426783711}
+
+
+Definition at line 134 of file H\+C-\/\+S\+R04.\+c.
+
+
+
+References T\+P\+M1\+\_\+\+SC, and T\+P\+M\+\_\+\+S\+C\+\_\+\+T\+O\+F\+\_\+\+M\+A\+SK.
+
+\index{H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}!T\+P\+M2\+\_\+\+I\+R\+Q\+Handler@{T\+P\+M2\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+P\+M2\+\_\+\+I\+R\+Q\+Handler@{T\+P\+M2\+\_\+\+I\+R\+Q\+Handler}!H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}}
+\subsubsection[{\texorpdfstring{T\+P\+M2\+\_\+\+I\+R\+Q\+Handler(void)}{TPM2_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void T\+P\+M2\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{_h_c-_s_r04_8c_ab36e33a3eb4d6a9f21aa876c6f0af5b4}{}\label{_h_c-_s_r04_8c_ab36e33a3eb4d6a9f21aa876c6f0af5b4}
+
+
+Definition at line 140 of file H\+C-\/\+S\+R04.\+c.
+
+
+
+References T\+P\+M2\+\_\+\+SC, and T\+P\+M\+\_\+\+S\+C\+\_\+\+T\+O\+F\+\_\+\+M\+A\+SK.
+
+
+
+\subsection{Variable Documentation}
+\index{H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}!end@{end}}
+\index{end@{end}!H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}}
+\subsubsection[{\texorpdfstring{end}{end}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf U32} end = 0}\hypertarget{_h_c-_s_r04_8c_a19a318200cf33a699fecac244ede52e8}{}\label{_h_c-_s_r04_8c_a19a318200cf33a699fecac244ede52e8}
+
+
+Definition at line 48 of file H\+C-\/\+S\+R04.\+c.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+read(), and T\+P\+M0\+\_\+\+I\+R\+Q\+Handler().
+
+\index{H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}!OvF@{OvF}}
+\index{OvF@{OvF}!H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}}
+\subsubsection[{\texorpdfstring{OvF}{OvF}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf U32} OvF = 0}\hypertarget{_h_c-_s_r04_8c_aa930652f952c7908d8bb5cec900aa5de}{}\label{_h_c-_s_r04_8c_aa930652f952c7908d8bb5cec900aa5de}
+
+
+Definition at line 49 of file H\+C-\/\+S\+R04.\+c.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+read(), and T\+P\+M0\+\_\+\+I\+R\+Q\+Handler().
+
+\index{H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}!ready@{ready}}
+\index{ready@{ready}!H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}}
+\subsubsection[{\texorpdfstring{ready}{ready}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf U08} ready = 0}\hypertarget{_h_c-_s_r04_8c_ad5ea6fe6d0c4db57abe39c72c5c17b87}{}\label{_h_c-_s_r04_8c_ad5ea6fe6d0c4db57abe39c72c5c17b87}
+
+
+Definition at line 46 of file H\+C-\/\+S\+R04.\+c.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+read(), and T\+P\+M0\+\_\+\+I\+R\+Q\+Handler().
+
+\index{H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}!start@{start}}
+\index{start@{start}!H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}}
+\subsubsection[{\texorpdfstring{start}{start}}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf U32} start = 0}\hypertarget{_h_c-_s_r04_8c_aafe0cd76d673304e5b435fdef6969662}{}\label{_h_c-_s_r04_8c_aafe0cd76d673304e5b435fdef6969662}
+
+
+Definition at line 47 of file H\+C-\/\+S\+R04.\+c.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+read(), and T\+P\+M0\+\_\+\+I\+R\+Q\+Handler().
+
+\index{H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}!tpm\+\_\+clk\+\_\+hz@{tpm\+\_\+clk\+\_\+hz}}
+\index{tpm\+\_\+clk\+\_\+hz@{tpm\+\_\+clk\+\_\+hz}!H\+C-\/\+S\+R04.\+c@{H\+C-\/\+S\+R04.\+c}}
+\subsubsection[{\texorpdfstring{tpm\+\_\+clk\+\_\+hz}{tpm_clk_hz}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} tpm\+\_\+clk\+\_\+hz = 0}\hypertarget{_h_c-_s_r04_8c_a5d1011673607a4854ece241942a4d686}{}\label{_h_c-_s_r04_8c_a5d1011673607a4854ece241942a4d686}
+
+
+Definition at line 50 of file H\+C-\/\+S\+R04.\+c.
+
+
+
+Referenced by hc\+\_\+sr04\+\_\+init(), and hc\+\_\+sr04\+\_\+read().
+
